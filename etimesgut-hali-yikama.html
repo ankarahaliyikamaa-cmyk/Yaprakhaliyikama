@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaprak Halı Yıkama | Ankara, Etimesgut, Çayyolu, Sincan Profesyonel Temizlik</title>
-    <meta name="description" content="Ankara Yaprak Halı Yıkama fabrikası. Etimesgut, Sincan, Çayyolu, Bağlıca ve İncek bölgelerine ücretsiz servis. Leke çıkarma garantili halı ve yerinde koltuk yıkama hizmeti.">
-    <meta name="keywords" content="ankara halı yıkama, etimesgut halı yıkama, sincan halı yıkama, çayyolu koltuk yıkama, bağlıca halı yıkama, yaprak halı yıkama">
+    <title>Yaprak Halı Yıkama | Ankara Profesyonel Temizlik</title>
+    <meta name="description" content="Ankara Yaprak Halı Yıkama fabrikası. Etimesgut, Sincan, Çayyolu ve Bağlıca bölgelerine ücretsiz servis. Leke çıkarma garantili halı yıkama hizmeti.">
     
     <!-- Premium Google Fontları -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -15,9 +14,9 @@
 
     <style>
         :root { 
-            --primary: #0f3460; /* Lacivert (Güven) */
-            --secondary: #e94560; /* Vurgu Rengi */
-            --gold: #d4af37; /* Premium Altın */
+            --primary: #0f3460; 
+            --secondary: #e94560; 
+            --gold: #d4af37; 
             --light: #f8f9fa; 
             --text: #4a4a4a;
         }
@@ -25,11 +24,11 @@
         body { color: var(--text); line-height: 1.8; background-color: #fff; scroll-behavior: smooth; }
         
         /* --- BAŞLIK VE NAVİGASYON --- */
-        .top-bar { background: var(--primary); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 13px; }
+        .top-bar { background: var(--primary); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 13px; align-items: center; }
         .top-bar a { color: var(--gold); text-decoration: none; font-weight: bold; }
         
         header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--primary); font-weight: 700; text-decoration: none; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--primary); font-weight: 700; text-decoration: none; line-height: 1.2; }
         .logo span { color: var(--gold); }
         
         nav a { margin-left: 30px; text-decoration: none; color: var(--primary); font-weight: 600; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
@@ -39,70 +38,86 @@
 
         /* --- HERO GİRİŞ BÖLÜMÜ --- */
         .hero { 
-            height: 80vh; 
-            background: linear-gradient(to right, rgba(15, 52, 96, 0.95), rgba(15, 52, 96, 0.7)), url('https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1600&q=80') center/cover; 
-            display: flex; align-items: center; padding: 0 5%; color: white; 
+            min-height: 80vh; /* height yerine min-height kullanıldı (Taşmayı önler) */
+            background: linear-gradient(to right, rgba(15, 52, 96, 0.95), rgba(15, 52, 96, 0.7)), url('https://images.unsplash.com/photo-1528502668750-88eccefcab4c?auto=format&fit=crop&w=1600&q=80') center/cover; 
+            display: flex; align-items: center; padding: 60px 5%; color: white; 
         }
-        .hero-content { max-width: 800px; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero-content { max-width: 800px; margin-top: 20px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; line-height: 1.2; margin-bottom: 20px; }
         .hero h1 span { color: var(--gold); font-style: italic; }
         .hero p { font-size: 1.2rem; margin-bottom: 40px; font-weight: 300; }
-        .btn { display: inline-block; padding: 18px 40px; font-size: 16px; font-weight: bold; border-radius: 50px; text-decoration: none; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-gold { background: var(--gold); color: #fff; box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3); margin-right: 15px; }
+        
+        .btn-container { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 35px; font-size: 15px; font-weight: bold; border-radius: 50px; text-decoration: none; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; gap: 10px; }
+        .btn-gold { background: var(--gold); color: #fff; box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3); }
         .btn-gold:hover { background: #b8962d; transform: translateY(-3px); }
         .btn-outline { border: 2px solid white; color: white; }
         .btn-outline:hover { background: white; color: var(--primary); }
 
         /* --- SEO HİZMET DETAYLARI --- */
-        .section { padding: 100px 5%; }
+        .section { padding: 80px 5%; }
         .section-bg { background: var(--light); }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--primary); }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); line-height: 1.3; }
         .section-title p { color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
 
-        .service-row { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; margin-bottom: 80px; }
+        .service-row { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 60px; }
         .service-row:nth-child(even) { flex-direction: row-reverse; }
         .service-img { flex: 1; min-width: 300px; }
-        .service-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .service-img img { width: 100%; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); object-fit: cover; }
         .service-text { flex: 1; min-width: 300px; }
-        .service-text h3 { font-size: 2rem; color: var(--primary); margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+        .service-text h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; font-family: 'Playfair Display', serif; }
         .service-text p { margin-bottom: 20px; text-align: justify; }
         .service-list { list-style: none; margin-top: 20px; }
         .service-list li { margin-bottom: 10px; display: flex; align-items: center; }
-        .service-list i { color: var(--gold); margin-right: 15px; font-size: 20px; }
+        .service-list i { color: var(--gold); margin-right: 15px; font-size: 18px; }
 
-        /* --- İŞ AKIŞI (NASIL ÇALIŞIRIZ) --- */
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center; }
-        .step-box { background: white; padding: 40px 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; }
-        .step-number { width: 60px; height: 60px; background: var(--gold); color: white; font-size: 24px; font-weight: bold; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin: 0 auto 20px; }
-        .step-box h4 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; }
+        /* --- İŞ AKIŞI --- */
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; text-align: center; }
+        .step-box { background: white; padding: 30px 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .step-number { width: 50px; height: 50px; background: var(--gold); color: white; font-size: 20px; font-weight: bold; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin: 0 auto 15px; }
+        .step-box h4 { color: var(--primary); font-size: 1.1rem; margin-bottom: 10px; }
 
-        /* --- BÖLGELER & SEO --- */
-        .districts { background: var(--primary); color: white; padding: 80px 5%; text-align: center; }
-        .districts h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px; color: var(--gold); }
-        .districts p { max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem; font-weight: 300; }
-        .tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        .tag { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 12px 25px; border-radius: 50px; font-weight: 300; letter-spacing: 1px; }
+        /* --- BÖLGELER --- */
+        .districts { background: var(--primary); color: white; padding: 60px 5%; text-align: center; }
+        .districts h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--gold); }
+        .tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 30px; }
+        .tag { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; }
 
-        /* --- FOOTER & İLETİŞİM --- */
-        footer { background: #0a1f3d; color: #a0aabf; padding: 80px 5% 30px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
-        .footer-col h4 { color: white; font-size: 1.5rem; margin-bottom: 25px; font-family: 'Playfair Display', serif; }
+        /* --- FOOTER --- */
+        footer { background: #0a1f3d; color: #a0aabf; padding: 60px 5% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: white; font-size: 1.3rem; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
         .contact-info p { margin-bottom: 15px; display: flex; align-items: center; }
         .contact-info i { color: var(--gold); width: 30px; font-size: 1.2rem; }
-        .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; font-size: 0.9rem; }
+        .footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.85rem; }
 
         /* --- SABİT WHATSAPP BUTONU --- */
-        .float-wa { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 15px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: 0.3s; text-decoration: none; }
+        .float-wa { position: fixed; width: 55px; height: 55px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 15px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: 0.3s; text-decoration: none; }
         .float-wa:hover { transform: scale(1.1); }
 
-        /* --- MOBİL UYUM --- */
+        /* =========================================
+           MOBİL UYUM (TAŞMALARI DÜZELTEN KISIM)
+           ========================================= */
         @media (max-width: 992px) {
-            nav { display: none; } /* Mobilde üst menüyü gizle, temiz dursun */
-            .hero h1 { font-size: 2.8rem; }
-            .hero { text-align: center; justify-content: center; height: 70vh; }
-            .btn-gold { margin-right: 0; margin-bottom: 15px; display: block; }
-            .btn-outline { display: block; }
+            nav { display: none; } /* Mobilde üst menüyü gizle */
+            .top-bar { flex-direction: column; text-align: center; gap: 8px; padding: 12px 5%; }
+            
+            .hero { text-align: center; padding: 40px 5% 60px; min-height: auto; }
+            .hero-content { margin-top: 0; }
+            .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+            .hero p { font-size: 1rem; margin-bottom: 30px; }
+            
+            /* Butonların üst üste binmesini engeller */
+            .btn-container { flex-direction: column; gap: 15px; width: 100%; }
+            .btn { width: 100%; padding: 18px 20px; font-size: 14px; }
+            
+            /* WhatsApp butonunu yazılardan uzaklaştırır */
+            .float-wa { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 28px; }
+            
+            .section-title h2 { font-size: 2rem; }
+            .service-text { text-align: center; }
+            .service-list li { justify-content: center; text-align: left; }
         }
     </style>
 </head>
@@ -125,10 +140,12 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Evinize Yakışan <span>Kusursuz Temizlik</span></h1>
+        <h1>Evinize Yakışan <br><span>Kusursuz Temizlik</span></h1>
         <p>Ankara'nın en modern halı yıkama fabrikası. Etimesgut, Sincan, Çayyolu ve Bağlıca'da binlerce mutlu müşterimiz arasına katılın. Leke garantili, antibakteriyel ve hızlı hizmet.</p>
-        <a href="tel:05362333675" class="btn btn-gold"><i class="fas fa-phone-alt"></i> Ücretsiz Servis Çağır</a>
-        <a href="https://wa.me/905362333675" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Fiyat Bilgisi Al</a>
+        <div class="btn-container">
+            <a href="tel:05362333675" class="btn btn-gold"><i class="fas fa-phone-alt"></i> Ücretsiz Servis Çağır</a>
+            <a href="https://wa.me/905362333675" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Fiyat Bilgisi Al</a>
+        </div>
     </div>
 </section>
 
@@ -138,36 +155,36 @@
         <h2>Profesyonel Çözümler</h2>
     </div>
 
-    <!-- Halı Yıkama SEO Metni -->
+    <!-- Halı Yıkama - Yeni Halı Görseli -->
     <div class="service-row">
         <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1603712725038-e9334ae8ce0e?auto=format&fit=crop&w=800&q=80" alt="Ankara Halı Yıkama Fabrikası">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Ankara Halı Yıkama Fabrikası">
         </div>
         <div class="service-text">
             <h3>Derinlemesine Halı Yıkama</h3>
-            <p><strong>Etimesgut halı yıkama</strong> sektöründe öncü olan Yaprak Halı Yıkama, halılarınızı sıradan yöntemlerle değil, tam otomatik 12 fırçalı endüstriyel makinelerde yıkar. Halılarınızın iplik yapısına (Makine, yün, ipek, bambu, shaggy) uygun özel şampuanlar seçilir.</p>
-            <p>Özellikle evcil hayvan besleyen veya küçük çocuğu olan aileler için uyguladığımız <strong>antibakteriyel dezenfeksiyon</strong> işlemi, halının dibine çökmüş mayt, akar ve alerjenleri tamamen yok eder. Kapalı kurutma odalarımız sayesinde halılarınız dışarıdaki egzoz dumanına veya toza maruz kalmadan tertemiz paketlenir.</p>
+            <p><strong>Etimesgut halı yıkama</strong> sektöründe öncü olan Yaprak Halı Yıkama, halılarınızı sıradan yöntemlerle değil, tam otomatik 12 fırçalı endüstriyel makinelerde yıkar. Halılarınızın iplik yapısına uygun özel şampuanlar seçilir.</p>
+            <p>Kapalı kurutma odalarımız sayesinde halılarınız dışarıdaki egzoz dumanına veya toza maruz kalmadan, nemi tamamen alınmış şekilde tertemiz paketlenir.</p>
             <ul class="service-list">
                 <li><i class="fas fa-check-circle"></i> Tam Otomatik Makinelerde El Değmeden Yıkama</li>
-                <li><i class="fas fa-check-circle"></i> İnatçı Lekelere Özel Kimyasal Olmayan Müdahale</li>
-                <li><i class="fas fa-check-circle"></i> %100 Kuruma ve Hijyenik Paketleme Garanti</li>
+                <li><i class="fas fa-check-circle"></i> İnatçı Lekelere Özel Müdahale</li>
+                <li><i class="fas fa-check-circle"></i> %100 Kuruma ve Hijyenik Paketleme</li>
             </ul>
         </div>
     </div>
 
-    <!-- Koltuk Yıkama SEO Metni -->
+    <!-- Yerinde Yıkama - Yeni Dokuma/Halı Görseli -->
     <div class="service-row">
         <div class="service-img">
-            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80" alt="Yerinde Koltuk Yıkama Ankara">
+            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=80" alt="Yerinde Yıkama Ankara">
         </div>
         <div class="service-text">
-            <h3>Yerinde Koltuk & Yatak Yıkama</h3>
-            <p>Ev taşıma, tadilat sonrası veya rutin temizlik... <strong>Sincan, Çayyolu ve İncek koltuk yıkama</strong> taleplerinizde evinize kadar gelerek, yüksek vakumlu makinelerimizle profesyonel hizmet sunuyoruz.</p>
-            <p>Koltuk kumaşınız (tay tüyü, keten, kadife vb.) analiz edildikten sonra, kumaşa zarar vermeyen sıcak su ve özel solüsyonlarla kumaşın içine işlemiş ter, kir ve yemek lekeleri kusursuzca sökülüp alınır. Vakum gücü yüksek makinelerimiz sayesinde koltuklarınız aynı gün içinde kurumaya başlar ve kullanıma hazır hale gelir.</p>
+            <h3>Yerinde Koltuk ve Halıfleks Yıkama</h3>
+            <p><strong>Sincan, Çayyolu ve İncek</strong> bölgelerinde evinize kadar gelerek, taşınması zor olan halıflekslerinizi ve koltuklarınızı yüksek vakumlu makinelerimizle yıkıyoruz.</p>
+            <p>Kumaş ve iplik yapısı analiz edildikten sonra, dokuya zarar vermeyen özel solüsyonlarla kir ve yemek lekeleri kusursuzca sökülüp alınır. Vakum gücü yüksek makinelerimiz sayesinde eşyalarınız aynı gün içinde kullanıma hazır hale gelir.</p>
             <ul class="service-list">
-                <li><i class="fas fa-check-circle"></i> Kumaş Türüne Özel Hassas Temizlik</li>
+                <li><i class="fas fa-check-circle"></i> Dokuya Özel Hassas Temizlik</li>
                 <li><i class="fas fa-check-circle"></i> Yüksek Emiş Gücü ile Derinlemesine Vakum</li>
-                <li><i class="fas fa-check-circle"></i> Renk Solmasını Engelleyen Koruyucu Bakım</li>
+                <li><i class="fas fa-check-circle"></i> Renk Solmasını Engelleyen Bakım</li>
             </ul>
         </div>
     </div>
@@ -182,7 +199,7 @@
         <div class="step-box">
             <div class="step-number">1</div>
             <h4>Ücretsiz Servis</h4>
-            <p>Ankara'nın neresinde olursanız olun, halılarınızı kapınızdan makbuz karşılığı güvenle teslim alıyoruz.</p>
+            <p>Ankara'nın neresinde olursanız olun, halılarınızı kapınızdan makbuz karşılığı teslim alıyoruz.</p>
         </div>
         <div class="step-box">
             <div class="step-number">2</div>
@@ -192,11 +209,11 @@
         <div class="step-box">
             <div class="step-number">3</div>
             <h4>Sıkma ve Kurutma</h4>
-            <p>Boru tipi rulo sıkma makinelerinde suyu %95 oranında atılır, kapalı odalarda nemi alınır.</p>
+            <p>Suyu %95 oranında atılır, kapalı odalarda nemi alınarak kurutulur.</p>
         </div>
         <div class="step-box">
             <div class="step-number">4</div>
-            <h4>Paketleme ve Teslimat</h4>
+            <h4>Paketleme</h4>
             <p>Son kalite kontrolü yapılan halılarınız parfümlenip ambalajlanarak size teslim edilir.</p>
         </div>
     </div>
@@ -204,7 +221,7 @@
 
 <section id="bolgeler" class="districts">
     <h2>Ankara'nın Dört Bir Yanına Kesintisiz Hizmet</h2>
-    <p>Merkez fabrikamız Etimesgut'ta bulunmasına rağmen, geniş servis araç filomuz ile Ankara'nın en seçkin semtlerine hiçbir ek nakliye ücreti talep etmeden ulaşıyoruz. Hızlı rotalama sistemimiz sayesinde zamanınızı boşa harcamıyoruz.</p>
+    <p style="max-width: 800px; margin: 0 auto; font-weight: 300;">Merkez fabrikamız Etimesgut'ta bulunmasına rağmen, geniş servis araç filomuz ile Ankara'nın en seçkin semtlerine hiçbir ek nakliye ücreti talep etmeden ulaşıyoruz.</p>
     <div class="tags">
         <div class="tag">📍 Etimesgut Merkez</div>
         <div class="tag">📍 Sincan</div>
@@ -215,9 +232,6 @@
         <div class="tag">📍 Yaşamkent</div>
         <div class="tag">📍 Eryaman</div>
         <div class="tag">📍 Yenimahalle</div>
-        <div class="tag">📍 Batıkent</div>
-        <div class="tag">📍 Keçiören</div>
-        <div class="tag">📍 Çukurambar</div>
     </div>
 </section>
 
@@ -225,31 +239,24 @@
     <div class="footer-grid">
         <div class="footer-col">
             <h4>Yaprak Halı Yıkama</h4>
-            <p>2026 yılından bu yana edindiğimiz tecrübe ile Ankara'da temizliğin standartlarını belirliyoruz. Sizin sağlığınız, bizim referansımızdır.</p>
+            <p>Edindiğimiz tecrübe ile Ankara'da temizliğin standartlarını belirliyoruz. Sizin sağlığınız, bizim referansımızdır.</p>
         </div>
         <div class="footer-col contact-info">
             <h4>İletişim</h4>
             <p><i class="fas fa-map-marker-alt"></i> İstasyon Mahallesi, Etimesgut / Ankara</p>
             <p><i class="fas fa-phone-alt"></i> 0536 233 36 75</p>
             <p><i class="fab fa-whatsapp"></i> 0536 233 36 75</p>
-            <p><i class="fas fa-envelope"></i> bilgi@yaprakhaliyikama.com</p>
-        </div>
-        <div class="footer-col">
-            <h4>Hizmetler</h4>
-            <p>Halı Yıkama</p>
-            <p>Yerinde Koltuk Yıkama</p>
-            <p>Yorgan ve Battaniye Yıkama</p>
-            <p>Stor Perde Yıkama</p>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2026 Yaprak Halı Yıkama Ankara. Tüm Hakları Saklıdır. Google Ads Optimizasyonlu Tasarım.
+        &copy; 2026 Yaprak Halı Yıkama Ankara. Tüm Hakları Saklıdır.
     </div>
 </footer>
 
 <!-- Sabit WhatsApp Butonu -->
-<a href="https://wa.me/905000000000" class="float-wa" target="_blank">
+<a href="https://wa.me/905362333675" class="float-wa" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 </body>
+</html>
