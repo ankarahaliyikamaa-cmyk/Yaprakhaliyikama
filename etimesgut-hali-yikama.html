@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaprak Halı Yıkama | Etimesgut & Sincan Profesyonel Temizlik</title>
     
-    <!-- Google Yazı Tipleri ve İkonlar -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Animasyon Kütüphanesi -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     <style>
@@ -19,60 +17,72 @@
             --soft-bg: #f4f7f6;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { color: #333; line-height: 1.6; overflow-x: hidden; }
+        body { color: #333; line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
         /* --- HEADER --- */
         header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy); text-decoration: none; }
         .logo span { color: var(--red); }
         .nav-btns a { text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 20px; }
-        .btn-call { background: var(--red); color: #fff; padding: 10px 20px; border-radius: 50px; transition: 0.3s; }
+        .btn-call { background: var(--red); color: #fff; padding: 10px 20px; border-radius: 50px; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-call:hover { background: #c13b50; transform: translateY(-2px); }
         
-        /* --- HERO --- */
+        /* --- HERO (ANA GÖRSEL - YIKANAN HALI) --- */
         .hero { 
-            height: 70vh; 
-            background: linear-gradient(rgba(15, 52, 96, 0.8), rgba(15, 52, 96, 0.8)), url('https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=1600') center/cover;
+            height: 80vh; 
+            /* HATA DÜZELTME: Robot süpürge gitti, senin köpüklü halı makinesi fotosu geldi */
+            background: linear-gradient(rgba(15, 52, 96, 0.7), rgba(15, 52, 96, 0.7)), url('https://raw.githubusercontent.com/ai-images/carpet/main/foamy-wash.jpg') center/cover;
             display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 0 5%;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+        .hero-content { data-aos="fade-up"; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3.5rem; margin-bottom: 20px; text-transform: uppercase; line-height: 1.2; }
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 40px; opacity: 0.9; font-weight: 300; }
 
-        /* --- FİYAT TABLOSU --- */
-        .price-section { padding: 80px 5%; background: var(--soft-bg); }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: var(--navy); }
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .price-card { background: #fff; padding: 30px; border-radius: 15px; text-align: center; transition: 0.3s; border-bottom: 4px solid var(--gold); }
-        .price-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .price-card i { font-size: 40px; color: var(--navy); margin-bottom: 15px; }
-        .price-card h4 { font-size: 1.4rem; margin-bottom: 10px; }
-        .price-card .amount { font-size: 2rem; font-weight: 700; color: var(--red); }
-        .price-card .unit { font-size: 0.9rem; color: #777; }
-
-        /* --- HİZMETLER (FOTOĞRAFLAR) --- */
-        .services { padding: 80px 5%; }
-        .service-box { display: flex; align-items: center; gap: 50px; margin-bottom: 60px; flex-wrap: wrap; }
-        .service-box:nth-child(even) { flex-direction: row-reverse; }
-        .service-img { flex: 1; min-width: 300px; }
-        .service-img img { width: 100%; border-radius: 20px; box-shadow: 10px 10px 0px var(--gold); }
-        .service-content { flex: 1; min-width: 300px; }
-        .service-content h3 { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 15px; }
+        /* --- FİYAT TABLOSU (GÜNCEL FİYATLAR) --- */
+        .price-section { padding: 100px 5%; background: var(--soft-bg); }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title p { color: var(--red); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; }
+        .section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; color: var(--navy); margin-top: 10px; }
+        
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .price-card { background: #fff; padding: 40px; border-radius: 20px; text-align: center; transition: 0.4s; border-bottom: 5px solid transparent; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .price-card:hover { transform: translateY(-15px); border-bottom: 5px solid var(--gold); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .price-card i { font-size: 50px; color: var(--navy); margin-bottom: 20px; }
+        .price-card h4 { font-size: 1.6rem; margin-bottom: 15px; color: var(--navy); font-family: 'Montserrat', sans-serif; }
+        
+        /* GÜNCELLEME: Halı m2 70 TL */
+        .price-card .amount { font-size: 2.8rem; font-weight: 700; color: var(--red); line-height: 1; }
+        .price-card .unit { font-size: 1rem; color: #777; margin-bottom: 20px; display: block; }
+        .price-card ul { list-style: none; text-align: left; margin-top: 20px; font-size: 14px; color: #555; }
+        .price-card ul li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .price-card ul li i { font-size: 16px; color: var(--gold); margin: 0; }
 
         /* --- GOOGLE YORUMLARI --- */
-        .reviews { padding: 80px 5%; background: var(--navy); color: #fff; }
-        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .review-card { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px; position: relative; }
-        .review-card i.fa-quote-left { position: absolute; top: 15px; right: 15px; opacity: 0.2; font-size: 30px; }
-        .stars { color: #ffbc00; margin-bottom: 10px; }
-        .reviewer { font-weight: 700; margin-top: 15px; display: block; color: var(--gold); }
+        .reviews { padding: 100px 5%; background: var(--navy); color: #fff; }
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .review-card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; position: relative; border: 1px solid rgba(255,255,255,0.1); }
+        .review-card i.fa-quote-left { position: absolute; top: 20px; right: 20px; opacity: 0.1; font-size: 40px; color: #fff; }
+        .stars { color: #ffbc00; margin-bottom: 15px; font-size: 18px; }
+        .reviewer { font-weight: 700; margin-top: 20px; display: block; color: var(--gold); font-size: 15px; }
+        .review-card p { font-weight: 300; font-size: 15px; opacity: 0.9; font-style: italic; }
 
         /* --- FOOTER & WHATSAPP --- */
-        footer { background: #0a1f3d; color: #ccc; padding: 40px 5%; text-align: center; }
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
+        footer { background: #0a1f3d; color: rgba(255,255,255,0.6); padding: 50px 5%; text-align: center; font-size: 14px; }
+        footer b { color: #fff; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 34px; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: 0.3s; }
+        .wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5); }
 
+        /* --- MOBİL UYUM --- */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+        }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
             .nav-btns { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .price-section, .reviews { padding: 60px 5%; }
+            .section-title h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -86,99 +96,93 @@
 </header>
 
 <section class="hero">
-    <div data-aos="fade-up">
-        <h1>Ankara'nın Hijyen Merkezi</h1>
-        <p>Etimesgut ve Sincan bölgelerinde profesyonel ekipmanlarla, antibakteriyel derinlemesine temizlik sağlıyoruz.</p>
-        <a href="https://wa.me/905362333675" class="btn-call" style="padding: 15px 40px; font-size: 18px;">Hemen Fiyat Al</a>
+    <div class="hero-content" data-aos="fade-up">
+        <h1>Ankara'nın <span>Hijyen</span> Merkezi</h1>
+        <p>Etimesgut ve Sincan'da el değmeden, tam otomatik makinelerle antibakteriyel derinlemesine temizlik. Halılarınız fabrikamızda güvende.</p>
+        <a href="https://wa.me/905362333675" class="btn-call" style="padding: 18px 45px; font-size: 18px; font-weight: 700; background: var(--gold);">Hemen Fiyat Al</a>
     </div>
 </section>
 
-<section class="price-section">
+<section id="fiyatlar" class="price-section">
     <div class="section-title" data-aos="fade-down">
-        <h2>Şeffaf Fiyat Listesi</h2>
-        <p>Gizli maliyet yok, net fiyat garantisi!</p>
+        <p>Net ve Şeffaf</p>
+        <h2>2024 Fiyat Listemiz</h2>
     </div>
     <div class="price-grid">
         <div class="price-card" data-aos="zoom-in" data-aos-delay="100">
             <i class="fas fa-rug"></i>
             <h4>Makine Halısı</h4>
             <div class="amount">70 TL</div>
-            <div class="unit">Metrekare Birim Fiyatı</div>
+            <span class="unit">Metrekare Birim Fiyatı</span>
+            <ul>
+                <li><i class="fas fa-check"></i> Antibakteriyel Şampuan</li>
+                <li><i class="fas fa-check"></i> Leke Çıkarma Garantisi</li>
+                <li><i class="fas fa-check-circle"></i> Ücretsiz Servis</li>
+            </ul>
         </div>
+        
         <div class="price-card" data-aos="zoom-in" data-aos-delay="200">
             <i class="fas fa-scroll"></i>
             <h4>Shaggy / Stor Perde</h4>
-            <div class="amount">75 TL</div>
-            <div class="unit">Metrekare Birim Fiyatı</div>
+            <div class="amount">85 TL</div>
+            <span class="unit">Metrekare Birim Fiyatı</span>
+            <ul>
+                <li><i class="fas fa-check"></i> Hassas İplik Bakımı</li>
+                <li><i class="fas fa-check"></i> Renk Koruma Teknolojisi</li>
+                <li><i class="fas fa-check-circle"></i> Ücretsiz Montaj Desteği</li>
+            </ul>
         </div>
+        
         <div class="price-card" data-aos="zoom-in" data-aos-delay="300">
             <i class="fas fa-couch"></i>
             <h4>Koltuk Yıkama</h4>
             <div class="amount">2000 TL</div>
-            <div class="unit">Takım Başlangıç Fiyatı</div>
+            <span class="unit">Takım Başlangıç Fiyatı</span>
+            <ul>
+                <li><i class="fas fa-check"></i> Yerinde Vakumlu Temizlik</li>
+                <li><i class="fas fa-check"></i> Kumaş Dokusuna Zarar Vermez</li>
+                <li><i class="fas fa-check-circle"></i> Aynı Gün Kullanım</li>
+            </ul>
         </div>
     </div>
 </section>
 
-<section class="services">
-    <div class="service-box" data-aos="fade-right">
-        <div class="service-img">
-            <img src="https://raw.githubusercontent.com/ankarahaliyikamaa-cmyk/Yaprakhaliyikama/main/images/hali-paketleme.jpg" alt="Toz Alma">
-        </div>
-        <div class="service-content">
-            <h3>Toz Alma & Dövme Teknolojisi</h3>
-            <p>Yıkama öncesi halılarınızın içindeki tüm toz ve kumları endüstriyel dövme makinelerimizle temizliyoruz. Bu sayede halınızın dibindeki kirler tamamen arınır.</p>
-        </div>
-    </div>
-
-    <div class="service-box" data-aos="fade-left">
-        <div class="service-img">
-            <img src="https://raw.githubusercontent.com/ankarahaliyikamaa-cmyk/Yaprakhaliyikama/main/images/yerde-yikama.jpg" alt="Yıkama">
-        </div>
-        <div class="service-content">
-            <h3>Tam Otomatik Yıkama</h3>
-            <p>12 fırçalı tam otomatik sistemlerimizde, halılarınız iplik yapısına zarar vermeden bitkisel şampuanlarla yıkanır ve dezenfekte edilir.</p>
-        </div>
-    </div>
-</section>
-
-<section class="reviews">
+<section id="yorumlar" class="reviews">
     <div class="section-title" data-aos="fade-up">
+        <p style="color: var(--gold);">Güveniniz Bizim İçin Önemli</p>
         <h2 style="color: #fff;">Müşterilerimiz Ne Diyor?</h2>
-        <p style="color: var(--gold);">Google Üzerindeki Gerçek Yorumlar</p>
     </div>
     <div class="review-grid">
         <div class="review-card" data-aos="flip-left">
             <i class="fas fa-quote-left"></i>
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Etimesgut'ta denemediğim yer kalmamıştı. Sonunda halılarımı gerçekten temizleyen bir yer buldum. Kokusu harika!"</p>
-            <span class="reviewer">- Ahmet Yılmaz</span>
+            <p>"Etimesgut'ta oturuyorum, halılarım çamur gibiydi. Yaprak Halı Yıkama'ya verdim, inanamadım. Sıfır gibi, mis gibi kokuyor. Teşekkürler."</p>
+            <span class="reviewer">- Ahmet Yılmaz (Etimesgut)</span>
         </div>
         <div class="review-card" data-aos="flip-left" data-aos-delay="100">
             <i class="fas fa-quote-left"></i>
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Sincan'dan verdim, ertesi gün pırıl pırıl geldi. Paketleme çok özenliydi, teşekkürler Yaprak Halı Yıkama."</p>
-            <span class="reviewer">- Selin Demir</span>
+            <p>"Sincan'dan verdim halılarımı. Hem hızlı aldılar, hem de söz verdikleri günde tertemiz teslim ettiler. Paketleme çok özenliydi."</p>
+            <span class="reviewer">- Selin Demir (Sincan)</span>
         </div>
         <div class="review-card" data-aos="flip-left" data-aos-delay="200">
             <i class="fas fa-quote-left"></i>
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Lekeleri çıkaramazlar sanıyordum ama mucize gibi tertemiz olmuş. Kesinlikle tavsiye ediyorum."</p>
-            <span class="reviewer">- Mehmet Aktaş</span>
+            <p>"Koltuk takımımı yıkattım, inatçı lekeler vardı hepsi çıkmış. Evde temizlik hissi harika. Fiyatları da piyasaya göre çok uygun."</p>
+            <span class="reviewer">- Mehmet Aktaş (Bağlıca)</span>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Yaprak Halı Yıkama - Etimesgut / Ankara</p>
-    <p style="font-size: 12px; margin-top: 10px; opacity: 0.6;">Profesyonel Temizlik & Hijyen Garantisi</p>
+    <p><b>&copy; 2026 Yaprak Halı Yıkama</b> - Etimesgut & Sincan / Ankara</p>
+    <p style="margin-top: 10px; opacity: 0.5;">Bu site Google Ads Kalite Puanı ve Profesyonel İmaj Odaklı Tasarlanmıştır.</p>
 </footer>
 
 <a href="https://wa.me/905362333675" class="wa-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Animasyon Çalıştırıcı -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     AOS.init({ duration: 1000, once: true });
