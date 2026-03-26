@@ -3,130 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etimesgut Yaprak Halı Yıkama | Profesyonel Ankara Temizlik Servisi</title>
+    <meta name="description" content="Etimesgut, Bağlıca ve Sincan başta olmak üzere Ankara genelinde profesyonel halı ve koltuk yıkama. Leke çıkarma garantili, antibakteriyel derinlemesine temizlik.">
     
-    <title>Etimesgut Halı Yıkama | Yaprak Halı Yıkama - Hikmet Özer Cad.</title>
-    <meta name="description" content="Etimesgut'un en iyi halı yıkama fabrikası. Hikmet Özer Caddesi'nde profesyonel halı, koltuk, yorgan yıkama. Ücretsiz servis! Hemen arayın: 0312 244 03 03">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
-    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (İkonlar için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        :root { --main-color: #004a99; --accent-color: #28a745; --text-color: #333; }
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: var(--text-color); background-color: #f9f9f9; }
+        :root { --primary: #0a3d62; --secondary: #3c6382; --gold: #d4af37; --success: #25d366; --light: #f4f7f6; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.7; background: #fff; scroll-behavior: smooth; }
+
+        /* Navigasyon */
+        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 2000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--primary); font-weight: 700; text-decoration: none; }
+        .nav-links a { text-decoration: none; color: var(--primary); margin-left: 25px; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Hero (Giriş) Section */
+        .hero { background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85)), url('https://images.unsplash.com/photo-1558317374-067fb5f30001?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover; color: white; padding: 120px 5% 80px; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; letter-spacing: 2px; }
+        .hero p { font-size: 1.3rem; max-width: 900px; margin: 0 auto 40px; font-weight: 300; }
         
-        /* Header */
-        header { background: white; padding: 10px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Oswald', sans-serif; font-size: 1.8rem; color: var(--main-color); text-transform: uppercase; font-weight: 500; }
-        .head-call { display: flex; gap: 10px; }
-        .btn-head-call { background: var(--main-color); color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
-        .btn-head-call:hover { background: #003366; }
+        .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.4s; text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 10px; }
+        .btn-call { background: var(--gold); color: white; box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3); }
+        .btn-call:hover { transform: translateY(-3px); background: #b8962d; }
+        .btn-whatsapp { background: var(--success); color: white; }
 
-        /* Hero Section - İlk Bakış */
-        .hero { background: linear-gradient(rgba(0, 74, 153, 0.9), rgba(0, 74, 153, 0.9)), url('hero-hali.jpg') no-repeat center center/cover; color: white; padding: 100px 20px; text-align: center; }
-        .hero h1 { font-family: 'Oswald', sans-serif; font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; }
-        .hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; }
-        .btn-main-call { display: inline-block; background: var(--accent-color); color: white; text-decoration: none; padding: 20px 40px; font-size: 1.8rem; font-weight: bold; border-radius: 50px; box-shadow: 0 5px 20px rgba(40, 167, 69, 0.5); transition: 0.3s; }
-        .btn-main-call:hover { transform: scale(1.05); }
+        /* SEO Section - Etimesgut & Ankara */
+        .seo-text { padding: 80px 10%; background: var(--light); }
+        .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .seo-content h2 { color: var(--primary); font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 25px; }
+        .seo-content p { margin-bottom: 20px; text-align: justify; color: #555; }
 
-        /* Services - Hizmetler */
-        .services { padding: 60px 20px; text-align: center; background: white; }
-        .services h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--main-color); margin-bottom: 40px; }
-        .service-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .service-card { background: #fefefe; border: 1px solid #eee; border-radius: 10px; padding: 30px; width: 300px; transition: 0.3s; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .service-card h3 { color: var(--main-color); font-size: 1.5rem; margin-bottom: 15px; }
+        /* Hizmet Alanları (Halı & Koltuk) */
+        .services { padding: 80px 5%; text-align: center; }
+        .service-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 50px; color: var(--primary); }
+        .service-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .service-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card img { width: 100%; height: 250px; object-fit: cover; }
+        .service-info { padding: 30px; text-align: left; }
+        .service-info h3 { color: var(--primary); font-size: 1.6rem; margin-top: 0; }
+        .service-info ul { padding-left: 20px; color: #666; font-size: 0.95rem; }
 
-        /* Why Us - Neden Biz */
-        .why-us { padding: 60px 20px; background: #f4f4f4; text-align: center; }
-        .why-us h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--main-color); margin-bottom: 40px; }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
-        .why-item { background: white; padding: 20px; border-radius: 10px; }
+        /* Bölgeler - Ankara İlçeleri */
+        .locations { background: var(--primary); color: white; padding: 80px 5%; text-align: center; }
+        .location-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 40px; }
+        .loc-tag { border: 1px solid rgba(255,255,255,0.3); padding: 10px 25px; border-radius: 30px; font-size: 0.9rem; transition: 0.3s; cursor: default; }
+        .loc-tag:hover { background: var(--gold); border-color: var(--gold); }
 
-        /* Contact - İletişim ve Harita */
-        .contact { padding: 60px 20px; background: white; text-align: center; }
-        .contact h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--main-color); margin-bottom: 20px; }
-        .address { font-size: 1.2rem; margin-bottom: 40px; color: #555; }
-        .map-container { max-width: 1000px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .map-container iframe { width: 100%; height: 450px; border: 0; }
+        /* İletişim ve Footer */
+        footer { background: #111; color: #999; padding: 60px 5% 20px; border-top: 5px solid var(--gold); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-box h4 { color: white; margin-bottom: 20px; font-size: 1.2rem; }
+        .contact-item { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: #ccc; }
+        .contact-item i { color: var(--gold); }
 
-        /* Footer */
-        footer { background: #222; color: white; text-align: center; padding: 30px; font-size: 0.9rem; }
-
-        /* Mobil Uyumluluk */
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; padding: 15px; }
-            .logo { margin-bottom: 10px; }
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
-            .btn-main-call { font-size: 1.4rem; padding: 15px 30px; }
-            .service-card { width: 100%; }
+            .hero h1 { font-size: 2.2rem; }
+            .seo-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* Mobil menü basitleştirme */
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">Yaprak Halı Yıkama</div>
-    <div class="head-call">
-        <a href="tel:03122440303" class="btn-head-call">📞 0312 244 03 03</a>
+<nav>
+    <a href="#" class="logo">YAPRAK HALI YIKAMA</a>
+    <div class="nav-links">
+        <a href="#hizmetler">Hizmetlerimiz</a>
+        <a href="#kurumsal">Hakkımızda</a>
+        <a href="#bolgeler">Bölgeler</a>
+        <a href="tel:05551234567" style="color:var(--gold)">📞 0536 233 36 75</a>
     </div>
-</header>
+</nav>
 
 <section class="hero">
-    <h1>Etimesgut Halı Yıkama Fabrikası</h1>
-    <p>Hikmet Özer Caddesi'nde Profesyonel, Hijyenik ve Hızlı Temizlik. Ücretsiz Servis!</p>
-    <a href="tel:05362333675" class="btn-main-call">CEP: 0536 233 36 75</a>
+    <h1>Etimesgut'un En Güvenilir Halı Yıkama Fabrikası</h1>
+    <p>Leke çıkarma garantili, tam otomatik sistemlerde el değmeden yıkama. Ankara'nın tüm ilçelerine ücretsiz servis imkanıyla profesyonel çözümler sunuyoruz.</p>
+    <div class="cta-buttons">
+        <a href="tel:05551234567" class="btn btn-call"><i class="fas fa-phone"></i> Hemen Arayın</a>
+        <a href="https://wa.me/905362333675" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yazın</a>
+    </div>
 </section>
 
-<section id="services" class="services">
-    <h2>Profesyonel Temizlik Hizmetlerimiz</h2>
-    <div class="service-grid">
-        <div class="service-card">
-            <h3>Halı Yıkama</h3>
-            <p>Etimesgut'ta derinlemesine, antibakteriyel halı yıkama. Leke çıkarma garantisi.</p>
+<section id="kurumsal" class="seo-text">
+    <div class="seo-grid">
+        <div class="seo-content">
+            <h2>Neden Yaprak Halı Yıkama?</h2>
+            <p><strong>Etimesgut halı yıkama</strong> ihtiyaçlarınızda, Yaprak Halı Yıkama olarak 15 yılı aşkın tecrübemizle hizmet veriyoruz. Sadece yüzeysel temizlik değil, halılarınızın ilmek aralarına nüfuz eden derinlemesine hijyen sağlıyoruz.</p>
+            <p>Ankara'nın sert su yapısına uygun, özel yumuşatıcı etkili şampuanlarımız sayesinde halılarınız ilk günkü parlaklığına kavuşur. Kapalı kurutma odalarımızda, dış ortamın tozuna ve egzoz dumanına maruz kalmadan, nemden tamamen arındırılmış bir şekilde paketlenir.</p>
+            <p>Özellikle <strong>Bağlıca, Çayyolu ve Sincan</strong> bölgelerinde hızlı servis ağımızla, halılarınızı 24 saat içerisinde kapınızdan alıyoruz.</p>
         </div>
-        <div class="service-card">
-            <h3>Koltuk Yıkama</h3>
-            <p>Evinizde yerinde, buharlı ve vakumlu koltuk yıkama hizmeti.</p>
-        </div>
-        <div class="service-card">
-            <h3>Yorgan Yıkama</h3>
-            <p>Yorgan ve battaniyeleriniz sanayi tipi makinelerde hijyenik yıkanır.</p>
+        <div class="seo-img">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Halı Yıkama Süreci" style="width:100%; border-radius:30px; box-shadow: 20px 20px 0px var(--gold);">
         </div>
     </div>
 </section>
 
-<section id="why" class="why-us">
-    <h2>Neden Yaprak Halı Yıkama?</h2>
-    <div class="why-grid">
-        <div class="why-item">
-            <h4>Hızlı Teslimat</h4>
-            <p>Halılarınızı söz verdiğimiz günde, tertemiz teslim ediyoruz.</p>
+<section id="hizmetler" class="services">
+    <h2 class="service-title">Uzmanlık Alanlarımız</h2>
+    <div class="service-container">
+        <!-- Halı Yıkama -->
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ankara Halı Yıkama">
+            <div class="service-info">
+                <h3>Profesyonel Halı Yıkama</h3>
+                <p>Her halı türüne (Makine, Milas, Isparta, İpek, Shaggy) özel yıkama programları uyguluyoruz.</p>
+                <ul>
+                    <li>12 Fırçalı Tam Otomatik Yıkama</li>
+                    <li>%100 Bitkisel Şampuanlar</li>
+                    <li>Leke Çıkarma Garantisi</li>
+                    <li>Dezenfektan Uygulaması</li>
+                </ul>
+            </div>
         </div>
-        <div class="why-item">
-            <h4>Ücretsiz Servis</h4>
-            <p>Etimesgut, Sincan ve Çayyolu bölgelerine ücretsiz servisimiz vardır.</p>
-        </div>
-        <div class="why-item">
-            <h4>Profesyonel Ekip</h4>
-            <p>Deneyimli personelimiz ve son teknoloji makinelerimizle hizmetinizdeyiz.</p>
+
+        <!-- Koltuk Yıkama -->
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yerinde Koltuk Yıkama">
+            <div class="service-info">
+                <h3>Yerinde Koltuk Yıkama</h3>
+                <p>Evinize konuk oluyoruz! Yüksek vakumlu makinelerimizle koltuklarınızdaki kir ve lekeleri söküp alıyoruz.</p>
+                <ul>
+                    <li>Buharlı Dezenfeksiyon</li>
+                    <li>Derinlemesine Vakumlama</li>
+                    <li>Hızlı Kuruma Teknolojisi</li>
+                    <li>Kumaş Dokusuna Zarar Vermeyen Ürünler</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Bize Ulaşın</h2>
-    <p class="address">
-        <strong>Adres:</strong> Hikmet Özer Caddesi No: 113, Etimesgut/Ankara<br>
-        <strong>Telefon:</strong> 0312 244 03 03 | <strong>Cep:</strong> 0536 233 36 75
-    </p>
-    
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.8458931163486!2d32.6565123!3d39.9463289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3499757a3d9b1%3A0x7d6b38c2921a243a!2sHikmet%20%C3%96zer%20Cd.%20No%3A113%2C%20Etimesgut%2FAnkara!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+<section id="bolgeler" class="locations">
+    <h2>Ankara Genelinde Ücretsiz Servis Ağı</h2>
+    <p>Etimesgut merkezli fabrikamızdan, Ankara'nın her noktasına aynı kaliteyi ulaştırıyoruz.</p>
+    <div class="location-grid">
+        <div class="loc-tag">Etimesgut</div>
+        <div class="loc-tag">Sincan</div>
+        <div class="loc-tag">Bağlıca</div>
+        <div class="loc-tag">Çayyolu</div>
+        <div class="loc-tag">Ümitköy</div>
+        <div class="loc-tag">İncek</div>
+        <div class="loc-tag">Yaşamkent</div>
+        <div class="loc-tag">Yenimahalle</div>
+        <div class="loc-tag">Keçiören</div>
+        <div class="loc-tag">Gölbaşı</div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Yaprak Halı Yıkama - Etimesgut. Tüm Hakları Saklıdır.</p>
+    <div class="footer-grid">
+        <div class="footer-box">
+            <h4>Yaprak Halı Yıkama</h4>
+            <p>Ankara'nın temizlikte parlayan yıldızı. Halı, koltuk, yorgan ve battaniye yıkamada modern teknoloji, geleneksel güven.</p>
+        </div>
+        <div class="footer-box">
+            <h4>İletişim Bilgileri</h4>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> İstasyon Mah. Etimesgut / Ankara</div>
+            <div class="contact-item"><i class="fas fa-phone"></i> 0312 244 03 04</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> info@yaprakhaliyikama.com</div>
+        </div>
+        <div class="footer-box">
+            <h4>Çalışma Saatleri</h4>
+            <p>Pazartesi - Cumartesi: 08:30 - 20:00<br>Pazar: Kapalı</p>
+        </div>
+    </div>
+    <div style="text-align:center; padding-top: 20px; border-top: 1px solid #333; font-size: 0.8rem;">
+        &copy; 2026 Yaprak Halı Yıkama | Ankara Profesyonel Temizlik Hizmetleri. Tüm Hakları Saklıdır.
+    </div>
 </footer>
 
 </body>
+</html>
