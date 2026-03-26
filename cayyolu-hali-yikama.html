@@ -17,33 +17,26 @@ body{margin:0;font-family:Poppins,sans-serif;color:#333}
 header{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:1000}
 .logo{font-weight:700;color:var(--primary);font-size:22px}
 .btn{background:var(--accent);color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600}
-.hero{padding:90px 5%;text-align:center;background:linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600') center/cover}
+.hero{padding:90px 5%;text-align:center;background:linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),url('images/hero.jpg') center/cover}
 .hero h1{font-size:2.5rem;color:var(--primary)}
 .section{padding:60px 5%}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 .card{border:1px solid #eee;padding:30px;border-radius:15px;text-align:center;transition:.3s}
 .card:hover{transform:translateY(-5px);border-color:var(--accent)}
 .badge{background:var(--accent);color:#fff;padding:15px;text-align:center;font-weight:600}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.gallery img{width:100%;border-radius:12px}
 footer{background:#111;color:#fff;text-align:center;padding:40px}
 .wa{position:fixed;bottom:25px;right:25px;background:#25d366;color:#fff;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px}
 </style>
 
-<!-- GELİŞMİŞ SEO SCHEMA -->
 <script type="application/ld+json">
 {
 "@context":"https://schema.org",
 "@type":"LocalBusiness",
 "name":"Yaprak Halı Yıkama",
-"image":"https://via.placeholder.com/300",
 "telephone":"+905362333675",
-"address":{
-"@type":"PostalAddress",
-"addressLocality":"Çayyolu",
-"addressRegion":"Ankara",
-"addressCountry":"TR"
-},
-"areaServed":["Çayyolu","Ümitköy","Beysukent","Konutkent"],
-"openingHours":"Mo-Su 09:00-20:00"
+"address":{"@type":"PostalAddress","addressLocality":"Çayyolu","addressRegion":"Ankara","addressCountry":"TR"}
 }
 </script>
 
@@ -62,15 +55,25 @@ footer{background:#111;color:#fff;text-align:center;padding:40px}
 <h1>Çayyolu Halı Yıkama</h1>
 <p>Ümitköy, Beysukent ve Konutkent bölgelerinde profesyonel halı ve koltuk yıkama hizmeti.</p>
 <p><b>✔ Aynı Gün Alım ✔ 3 Günde Teslim ✔ %100 Memnuniyet</b></p>
-<a href="https://wa.me/905362333675?text=Merhaba%20%C3%87ayyolu%20hal%C4%B1%20y%C4%B1kama%20fiyat%20alabilir%20miyim" class="btn">WhatsApp Yaz</a>
+<a href="https://wa.me/905362333675" class="btn">WhatsApp Yaz</a>
 </section>
 
 <section class="section">
 <h2>Hizmetlerimiz</h2>
 <div class="grid">
-<div class="card"><h3>Halı Yıkama</h3><p><b>70 TL m²</b></p></div>
-<div class="card"><h3>Koltuk Yıkama</h3><p><b>2000 TL</b></p></div>
-<div class="card"><h3>Yorgan Yıkama</h3><p><b>300 TL</b></p></div>
+<div class="card"><h3>Halı Yıkama</h3><p>Profesyonel makineler ile derinlemesine temizlik</p></div>
+<div class="card"><h3>Koltuk Yıkama</h3><p>Yerinde buharlı ve vakumlu sistem</p></div>
+<div class="card"><h3>Yorgan Yıkama</h3><p>Hijyenik sanayi tipi makinelerde yıkama</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Çalışmalarımız</h2>
+<div class="gallery">
+<img src="images/1.jpg">
+<img src="images/2.jpg">
+<img src="images/3.jpg">
+<img src="images/4.jpg">
 </div>
 </section>
 
@@ -84,12 +87,6 @@ footer{background:#111;color:#fff;text-align:center;padding:40px}
 <p>⭐⭐⭐⭐⭐ Çayyolu'nda en iyi hizmet</p>
 <p>⭐⭐⭐⭐⭐ Halılar tertemiz geldi</p>
 <p>⭐⭐⭐⭐⭐ Hızlı ve güvenilir</p>
-</section>
-
-<section class="section">
-<h2>Sık Sorulan Sorular</h2>
-<p><b>Halılar kaç günde gelir?</b><br>Genelde 2-3 gün içinde teslim edilir.</p>
-<p><b>Servis ücretli mi?</b><br>Hayır, ücretsiz servis vardır.</p>
 </section>
 
 <section class="section">
