@@ -1,256 +1,132 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Etimesgut Halı Yıkama | Yaprak Halı Yıkama - Hikmet Özer Cad.</title>
+    <meta name="description" content="Etimesgut'un en iyi halı yıkama fabrikası. Hikmet Özer Caddesi'nde profesyonel halı, koltuk, yorgan yıkama. Ücretsiz servis! Hemen arayın: 0312 244 03 03">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --main-color: #004a99; --accent-color: #28a745; --text-color: #333; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: var(--text-color); background-color: #f9f9f9; }
+        
+        /* Header */
+        header { background: white; padding: 10px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Oswald', sans-serif; font-size: 1.8rem; color: var(--main-color); text-transform: uppercase; font-weight: 500; }
+        .head-call { display: flex; gap: 10px; }
+        .btn-head-call { background: var(--main-color); color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
+        .btn-head-call:hover { background: #003366; }
 
-<title>Etimesgut Halı Yıkama | 5.0 Google Puan • Yaprak Halı Yıkama</title>
+        /* Hero Section - İlk Bakış */
+        .hero { background: linear-gradient(rgba(0, 74, 153, 0.9), rgba(0, 74, 153, 0.9)), url('hero-hali.jpg') no-repeat center center/cover; color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-family: 'Oswald', sans-serif; font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; }
+        .btn-main-call { display: inline-block; background: var(--accent-color); color: white; text-decoration: none; padding: 20px 40px; font-size: 1.8rem; font-weight: bold; border-radius: 50px; box-shadow: 0 5px 20px rgba(40, 167, 69, 0.5); transition: 0.3s; }
+        .btn-main-call:hover { transform: scale(1.05); }
 
-<meta name="description" content="Etimesgut halı yıkama hizmeti. Derin toz alma, otomatik makinede yıkama, kalıntısız durulama ve hijyenik paketleme. Etimesgut, Eryaman, Bağlıca ve çevresinde adresten alım–teslim.">
+        /* Services - Hizmetler */
+        .services { padding: 60px 20px; text-align: center; background: white; }
+        .services h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--main-color); margin-bottom: 40px; }
+        .service-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .service-card { background: #fefefe; border: 1px solid #eee; border-radius: 10px; padding: 30px; width: 300px; transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-card h3 { color: var(--main-color); font-size: 1.5rem; margin-bottom: 15px; }
 
-<link rel="canonical" href="https://yaprakhaliyikama.net/etimesgut-hali-yikama.html">
-<link rel="icon" href="favicon.png">
+        /* Why Us - Neden Biz */
+        .why-us { padding: 60px 20px; background: #f4f4f4; text-align: center; }
+        .why-us h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--main-color); margin-bottom: 40px; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .why-item { background: white; padding: 20px; border-radius: 10px; }
 
-<style>
-:root{
---bg:#f5f7fb;
---card:#ffffff;
---text:#111827;
---muted:#6b7280;
---accent:#0f766e;
---accent2:#14b8a6;
---gold:#f5b301;
---radius:22px;
---shadow:0 14px 40px rgba(0,0,0,.08);
-}
+        /* Contact - İletişim ve Harita */
+        .contact { padding: 60px 20px; background: white; text-align: center; }
+        .contact h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--main-color); margin-bottom: 20px; }
+        .address { font-size: 1.2rem; margin-bottom: 40px; color: #555; }
+        .map-container { max-width: 1000px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .map-container iframe { width: 100%; height: 450px; border: 0; }
 
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.7;
-overflow-x:hidden;
-}
+        /* Footer */
+        footer { background: #222; color: white; text-align: center; padding: 30px; font-size: 0.9rem; }
 
-/* HERO */
-header{
-background:
-linear-gradient(120deg,rgba(0,0,0,.85),rgba(15,118,110,.7)),
-url("/images/hali-servis-yukleme.jpg");
-background-size:cover;
-background-position:center;
-color:white;
-text-align:center;
-padding:50px 20px;
-}
-header h1{
-margin:0;
-font-size:36px;
-}
-header p{
-margin-top:12px;
-font-weight:700;
-opacity:.95;
-}
-
-.container{
-max-width:1150px;
-margin:auto;
-padding:20px;
-}
-
-.card{
-background:var(--card);
-border-radius:var(--radius);
-box-shadow:var(--shadow);
-padding:24px;
-margin:20px 0;
-}
-
-.btn{
-display:inline-block;
-padding:14px 22px;
-border-radius:16px;
-font-weight:900;
-color:white;
-text-decoration:none;
-margin:6px;
-transition:.2s;
-}
-.btn:hover{transform:translateY(-2px);}
-.btn-call{background:linear-gradient(135deg,var(--accent),#0d9488);}
-.btn-wa{background:linear-gradient(135deg,#16a34a,#22c55e);}
-.btn-ig{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);}
-
-/* GOOGLE RATING */
-.rating{
-text-align:center;
-font-size:32px;
-font-weight:900;
-}
-.stars{
-color:var(--gold);
-font-size:26px;
-letter-spacing:2px;
-}
-
-/* FEATURES */
-.features{
-display:grid;
-grid-template-columns:1fr;
-gap:18px;
-margin-top:15px;
-}
-@media(min-width:900px){
-.features{grid-template-columns:1fr 1fr 1fr;}
-}
-.feature{
-background:#f9fafb;
-border-radius:18px;
-padding:18px;
-text-align:center;
-border:1px solid #e5e7eb;
-}
-.feature h3{margin:10px 0 5px 0;}
-
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:1fr;
-gap:16px;
-margin-top:15px;
-}
-@media(min-width:900px){
-.gallery{grid-template-columns:1fr 1fr;}
-}
-.gallery img{
-width:100%;
-border-radius:18px;
-object-fit:cover;
-}
-
-/* ANIMATION */
-.reveal{opacity:0;transform:translateY(15px);transition:.6s;}
-.reveal.show{opacity:1;transform:translateY(0);}
-
-footer{
-text-align:center;
-padding:30px;
-color:var(--muted);
-font-weight:700;
-}
-</style>
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; padding: 15px; }
+            .logo { margin-bottom: 10px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            .btn-main-call { font-size: 1.4rem; padding: 15px 30px; }
+            .service-card { width: 100%; }
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-<h1>Etimesgut Halı Yıkama</h1>
-<p>Etimesgut • Eryaman • Bağlıca • Göksu • Şeker Mahallesi</p>
-<p>Adresten Alım – Derin Temizlik – Hijyenik Teslim</p>
+    <div class="logo">Yaprak Halı Yıkama</div>
+    <div class="head-call">
+        <a href="tel:03122440303" class="btn-head-call">📞 0312 244 03 03</a>
+    </div>
 </header>
 
-<div class="container">
+<section class="hero">
+    <h1>Etimesgut Halı Yıkama Fabrikası</h1>
+    <p>Hikmet Özer Caddesi'nde Profesyonel, Hijyenik ve Hızlı Temizlik. Ücretsiz Servis!</p>
+    <a href="tel:05362333675" class="btn-main-call">CEP: 0536 233 36 75</a>
+</section>
 
-<div class="card reveal" style="text-align:center;">
-<a class="btn btn-call" href="tel:+905362333675">📞 Hemen Ara</a>
-<a class="btn btn-wa" href="https://wa.me/905362333675" target="_blank">💬 WhatsApp</a>
-<a class="btn btn-ig" href="https://www.instagram.com/yaprakhaliyikama06?igsh=M2Q2dzZ1bnJidjI0&utm_source=qr" target="_blank">📸 Instagram</a>
-</div>
+<section id="services" class="services">
+    <h2>Profesyonel Temizlik Hizmetlerimiz</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Halı Yıkama</h3>
+            <p>Etimesgut'ta derinlemesine, antibakteriyel halı yıkama. Leke çıkarma garantisi.</p>
+        </div>
+        <div class="service-card">
+            <h3>Koltuk Yıkama</h3>
+            <p>Evinizde yerinde, buharlı ve vakumlu koltuk yıkama hizmeti.</p>
+        </div>
+        <div class="service-card">
+            <h3>Yorgan Yıkama</h3>
+            <p>Yorgan ve battaniyeleriniz sanayi tipi makinelerde hijyenik yıkanır.</p>
+        </div>
+    </div>
+</section>
 
-<div class="card reveal">
-<div class="rating">
-5.0 <span class="stars">★★★★★</span>
-</div>
-<p style="text-align:center;font-weight:800;">1600+ Google Yorumu</p>
+<section id="why" class="why-us">
+    <h2>Neden Yaprak Halı Yıkama?</h2>
+    <div class="why-grid">
+        <div class="why-item">
+            <h4>Hızlı Teslimat</h4>
+            <p>Halılarınızı söz verdiğimiz günde, tertemiz teslim ediyoruz.</p>
+        </div>
+        <div class="why-item">
+            <h4>Ücretsiz Servis</h4>
+            <p>Etimesgut, Sincan ve Çayyolu bölgelerine ücretsiz servisimiz vardır.</p>
+        </div>
+        <div class="why-item">
+            <h4>Profesyonel Ekip</h4>
+            <p>Deneyimli personelimiz ve son teknoloji makinelerimizle hizmetinizdeyiz.</p>
+        </div>
+    </div>
+</section>
 
-<p>
-Etimesgut halı yıkama hizmetimizde önceliğimiz halının yalnızca yüzeyini değil,
-derin dokusunu da temizlemektir. Özellikle Etimesgut bölgesinde yoğun kullanılan
-salon halıları ve çocuk odası halılarında dip temizlik büyük önem taşır.
-</p>
-</div>
-
-<div class="card reveal">
-<h2>Etimesgut’ta Halı Yıkama Süreci</h2>
-<p>
-İlk aşamada halılar güçlü makinelerle <b>derin toz alma</b> işleminden geçer.
-Bu işlem yapılmadan yıkama kirin çamurlaşmasına sebep olabilir.
-</p>
-<p>
-Sonrasında halı tipine uygun şampuan ile <b>otomatik makinede fırçalama</b> yapılır.
-Bol su ile <b>kalıntısız durulama</b> uygulanır.
-Santrifüj sıkma sonrası kontrollü ortamda kurutulur.
-Nem bırakmadan paketlenip teslim edilir.
-</p>
-</div>
-
-<div class="card reveal">
-<h2>Neden Etimesgut’ta Bizi Tercih Etmelisiniz?</h2>
-
-<div class="features">
-<div class="feature">
-<h3>🧼 Derin Toz Alma</h3>
-<p>Dipteki kum ve toz temizlenir.</p>
-</div>
-
-<div class="feature">
-<h3>💧 Kalıntısız Durulama</h3>
-<p>Köpük kalmaz, koku riski azalır.</p>
-</div>
-
-<div class="feature">
-<h3>📦 Hijyenik Paketleme</h3>
-<p>Nem bırakmadan teslim edilir.</p>
-</div>
-</div>
-</div>
-
-<div class="card reveal">
-<h2>Hizmetlerimiz</h2>
-<ul>
-<li>Makine halısı yıkama</li>
-<li>Shaggy halı temizliği</li>
-<li>Yün halı yıkama</li>
-<li>Koltuk yıkama</li>
-<li>Yerinde temizlik</li>
-<li>Leke & koku giderme</li>
-</ul>
-</div>
-
-<div class="card reveal">
-<h2>Çalışma Görselleri</h2>
-
-<div class="gallery">
-<img src="/images/hali-toz-alma.jpg" alt="Etimesgut halı toz alma">
-<img src="/images/hali-otomatik-makina.jpg" alt="Etimesgut otomatik halı yıkama">
-<img src="/images/hali-yikama-fabrika.jpg" alt="Etimesgut halı yıkama tesisi">
-<img src="/images/hali-paketleme.jpg" alt="Etimesgut halı paketleme">
-<img src="/images/hali-servis-yukleme.jpg" alt="Etimesgut servis aracı">
-<img src="/images/hali-sirtinda-tasima.jpg" alt="Etimesgut halı taşıma">
-<img src="/images/koltuk-yikama.jpg" alt="Etimesgut koltuk yıkama">
-<img src="/images/yerde-yikama.jpg" alt="Etimesgut yerinde yıkama">
-</div>
-</div>
-
-</div>
+<section id="contact" class="contact">
+    <h2>Bize Ulaşın</h2>
+    <p class="address">
+        <strong>Adres:</strong> Hikmet Özer Caddesi No: 113, Etimesgut/Ankara<br>
+        <strong>Telefon:</strong> 0312 244 03 03 | <strong>Cep:</strong> 0536 233 36 75
+    </p>
+    
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.8458931163486!2d32.6565123!3d39.9463289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3499757a3d9b1%3A0x7d6b38c2921a243a!2sHikmet%20%C3%96zer%20Cd.%20No%3A113%2C%20Etimesgut%2FAnkara!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
 
 <footer>
-© <span id="year"></span> Yaprak Halı Yıkama • Etimesgut
+    <p>&copy; 2026 Yaprak Halı Yıkama - Etimesgut. Tüm Hakları Saklıdır.</p>
 </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-const reveals=document.querySelectorAll(".reveal");
-window.addEventListener("scroll",()=>{
-reveals.forEach(el=>{
-const top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-100){el.classList.add("show");}
-});
-});
-</script>
-
 </body>
-</html>
