@@ -140,120 +140,90 @@
     </div>
 </section>
 
-<section class="section-stats">
-    <div class="stats-grid">
-        <div class="stat-box">
-            <h3 class="counter" data-target="47177">0</h3>
-            <p class="stat-label">Mutlu Müşteri</p>
-        </div>
-        <div class="stat-box">
-            <h3 class="counter" data-target="235836">0</h3>
-            <p class="stat-label">Yıkanan Halı (m²)</p>
-        </div>
-        <div class="stat-box">
-            <h3>%100</h3>
-            <p class="stat-label">Leke Çıkarma Garantisi</p>
-        </div>
+<section class="stats-grid">
+    <div class="stat-box">
+        <h3 class="counter" data-target="47177">0</h3>
+        <p>Mutlu Müşteri</p>
+    </div>
+    <div class="stat-box">
+        <h3 class="counter" data-target="235836">0</h3>
+        <p>Yıkanan Halı (m²)</p>
     </div>
 </section>
 
-<section class="section">
-    <div class="grid-2">
-        <div class="reveal">
-            <span class="badge">Bölgesel Hizmet Ağı</span>
-            <h2>Çayyolu ve Çevresinde <br>Ücretsiz Servis</h2>
-            <p class="seo-text">
-                Ankara'nın en seçkin bölgeleri olan <strong>Çayyolu halı yıkama</strong> ihtiyaçlarınızda, 15 yılı aşkın tecrübemizle yanınızdayız. 
-                Sadece halı değil; <strong>Ümitköy koltuk yıkama</strong>, <strong>Yaşamkent yatak yıkama</strong> ve <strong>Bağlıca yerinde temizlik</strong> 
-                hizmetlerimizle profesyonel çözümler üretiyoruz.
-            </p>
-            <p class="seo-text">
-                Fabrikamızda kullanılan tüm ürünler sağlık bakanlığı onaylıdır. <strong>Konutkent</strong> ve <strong>İncek</strong> bölgelerine 
-                günlük 3 farklı servis aracımızla en geç 24 saat içinde ulaşım sağlıyoruz.
-            </p>
-        </div>
-        <div class="services-wrapper">
-            <div class="s-card">
-                <i>🧼</i>
-                <h4>Halı Yıkama</h4>
-                <p>12 fırçalı tam otomatik makineler ile derinlemesine temizlik.</p>
-            </div>
-            <div class="s-card">
-                <i>🛋️</i>
-                <h4>Koltuk Yıkama</h4>
-                <p>Buharlı vakum teknolojisi ile yerinde leke çıkarma.</p>
-            </div>
-        </div>
+<form onsubmit="sendProfessionalLead(event)">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <input type="text" id="pName" placeholder="Adınız Soyadınız" required>
+        <input type="tel" id="pPhone" placeholder="Telefon Numaranız" required>
     </div>
-</section>
-
-<section class="section" style="padding-top: 0;">
-    <div class="form-container">
-        <div style="max-width: 600px;">
-            <h2>Hızlı Randevu Alın</h2>
-            <p style="opacity: 0.8; margin-bottom: 30px;">Bilgilerinizi bırakın, uzman ekibimiz 5 dakika içinde size özel fiyat çalışmasıyla geri dönsün.</p>
-            <form onsubmit="sendProfessionalLead(event)">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                    <input type="text" id="pName" placeholder="Adınız Soyadınız" required>
-                    <input type="tel" id="pPhone" placeholder="Telefon Numaranız" required>
-                </div>
-                <textarea id="pTask" rows="4" placeholder="Hangi bölgedesiniz ve ne yıkanacak? (Örn: Ümitköy, 2 adet shaggy halı)" required></textarea>
-                <button type="submit" class="btn-v btn-v-primary" style="border: none; width: 100%; cursor: pointer;">Şimdi Ücretsiz Teklif Al</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<div class="mobile-bar">
-    <a href="tel:05362333675" class="m-btn" style="background: var(--primary);">📞 ARA</a>
-    <a href="https://wa.me/905362333675" class="m-btn" style="background: #25D366;">WHATSAPP</a>
-</div>
+    <textarea id="pTask" rows="4" placeholder="Hangi bölgedesiniz ve ne yıkanacak? (Örn: Ümitköy, 2 adet shaggy halı)" required></textarea>
+    <button type="submit" class="btn-v-primary">Şimdi Ücretsiz Teklif Al</button>
+</form>
 
 <script>
-    // --- Intersection Observer & Counter Engine ---
-    const statsSection = document.querySelector('.stats-grid');
+// --- 1. SAYAÇ MOTORU (Gelişmiş ve Akıcı) ---
+const startCounters = () => {
     const counters = document.querySelectorAll('.counter');
-    let started = false;
+    
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target'); // Hedef rakam
+            const count = +counter.innerText.replace(/\./g, ''); // Mevcut rakam
+            
+            // Hız ayarı: Rakam büyüdükçe artış hızı artar
+            const speed = target / 100; 
 
-    const startCounters = () => {
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText.replace(/\./g, '');
-                const speed = target / 100;
+            if (count < target) {
+                const nextCount = Math.ceil(count + speed);
+                // Rakamı binlik ayırıcı ile (nokta) formatlayarak yazdır
+                counter.innerText = nextCount > target ? target.toLocaleString('tr-TR') : nextCount.toLocaleString('tr-TR');
+                setTimeout(updateCount, 20);
+            } else {
+                counter.innerText = target.toLocaleString('tr-TR');
+            }
+        };
+        updateCount();
+    });
+};
 
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + speed).toLocaleString('tr-TR');
-                    setTimeout(updateCount, 20);
-                } else {
-                    counter.innerText = target.toLocaleString('tr-TR');
-                }
-            };
-            updateCount();
-        });
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && !started) {
+// Sayfa kaydırıldığında sayaçları tetikle
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
             startCounters();
-            started = true;
+            observer.unobserve(entry.target); // Sadece bir kez çalışması için
         }
-    }, { threshold: 0.5 });
+    });
+}, { threshold: 0.5 });
 
-    observer.observe(statsSection);
+document.querySelectorAll('.stats-grid').forEach(grid => observer.observe(grid));
 
-    // --- Form Handling ---
-    function sendProfessionalLead(e) {
-        e.preventDefault();
-        const n = document.getElementById('pName').value;
-        const p = document.getElementById('pPhone').value;
-        const t = document.getElementById('pTask').value;
-        
-        const message = 🌟 *Yeni Servis Talebi* 🌟%0A--------------------------%0A👤 *Müşteri:* ${n}%0A📞 *Telefon:* ${p}%0A📝 *İstek:* ${t}%0A--------------------------%0A_Bu mesaj VIP Web sayfasından gönderildi._;
-        
-        window.open(https://wa.me/905362333675?text=${message}, '_blank');
-    }
+
+// --- 2. WHATSAPP FORM GÖNDERİMİ (Hata Giderilmiş) ---
+function sendProfessionalLead(e) {
+    e.preventDefault(); // Sayfanın yenilenmesini engeller
+    
+    // Form elemanlarını al
+    const name = document.getElementById('pName').value.trim();
+    const phone = document.getElementById('pPhone').value.trim();
+    const task = document.getElementById('pTask').value.trim();
+    
+    // Numaranı buraya başına 90 koyarak yaz (Örn: 90536...)
+    const myNumber = "905362333675"; 
+    
+    // Mesaj içeriğini oluştur
+    const message = 🌟 *Yeni Servis Talebi* 🌟%0A +
+                    --------------------------%0A +
+                    👤 *Müşteri:* ${name}%0A +
+                    📞 *Telefon:* ${phone}%0A +
+                    📝 *İstek:* ${task}%0A +
+                    --------------------------%0A +
+                    _Bu mesaj yaprakhaliyikama.net üzerinden gönderildi._;
+    
+    // WhatsApp'a yönlendir
+    const whatsappUrl = https://wa.me/${myNumber}?text=${message};
+    window.open(whatsappUrl, '_blank');
+}
 </script>
-
 </body>
 </html>
