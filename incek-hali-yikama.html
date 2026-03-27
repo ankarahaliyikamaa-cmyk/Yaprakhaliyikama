@@ -158,12 +158,50 @@
         .contact-link { color: #fff; font-size: 1.2rem; font-weight: 700; display: block; margin-top: 5px; }
         .footer-bottom { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #333; color: #666; font-size: 0.9rem; }
 
+        /* WhatsApp Sabit Buton Stili */
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            transition: 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-fixed i {
+            font-size: 1.8rem;
+        }
+
+        .whatsapp-fixed:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+            color: white;
+        }
+
+        /* Dikkat çekmesi için hafif bir büyüme küçülme efekti */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .top-bar { flex-direction: column; text-align: center; padding: 15px; }
             .nav-links { display: none; }
             .seo-container, .gallery-container { padding: 40px 5%; }
             .carousel-slide img { height: 250px; }
+            .whatsapp-fixed span { display: none; }
+            .whatsapp-fixed { padding: 15px; bottom: 20px; right: 20px; }
         }
     </style>
 </head>
@@ -199,25 +237,22 @@
         <div class="gallery-title">
             <h2>Halı, Battaniye ve Perdeleriniz Nasıl Temizleniyor?</h2>
             <div></div>
-            <p style="margin-top: 20px; color: #666;">Profesyonel temizlik sürecimizi adım adım inceleyin.</p>
+            <p style="margin-top: 20px; color: #666;">Profesyonel temizlik sürecimiz otomatik olarak ilerlemektedir.</p>
         </div>
 
         <div class="carousel-viewport">
-            <button class="carousel-btn carousel-prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-btn carousel-next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-
             <div class="carousel-track" id="carouselTrack">
                 
                 <div class="carousel-slide">
                     <img src="images/makina.jfif" alt="Tam Otomatik Halı Yıkama">
                     <h4>1. Tam Otomatik Yıkama</h4>
-                    <p>Halılarınız en son teknolojiye sahip makinelerimizde, bitkisel şampuanlarla derinlemesine yıkanır.</p>
+                    <p>Halılarınız en son teknolojiye sahip makinelerimizde, bitkisel şampuanlarla yıkanır.</p>
                 </div>
 
                 <div class="carousel-slide">
                     <img src="images/Battaniye.jfif" alt="Battaniye Yıkama">
                     <h4>2. Battaniye & Yorgan Hijyeni</h4>
-                    <p>Battaniye ve yorganlarınız, hassas dokularını koruyan özel programlarda antibakteriyel olarak temizlenir.</p>
+                    <p>Battaniye ve yorganlarınız, hassas dokularını koruyan özel programlarda temizlenir.</p>
                 </div>
 
                 <div class="carousel-slide">
@@ -229,7 +264,7 @@
                 <div class="carousel-slide">
                     <img src="images/kurutma.jfif" alt="Kapalı Alan Kurutma">
                     <h4>4. Tozsuz Kurutma</h4>
-                    <p>Yıkanan tüm ürünler, nem ve toz görmeyen özel kapalı kurutma odalarında asılarak kurutulur.</p>
+                    <p>Tüm ürünler, nem ve toz görmeyen özel kapalı kurutma odalarında hijyenik şartlarda kurutulur.</p>
                 </div>
 
                 <div class="carousel-slide">
@@ -304,71 +339,41 @@
 
     <script>
         const track = document.getElementById('carouselTrack');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
         const slides = document.querySelectorAll('.carousel-slide');
-        const slideCount = slides.length;
         let index = 0;
 
+        // Fotoğrafın genişliğini hesapla
         function getSlideWidth() {
-            return slides[0].getBoundingClientRect().width;
+            return slides[0].offsetWidth; 
         }
 
-        function moveCarousel() {
+        // Kaydırma İşlemi (Yatay Kaydırma)
+        function updateCarousel() {
             const slideWidth = getSlideWidth();
             track.style.transform = translateX(-${index * slideWidth}px);
         }
 
-        nextBtn.addEventListener('click', () => {
-            if (index < slideCount - 1) {
+        // Sonraki Fotoğrafa Git (Otomatik Çağrılır)
+        function nextSlide() {
+            if (index < slides.length - 1) {
                 index++;
             } else {
                 index = 0; // Başa dön
             }
-            moveCarousel();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-            } else {
-                index = slideCount - 1; // Sona git
-            }
-            moveCarousel();
-        });
-
-        window.addEventListener('resize', moveCarousel);
-        
-        // Mobilde parmakla kaydırma desteği (touch support)
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        track.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        track.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleGesture();
-        });
-
-        function handleGesture() {
-            if (touchEndX < touchStartX) {
-                // Sola kaydırıldı -> Sonraki
-                if (index < slideCount - 1) {
-                    index++;
-                    moveCarousel();
-                }
-            }
-            if (touchEndX > touchStartX) {
-                // Sağa kaydırıldı -> Önceki
-                if (index > 0) {
-                    index--;
-                    moveCarousel();
-                }
-            }
+            updateCarousel();
         }
+
+        // 3 saniyede bir (3000ms) kaydır
+        setInterval(nextSlide, 3000);
+
+        // Pencere boyutu değişirse resmi ortada tut
+        window.addEventListener('resize', updateCarousel);
     </script>
+
+    <a href="https://wa.me/905362333675?text=Merhaba,%20Yaprak%20Halı%20Yıkama'dan%20bilgi%20almak%20istiyorum." class="whatsapp-fixed" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp Sipariş</span>
+    </a>
 
 </body>
 </html>
