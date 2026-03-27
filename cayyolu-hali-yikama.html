@@ -7,144 +7,136 @@
   <meta name="keywords" content="Halı yıkama, Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe, Alacaatlı, profesyonel temizlik">
   <title>Yaprak Halı Yıkama</title>
   <style>
-    /* Reset & Base */
     * {margin:0; padding:0; box-sizing:border-box; font-family:sans-serif;}
     body {background:#f9fafb; color:#333; scroll-behavior:smooth;}
     a {text-decoration:none; transition:0.3s;}
     img {max-width:100%; display:block; border-radius:10px;}
     h1,h2,h3{margin-bottom:0.5em;}
 
-    /* Header */
     header {background:#1e40af; color:white; padding:30px 20px; text-align:center; position:sticky; top:0; z-index:1000;}
     header p {margin-top:10px; font-size:1.1em;}
     header nav a {margin:0 15px; color:white; font-weight:bold;}
     header nav a:hover {color:#facc15;}
 
-    /* Hero */
-    .hero {background:#93c5fd; padding:100px 20px; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center;}
+    .hero {padding:100px 20px; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#93c5fd;}
     .hero h2 {font-size:3em; margin-bottom:20px; animation: pulse 2s infinite;}
     .hero p {font-size:1.2em; margin-bottom:30px; max-width:600px;}
     .hero a {background:#1e40af; color:white; padding:15px 40px; border-radius:20px; font-weight:bold; box-shadow:0 8px 20px rgba(0,0,0,0.2);}
     .hero a:hover {background:#1e3a8a; transform:scale(1.05);}
     @keyframes pulse {0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
 
-    /* Services */
     .services {max-width:1200px; margin:60px auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; padding:0 20px;}
     .service-card {background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition:0.3s; cursor:pointer;}
     .service-card:hover {transform:translateY(-10px); box-shadow:0 15px 35px rgba(0,0,0,0.15);}
     .service-card div {padding:20px;}
     .service-card h3 {margin-bottom:10px; font-size:1.5em; color:#1e40af;}
 
-    /* Reviews */
     .reviews {background:#bfdbfe; padding:80px 20px; text-align:center;}
     .reviews h2 {font-size:2.8em; margin-bottom:50px;}
     .review-card {background:white; padding:30px; margin:15px; border-radius:20px; display:inline-block; width:300px; box-shadow:0 8px 25px rgba(0,0,0,0.1); transition:0.3s; vertical-align:top;}
     .review-card:hover {transform:translateY(-5px); box-shadow:0 12px 35px rgba(0,0,0,0.15);}
     .stars {color:#facc15; margin-bottom:10px; font-size:1.2em;}
 
-    /* Table */
     .satisfaction {max-width:900px; margin:60px auto; overflow-x:auto; padding:0 20px;}
     table {width:100%; border-collapse:collapse; background:white; border-radius:15px; overflow:hidden; box-shadow:0 8px 25px rgba(0,0,0,0.1);}
     th, td {padding:15px; text-align:center; border-bottom:1px solid #ddd;}
     th {background:#1e40af; color:white; font-size:1.1em;}
     td {font-size:1em;}
 
-    /* Contact */
     .contact {max-width:700px; margin:80px auto; background:white; padding:50px; border-radius:20px; text-align:center; box-shadow:0 8px 25px rgba(0,0,0,0.1);}
     .contact a {display:inline-block; margin:10px; padding:15px 30px; background:#1e40af; color:white; border-radius:15px; font-weight:bold; transition:0.3s;}
     .contact a:hover {background:#1e3a8a; transform:scale(1.05);}
 
-    /* Footer */
     footer {background:#1e40af; color:white; text-align:center; padding:30px;}
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Yaprak Halı Yıkama</h1>
-    <p>Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe, Alacaatlı Profesyonel Temizlik</p>
-    <nav>
-      <a href="#services">Hizmetler</a>
-      <a href="#reviews">Müşteri Yorumları</a>
-      <a href="#contact">İletişim</a>
-    </nav>
-  </header>
+<header>
+  <h1>Yaprak Halı Yıkama</h1>
+  <p>Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe, Alacaatlı Profesyonel Temizlik</p>
+  <nav>
+    <a href="#services">Hizmetler</a>
+    <a href="#reviews">Müşteri Yorumları</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h2>Halılarınız Bizimle Güvende</h2>
-    <p>Hızlı, güvenli ve profesyonel halı temizliği. Evden teslim, kapınıza kadar.</p>
-    <a href="#contact">Hemen Randevu Al</a>
-  </section>
+<section class="hero">
+  <h2>Halılarınız Bizimle Güvende</h2>
+  <p>Hızlı, güvenli ve profesyonel halı temizliği. Evden teslim, kapınıza kadar.</p>
+  <a href="#contact">Hemen Randevu Al</a>
+</section>
 
-  <section id="services" class="services">
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1601979064927-86f8fbc37c3f?auto=format&fit=crop&w=800&q=80" alt="Ev Tipi Halı">
-      <div>
-        <h3>Ev Tipi Halı Yıkama</h3>
-        <p>Çayyolu, Yaşamkent ve çevresinde ev tipi halılarınız özenle temizlenir.</p>
-      </div>
+<section id="services" class="services">
+  <div class="service-card">
+    <img src="https://via.placeholder.com/400x250?text=Ev+Hali+Yikama" alt="Ev Tipi Halı">
+    <div>
+      <h3>Ev Tipi Halı Yıkama</h3>
+      <p>Çayyolu, Yaşamkent ve çevresinde ev tipi halılarınız özenle temizlenir.</p>
     </div>
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1616628181275-1c1f2450a05c?auto=format&fit=crop&w=800&q=80" alt="Koltuk Temizliği">
-      <div>
-        <h3>Koltuk & Döşeme Temizliği</h3>
-        <p>Koltuk, kanepe ve döşemeleriniz hijyenik bir şekilde temizlenir.</p>
-      </div>
+  </div>
+  <div class="service-card">
+    <img src="https://via.placeholder.com/400x250?text=Koltuk+Temizligi" alt="Koltuk Temizliği">
+    <div>
+      <h3>Koltuk & Döşeme Temizliği</h3>
+      <p>Koltuk, kanepe ve döşemeleriniz hijyenik bir şekilde temizlenir.</p>
     </div>
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Ofis Halı">
-      <div>
-        <h3>Ofis & Kurumsal Halılar</h3>
-        <p>Ofis ve kurumsal halılar için profesyonel yıkama hizmeti.</p>
-      </div>
+  </div>
+  <div class="service-card">
+    <img src="https://via.placeholder.com/400x250?text=Ofis+Hali" alt="Ofis Halı">
+    <div>
+      <h3>Ofis & Kurumsal Halılar</h3>
+      <p>Ofis ve kurumsal halılar için profesyonel yıkama hizmeti.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="reviews" class="reviews">
-    <h2>Müşteri Memnuniyeti</h2>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>Çayyolu halı yıkama hizmetinden çok memnun kaldım. Hızlı ve temiz!</p>
-      <strong>Ahmet K.</strong>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>İncek’teki koltuk temizliği mükemmeldi, herkese tavsiye ederim.</p>
-      <strong>Elif S.</strong>
-    </div>
-  </section>
+<section id="reviews" class="reviews">
+  <h2>Müşteri Memnuniyeti</h2>
+  <div class="review-card">
+    <div class="stars">★★★★★</div>
+    <p>Çayyolu halı yıkama hizmetinden çok memnun kaldım. Hızlı ve temiz!</p>
+    <strong>Ahmet K.</strong>
+  </div>
+  <div class="review-card">
+    <div class="stars">★★★★★</div>
+    <p>İncek’teki koltuk temizliği mükemmeldi, herkese tavsiye ederim.</p>
+    <strong>Elif S.</strong>
+  </div>
+</section>
 
-  <section class="satisfaction">
-    <table>
-      <thead>
-        <tr>
-          <th>Mahalle</th>
-          <th>Memnuniyet</th>
-          <th>Puan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Çayyolu</td><td>Çok Memnun</td><td>★★★★★</td></tr>
-        <tr><td>Yaşamkent</td><td>Memnun</td><td>★★★★</td></tr>
-        <tr><td>İncek</td><td>Çok Memnun</td><td>★★★★★</td></tr>
-        <tr><td>Beysukent</td><td>Memnun</td><td>★★★★</td></tr>
-        <tr><td>Beytepe</td><td>Çok Memnun</td><td>★★★★★</td></tr>
-        <tr><td>Alacaatlı</td><td>Memnun</td><td>★★★★</td></tr>
-      </tbody>
-    </table>
-  </section>
+<section class="satisfaction">
+  <table>
+    <thead>
+      <tr>
+        <th>Mahalle</th>
+        <th>Memnuniyet</th>
+        <th>Puan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Çayyolu</td><td>Çok Memnun</td><td>★★★★★</td></tr>
+      <tr><td>Yaşamkent</td><td>Memnun</td><td>★★★★</td></tr>
+      <tr><td>İncek</td><td>Çok Memnun</td><td>★★★★★</td></tr>
+      <tr><td>Beysukent</td><td>Memnun</td><td>★★★★</td></tr>
+      <tr><td>Beytepe</td><td>Çok Memnun</td><td>★★★★★</td></tr>
+      <tr><td>Alacaatlı</td><td>Memnun</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+</section>
 
-  <section class="contact" id="contact">
-    <h2>İletişim</h2>
-    <p>Randevu ve sorularınız için hemen arayın veya WhatsApp’tan yazın:</p>
-    <a href="tel:+905362333675">📞 0536 233 36 75</a>
-    <a href="tel:+903122440304">📞 0312 244 03 04</a>
-    <a href="https://wa.me/905362333675" target="_blank">💬 WhatsApp</a>
-  </section>
+<section class="contact" id="contact">
+  <h2>İletişim</h2>
+  <p>Randevu ve sorularınız için hemen arayın veya WhatsApp’tan yazın:</p>
+  <a href="tel:+905362333675">📞 0536 233 36 75</a>
+  <a href="tel:+903122440304">📞 0312 244 03 04</a>
+  <a href="https://wa.me/905362333675" target="_blank">💬 WhatsApp</a>
+</section>
 
-  <footer>
-    <p>© 2026 Yaprak Halı Yıkama. Tüm hakları saklıdır.</p>
-  </footer>
+<footer>
+  <p>© 2026 Yaprak Halı Yıkama. Tüm hakları saklıdır.</p>
+</footer>
 
 </body>
 </html>
