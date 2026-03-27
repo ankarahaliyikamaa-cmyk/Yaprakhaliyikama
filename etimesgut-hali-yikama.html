@@ -3,195 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaprak Halı Yıkama | Çayyolu, Ümitköy, Bağlıca, Etimesgut Halı Temizleme</title>
-    <meta name="description" content="Yaprak Halı Yıkama; Çayyolu, Ümitköy, Bağlıca, Konutkent ve Etimesgut bölgelerinde profesyonel, antibakteriyel halı yıkama hizmeti sunar. Hemen arayın: 0536 233 36 75">
+    <title>Etimesgut Halı Yıkama | Elvankent, Eryaman, Bağlıca Profesyonel Temizlik</title>
+    <meta name="description" content="Etimesgut halı yıkama (Elvankent, Eryaman, İstasyon) servisimizle 15 yıllık tecrübe. En iyi fiyat, %100 hijyen garantisi ve ücretsiz servis için hemen arayın!">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        :root {
-            --primary-blue: #005691;
-            --primary-green: #2ecc71;
-            --text-dark: #333;
-            --text-light: #fff;
-            --bg-light: #f9f9f9;
-        }
-
+        :root { --p-blue: #004a80; --p-green: #27ae60; --bg-gray: #f8f9fa; --gold: #f1c40f; --danger: #e74c3c; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { line-height: 1.6; color: var(--text-dark); background-color: #fff; }
-        a { text-decoration: none; transition: 0.3s; }
+        body { background: #fff; color: #333; line-height: 1.6; overflow-x: hidden; }
 
-        /* Üst Bar */
-        .top-bar {
-            background-color: var(--primary-blue);
-            color: var(--text-light);
-            padding: 10px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
+        /* Sabit Arama Barı */
+        .call-action-bar { 
+            background: var(--p-green); color: white; padding: 12px 5%; 
+            display: flex; justify-content: center; align-items: center; 
+            position: sticky; top: 0; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        .top-bar-phones a { color: white; font-weight: 600; margin-left: 15px; }
-
-        /* Navbar */
-        nav {
-            background-color: #fff;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky; top: 0; z-index: 1000;
+        .call-btn-main {
+            background: white; color: var(--p-green); padding: 8px 25px; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px;
+            animation: pulse 2s infinite;
         }
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary-blue); }
-        .logo span { color: var(--primary-green); }
-        .nav-links a { color: var(--text-dark); margin-left: 20px; font-weight: 600; }
-        .nav-links a:hover { color: var(--primary-blue); }
+        @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);} }
 
-        /* Hero Görseli */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hali-sirtinda-tasima.jpg') no-repeat center center/cover;
-            height: 65vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--text-light);
-            padding: 0 20px;
+        /* Etimesgut Özel Kampanya Bandı */
+        .promo-banner { background: var(--danger); color: white; text-align: center; padding: 10px; font-weight: 600; font-size: 0.9rem; }
+
+        /* Hero */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/hali-sirtinda-tasima.jpg') no-repeat center center/cover; 
+            height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 20px; 
         }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
-        .cta-buttons { display: flex; gap: 15px; margin-top: 20px; }
-        .btn { padding: 15px 35px; border-radius: 5px; font-weight: 700; border: none; font-size: 1.1rem; color: white; cursor: pointer; }
-        .btn-call { background-color: var(--primary-green); }
-        .btn-order { background-color: var(--primary-blue); }
 
-        /* SEO Metin Alanları */
-        .seo-sections { padding: 60px 10%; background-color: var(--bg-light); }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2 { color: var(--primary-blue); font-size: 2rem; }
-        
-        .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .seo-block { background: #fff; padding: 30px; border-radius: 12px; border-left: 5px solid var(--primary-green); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .seo-block h3 { color: var(--primary-blue); margin-bottom: 15px; font-size: 1.4rem; }
-        .seo-block p { font-size: 0.95rem; margin-bottom: 10px; text-align: justify; }
+        /* Hizmetler Galeri */
+        .gallery-section { padding: 40px 5%; text-align: center; }
+        .scroll-container { display: flex; overflow-x: auto; gap: 15px; padding: 20px 0; scrollbar-width: none; }
+        .scroll-container::-webkit-scrollbar { display: none; }
+        .scroll-item { flex: 0 0 85%; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-bottom: 5px solid var(--p-blue); }
+        .scroll-item img { width: 100%; height: 250px; object-fit: cover; }
 
-        /* Footer */
-        footer { background-color: #1a1a1a; color: #fff; padding: 60px 10% 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .footer-section h4 { border-bottom: 2px solid var(--primary-green); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
-        .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; font-size: 1.1rem; font-weight: 500; }
-        .contact-item i { color: var(--primary-green); }
-        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.85rem; color: #888; }
+        /* Etimesgut Mahalle Listesi - SEO Altın Madeni */
+        .area-list { padding: 40px 5%; background: #fff; text-align: center; }
+        .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 20px; }
+        .area-item { background: #f1f1f1; padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 500; color: var(--p-blue); border: 1px solid #ddd; }
 
-        @media (max-width: 992px) { .seo-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .top-bar { flex-direction: column; text-align: center; gap: 10px; }
-        }
+        /* SEO & Etimesgut Özel */
+        .seo-section { padding: 50px 5%; background: var(--bg-gray); }
+        .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .seo-card { background: white; padding: 30px; border-radius: 15px; border-top: 5px solid var(--p-green); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .etimesgut-box { border: 2px solid var(--danger); background: #fffcfc; }
+
+        /* WhatsApp */
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; z-index: 10000; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        @media (min-width: 992px) { .scroll-item { flex: 0 0 23%; } }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div><i class="fas fa-truck"></i> Ücretsiz Servis: Çayyolu - Ümitköy - Bağlıca - Etimesgut</div>
-        <div class="top-bar-phones">
-            <a href="tel:05362333675"><i class="fas fa-mobile-alt"></i> 0536 233 36 75</a>
-            <a href="tel:03122440304"><i class="fas fa-phone"></i> 0312 244 03 04</a>
-        </div>
+    <div class="promo-banner">📢 ETİMESGUT'A ÖZEL: 4 Halı Yıkatana 1 Battaniye Yıkama HEDİYE!</div>
+
+    <div class="call-action-bar">
+        <a href="tel:05362333675" class="call-btn-main">
+            <i class="fas fa-phone-alt"></i> ETİMESGUT HATTI: 0536 233 36 75
+        </a>
     </div>
 
-    <nav>
-        <div class="logo">YAPRAK <span>HALI YIKAMA</span></div>
-        <div class="nav-links">
-            <a href="#hizmetler">Hizmetlerimiz</a>
-            <a href="#bolgeler">Bölgeler</a>
-            <a href="#iletisim">İletişim</a>
-        </div>
+    <nav style="background: #fff; padding: 15px 5%; text-align: center;">
+        <div class="logo" style="font-weight:800; color:var(--p-blue); font-size:1.8rem;">YAPRAK <span style="color:var(--p-green)">HALI YIKAMA</span></div>
     </nav>
 
     <section class="hero">
-        <h1>Ankara'nın Halısı Yaprak ile Temizlenir!</h1>
-        <p>Çayyolu'ndan Etimesgut'a kadar tüm batı Ankara'da %100 hijyen garantili profesyonel halı yıkama.</p>
-        <div class="cta-buttons">
-            <a href="tel:05362333675" class="btn btn-call">Hemen Ara</a>
-            <a href="tel:03122440304" class="btn btn-order">Randevu Al</a>
+        <h1>Etimesgut'un En Güvenilir Halı Yıkama Fabrikası</h1>
+        <p>Elvankent, Eryaman ve Sincan'da 15 Yıllık Kusursuz Hizmet</p>
+    </section>
+
+    <!-- Hizmet Galeri -->
+    <section class="gallery-section">
+        <h2>Etimesgut Temizlik Hizmetlerimiz</h2>
+        <div class="scroll-container">
+            <div class="scroll-item"><img src="images/makina.jfif" alt="Etimesgut Halı Yıkama"><h4>Lekelere Son! Halı Yıkama</h4></div>
+            <div class="scroll-item"><img src="images/battaniye.jfif" alt="Etimesgut Battaniye Yıkama"><h4>Yumuşacık Battaniye & Yorgan</h4></div>
+            <div class="scroll-item"><img src="images/perde.jfif" alt="Etimesgut Perde Yıkama"><h4>Stor & Zebra Perde</h4></div>
+            <div class="scroll-item"><img src="images/kurutma.jfif" alt="Kurutma Sistemi"><h4>Kapalı Alan Hijyenik Kurutma</h4></div>
         </div>
     </section>
 
-    <section id="bolgeler" class="seo-sections">
-        <div class="section-header">
-            <h2>Profesyonel Hizmet Bölgelerimiz</h2>
-            <p>Size en yakın tam otomatik halı yıkama fabrikası olarak her semte özel servis ağımız mevcuttur.</p>
-        </div>
-
+    <!-- SEO & Etimesgut Fokus -->
+    <section class="seo-section">
         <div class="seo-grid">
-            <!-- ÇAYYOLU -->
-            <div class="seo-block">
-                <h3>Çayyolu Halı Yıkama</h3>
-                <p><strong>Çayyolu halı yıkama</strong> ihtiyaçlarınızda Yaprak Halı Yıkama olarak profesyonel çözümler sunuyoruz. Bölgenin en köklü firmalarından biri olarak, halılarınızı türüne göre ayırıyor ve antibakteriyel şampuanlarla yıkıyoruz.</p>
-                <p>Çayyolu, Alacaatlı ve Dodurga bölgelerine her gün düzenli servisimiz vardır.</p>
+            <div class="seo-card etimesgut-box">
+                <h3>Etimesgut Halı Yıkama Merkezi</h3>
+                <p><strong>Etimesgut halı yıkama</strong> ihtiyaçlarınızda Yaprak Halı Yıkama olarak bölgenin en büyük ve en modern tesisine sahibiz. Etimesgut'un dar sokaklarından geniş caddelerine kadar her noktaya ücretsiz servis ağımızla ulaşıyoruz. Halılarınız cinsine göre (Makine, Yün, Step, Nepal) ayrıştırılır ve özel solüsyonlarla yıkanır.</p>
+                <p><strong>Elvankent</strong> ve <strong>Eryaman</strong> bölgelerinde koltuk yıkama ve yerinde halıfleks temizliği hizmetimiz de yoğun ilgi görmektedir.</p>
             </div>
-
-            <!-- ETİMESGUT (YENİ EKLEDİĞİMİZ) -->
-            <div class="seo-block">
-                <h3>Etimesgut Halı Yıkama</h3>
-                <p><strong>Etimesgut halı yıkama</strong> servisimiz ile Elvankent, Eryaman ve İstasyon bölgelerine yıldırım hızında hizmet taşıyoruz. Etimesgut bölgesinde halı temizliği yaptırmak isteyen müşterilerimiz için en uygun fiyat garantisini sunuyoruz.</p>
-                <p>Yaprak Halı Yıkama, Etimesgut'ta koltuk yıkama ve yerinde temizlik hizmetleriyle de hijyeni kapınıza getiriyor.</p>
+            <div class="seo-card">
+                <h3>Sincan & Yenikent</h3>
+                <p><strong>Sincan halı yıkama</strong> servisimiz Fatih, Törekent ve Plevne mahallelerine her gün uğramaktadır. Fabrikamızda toz alma, yıkama, durulama ve paketleme işlemleri el değmeden yapılır.</p>
             </div>
-
-            <!-- ÜMİTKÖY -->
-            <div class="seo-block">
-                <h3>Ümitköy Halı Yıkama</h3>
-                <p><strong>Ümitköy halı yıkama</strong> firması arayanlar için hijyenik ve modern tesislerimizde hizmet veriyoruz. El dokuma halılarınız, antika halılarınız ve İpek halılarınız Ümitköy uzman ekibimiz tarafından özenle temizlenir.</p>
-                <p>Ümitköy genelinde ücretsiz servisimizle halılarınızı kapınızdan alıp kapınıza teslim ediyoruz.</p>
-            </div>
-
-            <!-- BAĞLICA -->
-            <div class="seo-block">
-                <h3>Bağlıca Halı Yıkama</h3>
-                <p>Bağlıca'nın tozlu ve yoğun trafiğinden etkilenen halılarınız için <strong>Bağlıca halı yıkama</strong> merkezimiz tam kapasite çalışıyor. Bağlıca'daki en modern yıkama parkurlarından birine sahibiz.</p>
-                <p>Yorgan, battaniye ve stor perde yıkama işlemleriniz için Bağlıca servisimize ulaşabilirsiniz.</p>
-            </div>
-
-            <!-- KONUTKENT -->
-            <div class="seo-block">
-                <h3>Konutkent Halı Yıkama</h3>
-                <p>Konutkent 1-2 ve Yaşamkent bölgelerinde <strong>Konutkent halı yıkama</strong> denilince akla gelen ilk firmayız. Halılarınızı yıpratmayan, renkleri soldurmayan bitkisel yıkama yöntemlerimizle tanışın.</p>
+            <div class="seo-card">
+                <h3>Bağlıca & Ümitköy</h3>
+                <p><strong>Bağlıca halı yıkama</strong> ve Yaşamkent bölgelerinde VIP standartlarda temizlik sağlıyoruz. Özellikle çocuklu evler için antibakteriyel yıkama önceliğimizdir.</p>
             </div>
         </div>
     </section>
 
-    <footer id="iletisim">
-        <div class="footer-grid">
-            <div class="footer-section">
-                <h4>Hakkımızda</h4>
-                <p>Yaprak Halı Yıkama, Ankara'nın batı semtlerinde profesyonel temizlik ekipmanları ve tecrübeli kadrosuyla hizmet veren bir aile kuruluşudur.</p>
-            </div>
-            <div class="footer-section">
-                <h4>İletişim Kanallarımız</h4>
-                <a href="tel:05362333675" class="contact-item">
-                    <i class="fas fa-mobile-alt"></i> 0536 233 36 75
-                </a>
-                <a href="tel:03122440304" class="contact-item">
-                    <i class="fas fa-phone"></i> 0312 244 03 04
-                </a>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i> Ankara / Çayyolu & Etimesgut Şubeleri
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Çalışma Saatleri</h4>
-                <p>Hafta İçi: 09:00 - 19:30</p>
-                <p>Cumartesi: 09:00 - 18:00</p>
-                <p>Pazar: Kapalı</p>
-            </div>
+    <!-- Mahalle Listesi - Google Bu Bölüme Bayılır -->
+    <section class="area-list">
+        <h2 style="color:var(--p-blue)">Etimesgut'ta Servis Verdiğimiz Mahalleler</h2>
+        <div class="area-grid">
+            <div class="area-item">Elvankent</div><div class="area-item">Eryaman</div><div class="area-item">İstasyon Mh.</div>
+            <div class="area-item">Şeker Mh.</div><div class="area-item">Etiler Mh.</div><div class="area-item">Piyade Mh.</div>
+            <div class="area-item">Süvari Mh.</div><div class="area-item">30 Ağustos</div><div class="area-item">Kazım Karabekir</div>
+            <div class="area-item">Alsancak</div><div class="area-item">Ahi Mesut</div><div class="area-item">Bağlıca</div>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 Yaprak Halı Yıkama. Ankara Halı Temizleme Profesyonelleri.
-        </div>
+    </section>
+
+    <!-- Güven Veren Footer -->
+    <footer style="background:#111; color:#777; text-align:center; padding:50px;">
+        <p><strong>Yaprak Halı Yıkama Fabrikası</strong><br>
+        Etimesgut, Sincan, Yenikent, Batıkent, Bağlıca, Çayyolu ve Ümitköy Servis Ağı<br>
+        Halılarınız Sigortalı ve Garantili Olarak Yıkanır.</p>
+        <p style="margin-top:20px; font-size:0.8rem;">&copy; 2026 - Ankara Profesyonel Temizlik</p>
     </footer>
+
+    <a href="https://wa.me/905362333675?text=Merhaba, Etimesgut bölgesinden randevu almak istiyorum." class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i> <span>Hemen Randevu Al</span>
+    </a>
 
 </body>
 </html>
