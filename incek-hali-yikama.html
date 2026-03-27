@@ -10,10 +10,10 @@
     <style>
         :root { --p-blue: #004a80; --p-green: #27ae60; --bg-gray: #f4f7f6; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #fff; color: #333; overflow-x: hidden; line-height: 1.6; }
+        body { background: #fff; color: #333; line-height: 1.6; overflow-x: hidden; }
 
         /* Üst Bar & Nav */
-        .top-info { background: var(--p-blue); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 0.9rem; border-bottom: 3px solid var(--p-green); }
+        .top-info { background: var(--p-blue); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 0.8rem; border-bottom: 3px solid var(--p-green); }
         nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
         .logo { font-weight: 800; font-size: 1.5rem; color: var(--p-blue); }
         .logo span { color: var(--p-green); }
@@ -21,67 +21,70 @@
         /* Hero */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hali-sirtinda-tasima.jpg') no-repeat center center/cover;
-            height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 20px;
+            height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 20px;
         }
 
-        /* --- GARANTİ GALERİ (FADE EFFECT) --- */
-        .gallery-container { padding: 50px 5%; text-align: center; background: #fff; }
-        .gallery-wrapper {
-            position: relative;
-            max-width: 800px;
-            height: 450px; /* Sabit yükseklik verdik ki kaymasın */
-            margin: 0 auto;
-            border-radius: 20px;
+        /* --- %100 ÇALIŞAN KAYDIRMALI GALERİ --- */
+        .gallery-section { padding: 40px 5%; text-align: center; }
+        .gallery-section h2 { color: var(--p-blue); margin-bottom: 20px; }
+        
+        /* Kaydırma Kutusu */
+        .scroll-container {
+            display: flex;
+            overflow-x: auto; /* Yatay kaydırmayı açar */
+            scroll-snap-type: x mandatory; /* Fotoğrafların tam ortada durmasını sağlar */
+            gap: 15px;
+            padding: 20px 0;
+            scrollbar-width: none; /* Mouse tekerleği çubuğunu gizler */
+        }
+        .scroll-container::-webkit-scrollbar { display: none; } /* Chrome/Safari için çubuğu gizler */
+
+        .scroll-item {
+            flex: 0 0 85%; /* Mobilde ekranın %85'ini kaplar (yanındaki görünsün diye) */
+            scroll-snap-align: center;
+            background: white;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .slide {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            opacity: 0; /* Başlangıçta hepsi gizli */
-            transition: opacity 1s ease-in-out; /* Yumuşak geçiş */
-            display: flex; flex-direction: column;
+        .scroll-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
         }
 
-        .slide.active { opacity: 1; z-index: 10; } /* Sadece aktif olan görünür */
-
-        .slide img { width: 100%; height: 100%; object-fit: cover; }
-
-        .slide-text {
-            position: absolute; bottom: 0; width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px; color: var(--p-blue);
-        }
+        .item-info { padding: 15px; background: #fff; border-top: 2px solid var(--p-green); }
+        .item-info h4 { color: var(--p-blue); font-size: 1.1rem; }
 
         /* --- SEO & İLÇE METİNLERİ (DOPDOLU) --- */
-        .seo-section { padding: 60px 5%; background: var(--bg-gray); }
-        .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .seo-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--p-green); }
-        .seo-card h3 { color: var(--p-blue); margin-bottom: 15px; font-size: 1.4rem; }
-        .seo-card p { font-size: 0.95rem; color: #555; text-align: justify; }
+        .seo-section { padding: 50px 5%; background: var(--bg-gray); }
+        .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .seo-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .seo-card h3 { color: var(--p-blue); margin-bottom: 12px; border-bottom: 2px solid var(--p-green); display: inline-block; }
+        .seo-card p { font-size: 0.9rem; color: #555; text-align: justify; margin-bottom: 10px; }
 
         /* WhatsApp */
-        .wa-btn {
+        .wa-float {
             position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white;
-            padding: 15px 25px; border-radius: 50px; font-weight: 700; z-index: 9999;
-            text-decoration: none; display: flex; align-items: center; gap: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2); animation: pulse 2s infinite;
+            padding: 12px 20px; border-radius: 50px; font-weight: bold; z-index: 10000;
+            text-decoration: none; display: flex; align-items: center; gap: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-        @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);} }
 
-        @media (max-width: 768px) {
-            .gallery-wrapper { height: 300px; }
-            .wa-btn span { display: none; }
+        /* Bilgisayar Ekranı İçin Düzenleme */
+        @media (min-width: 992px) {
+            .scroll-item { flex: 0 0 30%; } /* Bilgisayarda 3 tane yan yana görünür */
+            .hero { height: 60vh; }
         }
     </style>
 </head>
 <body>
 
     <div class="top-info">
-        <span>Yaprak Halı Yıkama - Profesyonel Hizmet</span>
-        <a href="tel:05362333675" style="color:white; font-weight:bold;">0536 233 36 75</a>
+        <span>Yaprak Halı Yıkama - Ankara Hijyen Hattı</span>
+        <a href="tel:05362333675" style="color:white;">0536 233 36 75</a>
     </div>
 
     <nav>
@@ -89,90 +92,74 @@
     </nav>
 
     <section class="hero">
-        <h1>Ankara'nın Halı Yıkama Uzmanı</h1>
-        <p>İncek, Çayyolu, Etimesgut ve Bağlıca'da Hijyenin Tek Adresi</p>
+        <h1>Ankara Halı Yıkama'da Öncü Firma</h1>
+        <p>İncek, Çayyolu ve Etimesgut'un En Güvenilir İsmi</p>
     </section>
 
-    <!-- GALERİ (FADE SİSTEMİ) -->
-    <section class="gallery-container">
-        <h2 style="color:var(--p-blue); margin-bottom:20px;">Hizmet Sürecimiz</h2>
-        <div class="gallery-wrapper">
-            
-            <div class="slide active">
+    <!-- GALERİ (DOKUNMATİK VE KAYDIRMALI) -->
+    <section class="gallery-section">
+        <h2>Temizlik Sürecimiz</h2>
+        <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">(Resimleri yana kaydırabilirsiniz)</p>
+        
+        <div class="scroll-container">
+            <!-- 1 -->
+            <div class="scroll-item">
                 <img src="images/makina.jfif" alt="Halı Yıkama">
-                <div class="slide-text"><h4>1. Tam Otomatik Yıkama</h4><p>Halılarınız son teknoloji makinelerde yıkanır.</p></div>
+                <div class="item-info"><h4>1. Tam Otomatik Yıkama</h4><p>Derinlemesine temizlik.</p></div>
             </div>
-
-            <div class="slide">
-                <img src="images/Battaniye.jfif" alt="Battaniye Yıkama">
-                <div class="slide-text"><h4>2. Battaniye & Yorgan Temizliği</h4><p>Bitkisel deterjanlarla hijyenik yıkama.</p></div>
+            <!-- 2 -->
+            <div class="scroll-item">
+                <img src="images/Battaniye.jfif" alt="Battaniye">
+                <div class="item-info"><h4>2. Battaniye Hijyeni</h4><p>Yumuşacık ve tertemiz.</p></div>
             </div>
-
-            <div class="slide">
-                <img src="images/perde.jfif" alt="Perde Yıkama">
-                <div class="slide-text"><h4>3. Perde & Stor Temizliği</h4><p>Hassas perdeleriniz için uzman çözüm.</p></div>
+            <!-- 3 -->
+            <div class="scroll-item">
+                <img src="images/perde.jfif" alt="Perde">
+                <div class="item-info"><h4>3. Stor & Perde</h4><p>Hassas dokunuşlar.</p></div>
             </div>
-
-            <div class="slide">
+            <!-- 4 -->
+            <div class="scroll-item">
                 <img src="images/kurutma.jfif" alt="Kurutma">
-                <div class="slide-text"><h4>4. Özel Kurutma Odaları</h4><p>Tozsuz ve nemden uzak kurutma sistemi.</p></div>
+                <div class="item-info"><h4>4. Tozsuz Kurutma</h4><p>Özel kurutma odaları.</p></div>
             </div>
-
-            <div class="slide">
+            <!-- 5 -->
+            <div class="scroll-item">
                 <img src="images/paket.jfif" alt="Teslimat">
-                <div class="slide-text"><h4>5. Ücretsiz Servis & Paketleme</h4><p>Kapınıza teslim profesyonel hizmet.</p></div>
+                <div class="item-info"><h4>5. Hızlı Teslimat</h4><p>Söz verdiğimiz zamanda.</p></div>
             </div>
-
         </div>
     </section>
 
-    <!-- SEO & İLÇE YAZILARI (DOPDOLU) -->
+    <!-- SEO & İLÇE METİNLERİ (DOPDOLU) -->
     <section class="seo-section">
         <div class="seo-grid">
             <div class="seo-card">
                 <h3>İncek Halı Yıkama</h3>
-                <p><strong>İncek halı yıkama</strong> servisimiz, bölgedeki lüks villalar ve konutlar için özel hijyen çözümleri sunar. El dokuma halılarınız, ipek halılarınız ve antika değerindeki eşyalarınız Yaprak Halı Yıkama güvencesiyle uzman ellerde temizlenir. İncek'in her noktasına ücretsiz servisimiz vardır.</p>
+                <p><strong>İncek halı yıkama</strong> fabrikası olarak, İncek ve çevresindeki sitelere profesyonel halı temizleme hizmeti veriyoruz. Villa ve geniş dairelerin ihtiyaç duyduğu yerinde koltuk yıkama hizmetini en modern makinelerle sunmaktayız. İpek, yün ve el dokuma halılarınızın formunu bozmadan temizliyoruz.</p>
+                <p>Ankara'nın havasına ve suyuna uygun en kaliteli bitkisel şampuanlarla sağlığınızı koruyoruz.</p>
             </div>
 
             <div class="seo-card">
                 <h3>Çayyolu Halı Yıkama</h3>
-                <p><strong>Çayyolu halı yıkama</strong> fabrikamız, bölgenin en modern tesisine sahiptir. Antibakteriyel yıkama yöntemlerimiz sayesinde halılarınızdaki mayt ve bakteriler tamamen yok edilir. Çocuklu aileler ve evcil hayvan besleyenler için en güvenli temizlik şampuanlarını kullanıyoruz.</p>
+                <p><strong>Çayyolu halı yıkama</strong> ihtiyaçlarınızda Yaprak Halı Yıkama uzmanlığı yanınızda. Ümitköy, Konutkent ve Beysukent bölgelerindeki müşterilerimize özel antibakteriyel yıkama seçenekleri sunuyoruz. Halılarınız tozdan arındırılır, yıkanır ve dezenfekte edilerek ilk günkü parlaklığına kavuşur.</p>
+                <p>Ücretsiz servisimizle halılarınızı kapınızdan alıp kapınıza bırakıyoruz.</p>
             </div>
 
             <div class="seo-card">
                 <h3>Etimesgut Halı Yıkama</h3>
-                <p><strong>Etimesgut halı yıkama</strong> ihtiyaçlarınızda profesyonel kadromuzla yanınızdayız. Bağlıca, Elvankent ve Eryaman bölgelerine her gün düzenli servis araçlarımız çıkmaktadır. Halılarınız, perdeleriniz ve battaniyeleriniz kapınızdan alınır, söz verdiğimiz günde tertemiz teslim edilir.</p>
-            </div>
-
-            <div class="seo-card">
-                <h3>Ümitköy Halı Yıkama</h3>
-                <p>Ümitköy ve Konutkent sakinlerine özel <strong>Ümitköy halı yıkama</strong> hizmetimizle kaliteden ödün vermiyoruz. Stor perde yıkama, koltuk yıkama ve yerinde halıfleks temizliği konularında Ankara'nın en çok tavsiye edilen firması olmanın gururunu yaşıyoruz.</p>
+                <p><strong>Etimesgut halı yıkama</strong> servis ağımız Bağlıca, Eryaman ve Elvankent mahallelerini kapsamaktadır. Geniş araç filomuzla Etimesgut bölgesinde hızlı ve zamanında teslimat yapıyoruz. Battaniye, yorgan ve perde yıkama işlemlerinde de bölgenin en uygun fiyatlı ve en kaliteli hizmetini sağlıyoruz.</p>
+                <p>Halınızın cinsi ne olursa olsun, doğru teknikle temizlendiğinden emin olabilirsiniz.</p>
             </div>
         </div>
     </section>
 
-    <footer style="background:#111; color:#999; text-align:center; padding:30px;">
-        <p>&copy; 2026 Yaprak Halı Yıkama | İncek - Çayyolu - Etimesgut - Ümitköy</p>
+    <footer style="background:#111; color:#999; text-align:center; padding:20px;">
+        <p>&copy; 2026 Yaprak Halı Yıkama - Ankara</p>
     </footer>
 
-    <a href="https://wa.me/905362333675" class="wa-btn" target="_blank">
+    <a href="https://wa.me/905362333675" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i> <span>WhatsApp Randevu</span>
     </a>
-
-    <!-- FADE GALERİ SCRIPT -->
-    <script>
-        let current = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function changeSlide() {
-            slides[current].classList.remove('active'); // Mevcut olanı gizle
-            current = (current + 1) % slides.length;    // Bir sonrakine geç
-            slides[current].classList.add('active');    // Yeni olanı göster
-        }
-
-        // 3 saniyede bir değiştir
-        setInterval(changeSlide, 3000);
-    </script>
 
 </body>
 </html>
