@@ -1,150 +1,132 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çayyolu Halı Yıkama | Profesyonel Halı Temizliği Etimesgut & Sincan</title>
-    <meta name="description" content="Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti. Halılarınız hijyenik ve tertemiz teslim edilir.">
-    <meta name="keywords" content="Çayyolu halı yıkama, Etimesgut halı temizliği, Sincan halı yıkama, halı temizleme, profesyonel halı temizliği">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f7f7f7;
-        }
-        header {
-            position: relative;
-            width: 100%;
-            height: 70vh;
-            overflow: hidden;
-        }
-        header iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 3em;
-            font-weight: bold;
-            text-align: center;
-            padding: 0 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            background: #0077cc;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact-buttons {
-            margin: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .contact-buttons a {
-            padding: 10px 20px;
-            background: #0077cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .content {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .content img {
-            max-width: 100%;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        h2, h3 {
-            color: #0077cc;
-        }
-        footer {
-            background: #0077cc;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            margin-top: 40px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Çayyolu Halı Yıkama | Profesyonel Halı Temizliği</title>
+<meta name="description" content="Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti. Halılarınız hijyenik ve tertemiz teslim edilir.">
+<meta name="keywords" content="Çayyolu halı yıkama, Etimesgut halı temizliği, Sincan halı yıkama, halı temizleme, profesyonel halı temizliği">
+<style>
+    /* Genel Stil */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:Arial,sans-serif;background:#f5f5f5;color:#333;overflow-x:hidden;}
+    a{text-decoration:none;color:white;}
+    h2,h3{color:#0077cc;}
+    
+    /* Üst Video ve Parallax */
+    header{position:relative;width:100%;height:80vh;overflow:hidden;}
+    header video{width:100%;height:100%;object-fit:cover;filter:brightness(0.6);}
+    .overlay{
+        position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+        color:white;font-size:3em;font-weight:bold;text-align:center;
+        animation:fadeInDown 2s ease forwards;
+    }
+    .overlay span{
+        display:inline-block;
+        animation:slideText 5s infinite alternate;
+    }
+    
+    @keyframes slideText{
+        0%{transform:translateY(0);}
+        100%{transform:translateY(-20px);}
+    }
+    @keyframes fadeInDown{
+        0%{opacity:0;transform:translateY(-50px);}
+        100%{opacity:1;transform:translateY(0);}
+    }
+    
+    /* Navbar */
+    nav{display:flex;justify-content:center;gap:15px;background:#0077cc;padding:12px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+    nav a{font-weight:bold;padding:8px 16px;border-radius:5px;transition:0.3s;}
+    nav a:hover{background:white;color:#0077cc;}
+    
+    /* Butonlar */
+    .contact-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:20px;}
+    .contact-buttons a{padding:12px 24px;background:#0077cc;border-radius:8px;font-weight:bold;transition:0.3s;position:relative;overflow:hidden;}
+    .contact-buttons a:hover{background:#005fa3;}
+    .contact-buttons a::after{
+        content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(255,255,255,0.2);transition:0.4s;
+    }
+    .contact-buttons a:hover::after{left:0;}
+    
+    /* İçerik */
+    .content{max-width:1200px;margin:auto;padding:30px;}
+    .service-box, .mahalle-box{background:white;padding:20px;margin:15px 0;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.4s;}
+    .service-box:hover, .mahalle-box:hover{transform:translateY(-5px);}
+    .content img{width:100%;margin:15px 0;border-radius:12px;transition:transform 0.5s;}
+    .content img:hover{transform:scale(1.05);}
+    ul{margin-left:20px;margin-top:10px;}
+    
+    /* Footer */
+    footer{background:#0077cc;color:white;text-align:center;padding:25px 10px;margin-top:40px;}
+    
+    /* Animasyon Scroll */
+    [data-animate]{opacity:0;transform:translateY(40px);transition:all 0.7s ease-out;}
+    [data-animate].active{opacity:1;transform:translateY(0);}
+</style>
 </head>
 <body>
 
 <header>
-    <!-- iStock Video Embed -->
-    <iframe src="https://www.istockphoto.com/tr/video/carpet-washing-gm1404923828-456945225/embed" allowfullscreen></iframe>
-    <div class="overlay">Çayyolu Halı Yıkama | Profesyonel Temizlik</div>
+    <video autoplay muted loop>
+        <source src="images/haliyikama.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
+    <div class="overlay"><span>Çayyolu Halı Yıkama | Profesyonel Temizlik</span></div>
 </header>
 
 <nav>
     <a href="#hizmetler">Hizmetlerimiz</a>
-    <a href="#mahalleler">Hizmet Verilen Mahalleler</a>
+    <a href="#mahalleler">Mahalleler</a>
     <a href="#iletisim">İletişim</a>
 </nav>
 
-<div class="contact-buttons">
-    <a href="tel:05362333675">Ara: 0536 233 36 75</a>
-    <a href="tel:03122440304">Ara: 0312 244 03 04</a>
+<div class="contact-buttons" data-animate>
+    <a href="tel:05362333675">0536 233 36 75</a>
+    <a href="tel:03122440304">0312 244 03 04</a>
     <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
 </div>
 
 <div class="content" id="hizmetler">
-    <h2>Profesyonel Halı Temizliği</h2>
-    <p>Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti sunuyoruz. Halılarınız hijyenik, tertemiz ve güvenli bir şekilde teslim edilir. Modern ekipmanlarımız ve deneyimli ekibimizle her tür halı ve koltuk temizliği yapılmaktadır.</p>
+    <h2 data-animate>Profesyonel Halı Temizliği</h2>
+    <p data-animate>Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti sunuyoruz. Halılarınız hijyenik, tertemiz ve güvenli bir şekilde teslim edilir.</p>
     
-    <h3>Hizmetlerimiz:</h3>
-    <ul>
-        <li>Ev tipi halı yıkama</li>
-        <li>Koltuk ve kanepe temizliği</li>
-        <li>Derinlemesine leke çıkarma</li>
-        <li>Hızlı ve güvenli teslimat</li>
-    </ul>
+    <div class="service-box" data-animate>
+        <h3>Hizmetlerimiz:</h3>
+        <ul>
+            <li>Ev tipi halı yıkama</li>
+            <li>Koltuk ve kanepe temizliği</li>
+            <li>Derinlemesine leke çıkarma</li>
+            <li>Hızlı ve güvenli teslimat</li>
+        </ul>
+    </div>
 
-    <h3>Öne Çıkan Fotoğraflar</h3>
-    <img src="https://via.placeholder.com/800x400?text=Halı+Yıkama+1" alt="Halı Yıkama">
-    <img src="https://via.placeholder.com/800x400?text=Halı+Yıkama+2" alt="Halı Yıkama">
-    <img src="https://via.placeholder.com/800x400?text=Halı+Yıkama+3" alt="Halı Yıkama">
+    <div class="service-box" data-animate>
+        <h3>Öne Çıkan Fotoğraflar</h3>
+        <img src="images/haliyikama1.jpg" alt="Halı Yıkama">
+        <img src="images/haliyikama2.jpg" alt="Halı Yıkama">
+        <img src="images/haliyikama3.jpg" alt="Halı Yıkama">
+    </div>
 </div>
 
 <div class="content" id="mahalleler">
-    <h2>Hizmet Verilen Mahalleler</h2>
-    <p>Çayyolu ve çevresindeki mahallelerde hizmet veriyoruz:</p>
-    <ul>
-        <li>Çayyolu Merkez</li>
-        <li>Mutlukent</li>
-        <li>Ümitköy</li>
-        <li>Yaşamkent</li>
-        <li>Etimesgut Merkez</li>
-        <li>Sincan Merkez</li>
-        <li>Batıkent</li>
-    </ul>
+    <h2 data-animate>Hizmet Verilen Mahalleler</h2>
+    <div class="mahalle-box" data-animate>
+        <ul>
+            <li>Çayyolu Merkez</li>
+            <li>Mutlukent</li>
+            <li>Ümitköy</li>
+            <li>Yaşamkent</li>
+            <li>Etimesgut Merkez</li>
+            <li>Sincan Merkez</li>
+            <li>Batıkent</li>
+        </ul>
+    </div>
 </div>
 
 <div class="content" id="iletisim">
-    <h2>İletişim</h2>
-    <p>Bize ulaşmak için aşağıdaki numaraları arayabilir veya WhatsApp üzerinden mesaj atabilirsiniz.</p>
-    <div class="contact-buttons">
+    <h2 data-animate>İletişim</h2>
+    <div class="contact-buttons" data-animate>
         <a href="tel:05362333675">0536 233 36 75</a>
         <a href="tel:03122440304">0312 244 03 04</a>
         <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
@@ -154,6 +136,18 @@
 <footer>
     &copy; 2026 Çayyolu Halı Yıkama | Tüm Hakları Saklıdır
 </footer>
+
+<script>
+    // Scroll Animasyon
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add('active');
+            }
+        });
+    }, {threshold:0.2});
+    document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
