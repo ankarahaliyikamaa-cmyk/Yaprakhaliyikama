@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -72,7 +72,7 @@
         .btn-order { background-color: white; color: var(--primary-blue); }
         .btn:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
 
-        /* Yana Kaydırmalı Galeri (Carousel) Stilleri */
+        /* DÜZELTİLDİ: Yana Kaydırmalı Galeri (Carousel) Stilleri */
         .gallery-container { padding: 80px 5%; background-color: #fff; }
         .gallery-title { text-align: center; margin-bottom: 50px; }
         .gallery-title h2 { font-size: 2.2rem; color: var(--primary-blue); margin-bottom: 15px; }
@@ -84,15 +84,18 @@
             position: relative;
         }
 
+        /* DÜZELTME: Toplam Genişlik ve Esneklik Ayarları */
         .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 500%; /* Toplam fotoğraf sayısı x 100% (5 foto için 500%) */
+            display: flex; /* Fotoğrafları yan yana dizer */
+            transition: transform 0.5s ease-in-out; /* Pürüzsüz kayma efekti */
+            width: 500%; /* 5 fotoğraf x 100% = 500% toplam genişlik */
+            will-change: transform; /* Performans için */
         }
 
+        /* DÜZELTME: Her Slaytın Genişliği */
         .carousel-slide {
-            width: 20%; /* 100% / fotoğraf sayısı (5 foto için 20%) */
-            flex-shrink: 0;
+            width: 20%; /* 100% / 5 fotoğraf = Her biri %20 genişlik kaplar */
+            flex-shrink: 0; /* Fotoğrafın küçülmesini engeller */
             padding: 0 15px;
             text-align: center;
         }
@@ -108,24 +111,6 @@
 
         .carousel-slide h4 { color: var(--primary-blue); margin-bottom: 10px; font-size: 1.2rem; }
         .carousel-slide p { font-size: 0.9rem; color: #666; }
-
-        .carousel-btn {
-            position: absolute;
-            top: 40%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            padding: 15px 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 10;
-        }
-        .carousel-btn:hover { background: var(--primary-green); color: white; }
-        .carousel-prev { left: 10px; }
-        .carousel-next { right: 10px; }
 
         /* SEO & Bölgeler Alanı */
         .seo-container { padding: 80px 10%; background-color: var(--bg-gray); }
@@ -176,18 +161,9 @@
             transition: 0.3s;
             animation: pulse 2s infinite;
         }
+        .whatsapp-fixed i { font-size: 1.8rem; }
+        .whatsapp-fixed:hover { transform: scale(1.1); background-color: #128c7e; color: white; }
 
-        .whatsapp-fixed i {
-            font-size: 1.8rem;
-        }
-
-        .whatsapp-fixed:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
-            color: white;
-        }
-
-        /* Dikkat çekmesi için hafif bir büyüme küçülme efekti */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -286,26 +262,23 @@
         <div class="seo-grid">
             <div class="seo-card incek-special">
                 <h3><i class="fas fa-gem"></i> İncek Halı Yıkama</h3>
-                <p><strong>İncek halı yıkama</strong> hizmetimizle, villalarınızdaki hassas ve değerli halılarınız için özel bakım sunuyoruz. İncek ve çevresindeki sitelere özel "yerinde koltuk yıkama" ve "VIP halı temizleme" seçeneklerimizle Ankara'nın en titiz ekibiyiz.</p>
+                <p><strong>İncek halı yıkama</strong> hizmetimizle, villalarınızdaki hassas ve değerli halılarınız için özel bakım sunuyoruz. Ankara'nın en titiz ekibiyiz.</p>
                 <p><strong>Yaprak Halı Yıkama İncek</strong> şubesi; ipek halı, el dokuma ve özel tasarım halılarınızın renklerini koruyarak, sigortalı temizlik imkanı sağlar.</p>
             </div>
 
             <div class="seo-card">
                 <h3><i class="fas fa-star"></i> Çayyolu Halı Yıkama</h3>
-                <p><strong>Çayyolu halı yıkama</strong> arayışınızda Yaprak kalitesiyle tanışın. Çayyolu, Alacaatlı ve Beysukent bölgelerinde halılarınızdaki inatçı lekeler için profesyonel leke çıkarma teknikleri uyguluyoruz.</p>
-                <p>Antibakteriyel şampuanlarımız sayesinde çocuklarınız ve evcil hayvanlarınız için tam güvenli, hijyenik bir ortam yaratıyoruz.</p>
+                <p><strong>Çayyolu halı yıkama</strong> arayışınızda Yaprak kalitesiyle tanışın. Çocuklarınız ve evcil hayvanlarınız için tam güvenli, hijyenik bir ortam yaratıyoruz.</p>
             </div>
 
             <div class="seo-card">
                 <h3><i class="fas fa-truck-loading"></i> Etimesgut Halı Yıkama</h3>
-                <p><strong>Etimesgut halı yıkama</strong> servisimiz Elvankent, Eryaman ve Bağlıca hattında ücretsiz mobil araçlarıyla her gün kapınızda. Etimesgut bölgesinin en hızlı teslimat yapan firmasıyız.</p>
-                <p>Halılarınızı evinizden alıyor, kapalı sistem kurutma odalarımızda toz görmeden kurutup, parfümlenmiş ve paketlenmiş şekilde teslim ediyoruz.</p>
+                <p><strong>Etimesgut halı yıkama</strong> servisimiz Elvankent, Eryaman ve Bağlıca hattında ücretsiz mobil araçlarıyla her gün kapınızda.</p>
             </div>
 
             <div class="seo-card">
                 <h3><i class="fas fa-home"></i> Ümitköy Halı Yıkama</h3>
-                <p>Ümitköy ve Konutkent sakinleri için <strong>Ümitköy halı yıkama</strong> hizmetimiz modern makineler ve tecrübeli ustalarla sunulmaktadır. Stor perde yıkama ve yorgan temizliğinde de bölgenin lideriyiz.</p>
-                <p>Kış bahçeleri ve geniş daireler için sunduğumuz yerinde koltuk ve yatak yıkama hizmetimizden yararlanmak için bizi hemen arayın.</p>
+                <p>Ümitköy ve Konutkent sakinleri için <strong>Ümitköy halı yıkama</strong> hizmetimiz modern makineler ve tecrübeli ustalarla sunulmaktadır.</p>
             </div>
         </div>
     </section>
@@ -314,7 +287,7 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h4>Hizmet Kalitemiz</h4>
-                <p>Yaprak Halı Yıkama, Ankara batı bölgesinde profesyonel temizlik anlayışını değiştiren, %100 müşteri memnuniyeti odaklı çalışan bir kuruluştur.</p>
+                <p>Yaprak Halı Yıkama, Ankara batı bölgesinde %100 müşteri memnuniyeti odaklı çalışan bir kuruluştur.</p>
             </div>
             <div class="footer-section">
                 <h4>Bize Ulaşın</h4>
@@ -333,7 +306,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 Yaprak Halı Yıkama. Tüm Hakları Saklıdır. | Güçlü SEO Alt Yapısı ile Tasarlanmıştır.
+            &copy; 2026 Yaprak Halı Yıkama. Tüm Hakları Saklıdır.
         </div>
     </footer>
 
@@ -347,9 +320,10 @@
             return slides[0].offsetWidth; 
         }
 
-        // Kaydırma İşlemi (Yatay Kaydırma)
+        // Kaydırma İşlemi (Yatay Transform)
         function updateCarousel() {
             const slideWidth = getSlideWidth();
+            // Performans için Transform:translateX kullanılır
             track.style.transform = translateX(-${index * slideWidth}px);
         }
 
@@ -358,7 +332,7 @@
             if (index < slides.length - 1) {
                 index++;
             } else {
-                index = 0; // Başa dön
+                index = 0; // Sona gelince başa dön
             }
             updateCarousel();
         }
@@ -366,11 +340,11 @@
         // 3 saniyede bir (3000ms) kaydır
         setInterval(nextSlide, 3000);
 
-        // Pencere boyutu değişirse resmi ortada tut
+        // Pencere boyutu değişirse resmi ortada tut (Responsive Destek)
         window.addEventListener('resize', updateCarousel);
     </script>
 
-    <a href="https://wa.me/905362333675?text=Merhaba,%20Yaprak%20Halı%20Yıkama'dan%20bilgi%20almak%20istiyorum." class="whatsapp-fixed" target="_blank">
+    <a href="https://wa.me/905362333675?text=Merhaba,%20Yaprak%20Halı%20Yıkama'dan%20sipariş%20oluşturmak%20istiyorum." class="whatsapp-fixed" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span>WhatsApp Sipariş</span>
     </a>
