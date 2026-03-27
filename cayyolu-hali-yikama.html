@@ -3,215 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Yaprak Halı Yıkama | Çayyolu VIP Temizlik Merkezi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Yaprak Halı Yıkama | Çayyolu, İncek, Bilkent VIP Servis</title>
+    <meta name="description" content="Çayyolu, Yaşamkent, Konutkent, İncek, Beysukent, Bilkent ve Beytepe bölgelerinde profesyonel halı ve koltuk yıkama. VIP temizlik ve ücretsiz servis!">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #c5a059;
-            --dark: #0f172a;
-            --slate: #1e293b;
-            --accent: #10b981;
-            --white: #ffffff;
-        }
+        :root { --gold: #c5a059; --dark: #0f172a; --slate: #1e293b; --accent: #25D366; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--dark); color: var(--white); line-height: 1.6; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
-        body { background-color: var(--dark); color: var(--white); line-height: 1.6; overflow-x: hidden; }
-
-        /* --- Custom Scrollbar --- */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--dark); }
-        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
-
-        /* --- Header / Hero --- */
+        /* --- Hero Section --- */
         .hero {
-            height: 100vh;
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), var(--dark)), 
-                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1400');
-            background-size: cover; background-position: center;
-            display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(15,23,42,0.85), var(--dark)), url('https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=1200') center/cover;
+            text-align: center; border-bottom: 2px solid var(--gold);
         }
+        .hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 800; margin-bottom: 15px; }
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
 
-        .hero-box h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 800; line-height: 1; margin-bottom: 20px; letter-spacing: -2px; }
-        .hero-box span { color: var(--gold); }
-        .hero-box p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.8; }
+        /* --- Stats Card (Gelişmiş Sayaçlar) --- */
+        .stats-wrapper { max-width: 600px; margin: -50px auto 40px; padding: 0 20px; }
+        .stat-item {
+            background: var(--slate); padding: 30px; border-radius: 25px; text-align: center;
+            margin-bottom: 15px; border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .counter-num { font-size: 3.2rem; font-weight: 800; color: var(--gold); display: block; }
+        .stat-text { font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; }
+
+        /* --- SEO CONTENT MASTER --- */
+        .seo-section { padding: 60px 25px; max-width: 900px; margin: 0 auto; }
+        .seo-section h2 { color: var(--gold); font-size: 2rem; margin-bottom: 20px; border-left: 4px solid var(--gold); padding-left: 15px; }
+        .seo-section p { margin-bottom: 20px; color: #cbd5e1; font-size: 1.1rem; }
+        .region-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0; }
+        .tag { background: rgba(197, 160, 89, 0.1); color: var(--gold); padding: 8px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; border: 1px solid var(--gold); }
+
+        /* --- Contact Form --- */
+        .form-container { background: var(--gold); color: var(--dark); padding: 40px 30px; border-radius: 40px; margin: 40px 20px; }
+        .form-container h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 25px; text-align: center; }
+        input, textarea { width: 100%; padding: 18px; margin-bottom: 15px; border-radius: 15px; border: 2px solid transparent; font-size: 1rem; font-weight: 600; transition: 0.3s; }
+        input:focus { border-color: var(--dark); outline: none; }
+        .btn-submit { width: 100%; padding: 20px; background: var(--dark); color: white; border: none; border-radius: 15px; font-weight: 800; font-size: 1.2rem; cursor: pointer; transition: 0.3s; }
+        .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
         /* --- Floating Actions --- */
-        .cta-flex { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        .btn { 
-            padding: 18px 40px; border-radius: 100px; text-decoration: none; font-weight: 700; 
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-transform: uppercase; letter-spacing: 1px;
+        .action-dock {
+            position: fixed; bottom: 25px; left: 20px; right: 20px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px; z-index: 999;
         }
-        .btn-gold { background: var(--gold); color: var(--dark); border: 2px solid var(--gold); }
-        .btn-outline { border: 2px solid var(--white); color: var(--white); }
-        .btn:hover { transform: scale(1.05) translateY(-5px); box-shadow: 0 15px 30px rgba(197, 160, 89, 0.3); }
+        .dock-btn { padding: 16px; border-radius: 50px; text-decoration: none; font-weight: 800; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .call { background: var(--gold); color: var(--dark); }
+        .wp { background: #25D366; color: white; }
 
-        /* --- Stats Section --- */
-        .stats-section { padding: 50px 20px; margin-top: -100px; }
-        .stats-grid { 
-            max-width: 1200px; margin: 0 auto; display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; 
-        }
-        .stat-card { 
-            background: var(--slate); padding: 40px; border-radius: 30px; text-align: center;
-            border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);
-        }
-        .stat-card h2 { font-size: 3.5rem; color: var(--gold); margin-bottom: 10px; }
-        .stat-card p { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; opacity: 0.6; }
-
-        /* --- SEO Content --- */
-        .content-section { padding: 100px 20px; max-width: 1000px; margin: 0 auto; }
-        .content-section h2 { font-size: 2.5rem; margin-bottom: 30px; color: var(--gold); }
-        .content-section p { font-size: 1.1rem; color: #94a3b8; margin-bottom: 20px; }
-
-        /* --- Service Cards --- */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .s-card { 
-            background: #1e293b; padding: 40px; border-radius: 40px; 
-            transition: 0.3s; border: 1px solid transparent;
-        }
-        .s-card:hover { border-color: var(--gold); background: #0f172a; }
-        .s-card h4 { font-size: 1.5rem; margin-bottom: 15px; color: var(--white); }
-
-        /* --- WhatsApp Form (The Beast) --- */
-        .contact-area { background: var(--gold); padding: 60px 30px; border-radius: 50px; color: var(--dark); margin: 50px 20px; }
-        .contact-area h2 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 800; }
-        .form-box { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        input, textarea { 
-            width: 100%; padding: 20px; border-radius: 20px; border: none; 
-            background: rgba(0,0,0,0.05); font-size: 1rem; color: var(--dark); font-weight: 600;
-        }
-        input::placeholder, textarea::placeholder { color: rgba(0,0,0,0.4); }
-        .submit-btn { 
-            grid-column: span 2; background: var(--dark); color: white; 
-            padding: 20px; border-radius: 20px; border: none; font-weight: 800; cursor: pointer; font-size: 1.1rem;
-        }
-
-        /* --- Fixed Navigation Mobile --- */
-        .bottom-nav { 
-            position: fixed; bottom: 20px; left: 20px; right: 20px; 
-            background: rgba(30, 41, 59, 0.9); backdrop-filter: blur(15px);
-            padding: 15px; border-radius: 100px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4); z-index: 9999;
-        }
-        .nav-link { 
-            text-align: center; text-decoration: none; color: white; 
-            font-weight: 700; font-size: 0.9rem; padding: 12px; border-radius: 100px; 
-        }
-
-        @media (max-width: 768px) {
-            .form-box { grid-template-columns: 1fr; }
-            .submit-btn { grid-column: span 1; }
-            .hero-box h1 { font-size: 3rem; }
-        }
+        @media (max-width: 600px) { .hero h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
 
 <section class="hero">
-    <div class="hero-box">
-        <h1>YAPRAK <span>PREMIUM</span></h1>
-        <p>Çayyolu'nun en seçkin konutlarına profesyonel halı ve koltuk bakım hizmeti. Hijyende VIP standartlar.</p>
-        <div class="cta-flex">
-            <a href="tel:05362333675" class="btn btn-gold">Hemen Ara</a>
-            <a href="#teklif" class="btn btn-outline">Teklif Al</a>
-        </div>
-    </div>
+    <h1>YAPRAK <span>PREMIUM</span></h1>
+    <p>Ankara'nın En Seçkin Bölgelerine Özel Halı & Koltuk Bakım Hizmeti</p>
 </section>
 
-<section class="stats-section">
-    <div class="stats-grid">
-        <div class="stat-card">
-            <h2 id="count1">0</h2>
-            <p>Seçkin Müşteri</p>
-        </div>
-        <div class="stat-card">
-            <h2 id="count2">0</h2>
-            <p>Yıkanan Halı (m²)</p>
-        </div>
-        <div class="stat-card">
-            <h2>5.0</h2>
-            <p>Google Memnuniyet</p>
-        </div>
+<div class="stats-wrapper">
+    <div class="stat-item">
+        <span class="counter-num" data-val="47177">0</span>
+        <span class="stat-text">Memnun Müşteri</span>
     </div>
-</section>
+    <div class="stat-item">
+        <span class="counter-num" data-val="235836">0</span>
+        <span class="stat-text">Yıkanan Halı (m²)</span>
+    </div>
+</div>
 
-<section class="content-section">
-    <h2>Çayyolu Halı Yıkama Uzmanı</h2>
-    <p><strong>Çayyolu halı yıkama</strong> denildiğinde akla gelen ilk isim olmanın gururunu yaşıyoruz. Firmamız, sadece bir temizlik şirketi değil, değerli halılarınız için bir <strong>bakım merkezidir</strong>. <strong>Ümitköy</strong>, <strong>Beysukent</strong>, <strong>Yaşamkent</strong> ve <strong>İncek</strong> bölgelerine özel VIP servis ağımızla hizmet veriyoruz.</p>
+<article class="seo-section">
+    <h2>Ankara Batı Aksı Halı Yıkama Merkezi</h2>
+    <p><strong>Yaprak Halı Yıkama</strong> olarak, Ankara'nın en nezih semtlerinde hijyen standartlarını yeniden belirliyoruz. <strong>Çayyolu halı yıkama</strong> ihtiyacınızdan, <strong>İncek koltuk yıkama</strong> taleplerinize kadar geniş bir yelpazede profesyonel çözümler sunuyoruz.</p>
     
-    <div class="services-grid">
-        <div class="s-card">
-            <h4>Halı Rehabilitasyonu</h4>
-            <p>İpek, bambu ve el dokuma halılarınız için özel pH dengeli solüsyonlar.</p>
-        </div>
-        <div class="s-card">
-            <h4>VIP Koltuk Yıkama</h4>
-            <p>İthal vakum sistemleri ile kumaşın en derinindeki mite ve bakterilere son.</p>
-        </div>
+    <div class="region-tags">
+        <span class="tag">Çayyolu</span> <span class="tag">Yaşamkent</span> <span class="tag">Konutkent</span> 
+        <span class="tag">İncek</span> <span class="tag">Beysukent</span> <span class="tag">Bilkent</span> 
+        <span class="tag">Beytepe</span> <span class="tag">Ümitköy</span>
     </div>
 
-    <p style="margin-top: 40px;"><strong>Bağlıca</strong> ve <strong>Konutkent</strong> bölgelerindeki şubelerimizle, Ankara'nın batı aksında 24 saat içinde teslimat garantisi sunan tek kurumsal yapıya sahibiz.</p>
-</section>
+    <h3>Neden Bizi Tercih Etmelisiniz?</h3>
+    <p><strong>Bilkent</strong> ve <strong>Beytepe</strong> bölgelerindeki villa ve konut projelerine özel, anti-bakteriyel yıkama teknikleri uyguluyoruz. <strong>Yaşamkent</strong> ve <strong>Konutkent</strong> şubelerimizle, halılarınızı adresinizden ücretsiz alıyor, 48 saat içinde ilk günkü canlılığıyla teslim ediyoruz. <strong>Beysukent</strong> lokasyonunda ise profesyonel yerinde koltuk ve yatak yıkama hizmetimizle fark yaratıyoruz.</p>
+</article>
 
-<section class="contact-area" id="teklif">
-    <h2>Ücretsiz Keşif & Fiyat</h2>
-    <form class="form-box" onsubmit="sendWhatsApp(event)">
-        <input type="text" id="userName" placeholder="İsim Soyisim" required>
-        <input type="tel" id="userTel" placeholder="Telefon Numaranız" required>
-        <textarea id="userMsg" rows="4" placeholder="Adresiniz ve hizmet detayları (Örn: Beysukent villası, 5 adet halı...)" style="grid-column: span 2;"></textarea>
-        <button type="submit" class="submit-btn">WHATSAPP İLE TEKLİF İSTE</button>
+<section class="form-container" id="teklif">
+    <h2>VIP Teklif Al</h2>
+    <form onsubmit="handleWp(event)">
+        <input type="text" id="n" placeholder="Adınız Soyadınız" required>
+        <input type="tel" id="t" placeholder="Telefonunuz (Örn: 05xx...)" required>
+        <textarea id="m" rows="4" placeholder="Hangi bölgedesiniz? (İncek, Bilkent vb.) ve ne yıkanacak?"></textarea>
+        <button type="submit" class="btn-submit">WHATSAPP'A GÖNDER</button>
     </form>
 </section>
 
 <div style="height: 120px;"></div>
 
-<div class="bottom-nav">
-    <a href="tel:05362333675" class="nav-link" style="background: var(--gold); color: var(--dark);">📞 ŞİMDİ ARA</a>
-    <a href="https://wa.me/905362333675" class="nav-link" style="background: #25D366;">💬 WHATSAPP</a>
+<div class="action-dock">
+    <a href="tel:05362333675" class="dock-btn call">📞 HEMEN ARA</a>
+    <a href="https://wa.me/905362333675" class="dock-btn wp">💬 WHATSAPP</a>
 </div>
 
 <script>
-    // --- %100 Çalışan Sayaç Sistemi ---
-    function animateCounter(id, target) {
-        let current = 0;
-        let obj = document.getElementById(id);
-        let step = target / 60; // Akıcılık ayarı
+    // --- Akıllı Sayaç Fonksiyonu ---
+    const startCounters = () => {
+        const items = document.querySelectorAll('.counter-num');
+        items.forEach(item => {
+            const target = +item.getAttribute('data-val');
+            let count = 0;
+            const speed = target / 80;
 
-        function update() {
-            current += step;
-            if (current < target) {
-                obj.innerText = Math.floor(current).toLocaleString('tr-TR');
-                requestAnimationFrame(update);
-            } else {
-                obj.innerText = target.toLocaleString('tr-TR');
+            const update = () => {
+                count += speed;
+                if(count < target) {
+                    item.innerText = Math.ceil(count).toLocaleString('tr-TR');
+                    setTimeout(update, 20);
+                } else {
+                    item.innerText = target.toLocaleString('tr-TR');
+                }
             }
-        }
-        update();
+            update();
+        });
     }
 
-    // Sayaçları görünür olduğunda başlat (Intersection Observer)
-    const obs = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter("count1", 47177);
-                animateCounter("count2", 235836);
-                obs.disconnect(); // Bir kez çalışması yeterli
-            }
-        });
-    });
-    obs.observe(document.querySelector('.stats-grid'));
+    // Scroll İzleyici (Sayaçlar görünce başlasın)
+    const observer = new IntersectionObserver(entries => {
+        if(entries[0].isIntersecting) {
+            startCounters();
+            observer.disconnect();
+        }
+    }, { threshold: 0.5 });
+    observer.observe(document.querySelector('.stats-wrapper'));
 
-    // --- WhatsApp Form Gönderim ---
-    function sendWhatsApp(e) {
+    // --- WhatsApp Form İşleme ---
+    function handleWp(e) {
         e.preventDefault();
-        
-        const name = document.getElementById('userName').value;
-        const tel = document.getElementById('userTel').value;
-        const msg = document.getElementById('userMsg').value;
-        
-        const baseMsg = 🏛️ *YAPRAK PREMİUM VIP TALEP* %0A--------------------------%0A👤 *Müşteri:* ${name}%0A📞 *Telefon:* ${tel}%0A🏠 *Detay:* ${msg}%0A--------------------------;
-        
-        window.open(https://wa.me/905362333675?text=${baseMsg}, '_blank');
+        const name = document.getElementById('n').value;
+        const tel = document.getElementById('t').value;
+        const msg = document.getElementById('m').value;
+        const myNum = "905362333675";
+
+        const finalMsg = 🌟 *YAPRAK PREMİUM SERVİS HATTI* 🌟%0A--------------------------%0A👤 *Müşteri:* ${name}%0A📞 *İletişim:* ${tel}%0A📍 *Bölge/Detay:* ${msg}%0A--------------------------%0A_VIP Hizmet Talebi Kaydı_;
+
+        window.open(https://wa.me/${myNum}?text=${finalMsg}, '_blank');
     }
 </script>
 
