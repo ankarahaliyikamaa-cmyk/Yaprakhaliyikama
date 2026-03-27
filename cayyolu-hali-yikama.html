@@ -1,96 +1,180 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Çayyolu Halı Yıkama | Profesyonel Halı Temizliği</title>
-<style>
-    body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5;}
-    header{position:relative;width:100%;height:80vh;overflow:hidden;}
-    header video{
-        position:absolute;top:0;left:0;width:100%;height:100%;
-        object-fit:cover;z-index:1;
-    }
-    .overlay{
-        position:absolute;top:0;left:0;width:100%;height:100%;
-        display:flex;justify-content:center;align-items:center;
-        color:white;font-size:3em;font-weight:bold;text-align:center;
-        background: rgba(0,0,0,0.3);z-index:2;
-    }
-    nav{display:flex;justify-content:center;gap:15px;background:#0077cc;padding:12px 0;position:sticky;top:0;z-index:100;}
-    nav a{color:white;font-weight:bold;padding:8px 16px;border-radius:5px;transition:0.3s;}
-    nav a:hover{background:white;color:#0077cc;}
-    .contact-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:20px;}
-    .contact-buttons a{padding:12px 24px;background:#0077cc;color:white;border-radius:8px;font-weight:bold;transition:0.3s;}
-    .contact-buttons a:hover{background:#005fa3;}
-    .content{max-width:1200px;margin:auto;padding:30px;}
-    .content img{width:100%;margin:15px 0;border-radius:12px;}
-    footer{background:#0077cc;color:white;text-align:center;padding:25px 10px;margin-top:40px;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaprak Halı Yıkama | Çayyolu, Ümitköy, Bağlıca Halı Yıkama</title>
+    <meta name="description" content="Yaprak Halı Yıkama Çayyolu, Ümitköy, Bağlıca, İncek ve Etimesgut bölgelerinde profesyonel halı temizleme hizmeti sunar. Uygun fiyat ve hızlı teslimat.">
+    <meta name="keywords" content="çayyolu halı yıkama, yaprak halı yıkama, ümitköy halı yıkama, bağlıca halı yıkama, ankara halı yıkama, koltuk yıkama">
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #005a9c;
+            --secondary-color: #28a745;
+            --text-dark: #333;
+            --light-bg: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body { line-height: 1.6; color: var(--text-dark); background-color: #fff; }
+
+        /* Header & Navbar */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+        }
+
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary-color); }
+        .logo span { color: var(--secondary-color); }
+
+        .nav-links a { text-decoration: none; color: var(--text-dark); margin-left: 20px; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&q=80&w=1470') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; max-width: 800px; }
+        
+        .cta-buttons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+        .btn { padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 700; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-call { background: var(--secondary-color); color: white; }
+        .btn-order { background: var(--primary-color); color: white; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        /* SEO Content & Regions */
+        .content-section { padding: 60px 10%; background: var(--light-bg); }
+        .content-section h2 { text-align: center; margin-bottom: 30px; color: var(--primary-color); }
+        .regions { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 30px; text-align: center; }
+        .region-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-weight: 600; }
+
+        /* SEO Long Text */
+        .seo-text { padding: 60px 10%; line-height: 1.8; }
+        .seo-text h3 { margin-top: 25px; color: var(--primary-color); }
+
+        /* Footer */
+        footer { background: #222; color: white; padding: 40px 10% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #444; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .top-bar { flex-direction: column; text-align: center; gap: 5px; }
+            nav { flex-direction: column; gap: 15px; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <video autoplay muted loop playsinline>
-        <source src="images/haliyikama.mp4" type="video/mp4">
-        Tarayıcınız video etiketini desteklemiyor.
-    </video>
-    <div class="overlay">Çayyolu Halı Yıkama | Profesyonel Temizlik</div>
-</header>
+    <header>
+        <div class="top-bar">
+            <span><i class="fas fa-map-marker-alt"></i> Ankara - Çayyolu ve Çevresi</span>
+            <div>
+                <a href="tel:05362333675" style="color:white; text-decoration:none; margin-right:15px;"><i class="fas fa-phone"></i> 0536 233 36 75</a>
+                <a href="tel:03122440304" style="color:white; text-decoration:none;"><i class="fas fa-phone"></i> 0312 244 03 04</a>
+            </div>
+        </div>
+        <nav>
+            <div class="logo">YAPRAK <span>HALI YIKAMA</span></div>
+            <div class="nav-links">
+                <a href="#hakkimizda">Kurumsal</a>
+                <a href="#hizmetler">Hizmetlerimiz</a>
+                <a href="#bolgeler">Hizmet Bölgeleri</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+        </nav>
+    </header>
 
-<nav>
-    <a href="#hizmetler">Hizmetlerimiz</a>
-    <a href="#mahalleler">Mahalleler</a>
-    <a href="#iletisim">İletişim</a>
-</nav>
+    <section class="hero">
+        <h1>Halılarınız Yaprak Güvencesinde!</h1>
+        <p>Çayyolu ve çevre semtlerde en derinlemesine temizlik, en uygun fiyat garantisiyle kapınızda.</p>
+        <div class="cta-buttons">
+            <a href="tel:05362333675" class="btn btn-call"><i class="fas fa-phone-alt"></i> Hemen Ara</a>
+            <a href="#iletisim" class="btn btn-order"><i class="fas fa-calendar-check"></i> Randevu Al</a>
+        </div>
+    </section>
 
-<div class="contact-buttons">
-    <a href="tel:05362333675">0536 233 36 75</a>
-    <a href="tel:03122440304">0312 244 03 04</a>
-    <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
-</div>
+    <section id="bolgeler" class="content-section">
+        <h2>Hizmet Verdiğimiz Bölgeler</h2>
+        <div class="regions">
+            <div class="region-card">Çayyolu</div>
+            <div class="region-card">Ümitköy</div>
+            <div class="region-card">Bağlıca</div>
+            <div class="region-card">Konutkent</div>
+            <div class="region-card">Yaşamkent</div>
+            <div class="region-card">İncek</div>
+            <div class="region-card">Etimesgut</div>
+            <div class="region-card">Sincan</div>
+        </div>
+    </section>
 
-<div class="content" id="hizmetler">
-    <h2>Profesyonel Halı Temizliği</h2>
-    <p>Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti sunuyoruz. Halılarınız hijyenik ve tertemiz teslim edilir.</p>
-    <h3>Hizmetlerimiz:</h3>
-    <ul>
-        <li>Ev tipi halı yıkama</li>
-        <li>Koltuk ve kanepe temizliği</li>
-        <li>Derinlemesine leke çıkarma</li>
-        <li>Hızlı ve güvenli teslimat</li>
-    </ul>
-    <h3>Fotoğraflar</h3>
-    <img src="images/haliyikama1.jpg" alt="Halı Yıkama">
-    <img src="images/haliyikama2.jpg" alt="Halı Yıkama">
-    <img src="images/haliyikama3.jpg" alt="Halı Yıkama">
-</div>
+    <article class="seo-text">
+        <h2>Çayyolu Profesyonel Halı Yıkama Çözümleri</h2>
+        <p><strong>Yaprak Halı Yıkama</strong> olarak, Ankara'nın en prestijli bölgelerinden biri olan Çayyolu'nda yılların verdiği tecrübe ile hizmetinizdeyiz. Halılarınız sadece bir eşya değil, evinizin sağlığıdır. Bu yüzden yıkama işleminde antibakteriyel şampuanlar ve modern makineler kullanıyoruz.</p>
+        
+        <h3>Neden Bizi Tercih Etmelisiniz?</h3>
+        <p>Halı yıkama sektöründe bizi öne çıkaran en büyük özellik, müşteri memnuniyeti odaklı çalışma prensibimizdir. Çayyolu halı yıkama firmaları arasında, halılarınızı türüne göre (makine halısı, el dokuma, yün halı vb.) özel programlarla temizleyen nadir firmalardan biriyiz. Ayrıca <strong>Ümitköy</strong> ve <strong>Bağlıca</strong> bölgelerine de ücretsiz servis ağımız bulunmaktadır.</p>
+        
+        <h3>Koltuk ve Battaniye Yıkama</h3>
+        <p>Sadece halı değil; yerinde koltuk yıkama, yorgan ve battaniye temizliği hizmetlerimizle de evinizin her köşesine hijyen getiriyoruz. Leke çıkarma garantili yöntemlerimizle, en zorlu kirleri bile halı ve kumaş dokusuna zarar vermeden temizliyoruz.</p>
+    </article>
 
-<div class="content" id="mahalleler">
-    <h2>Hizmet Verilen Mahalleler</h2>
-    <ul>
-        <li>Çayyolu Merkez</li>
-        <li>Mutlukent</li>
-        <li>Ümitköy</li>
-        <li>Yaşamkent</li>
-        <li>Etimesgut Merkez</li>
-        <li>Sincan Merkez</li>
-        <li>Batıkent</li>
-    </ul>
-</div>
-
-<div class="content" id="iletisim">
-    <h2>İletişim</h2>
-    <div class="contact-buttons">
-        <a href="tel:05362333675">0536 233 36 75</a>
-        <a href="tel:03122440304">0312 244 03 04</a>
-        <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
-    </div>
-</div>
-
-<footer>
-    &copy; 2026 Çayyolu Halı Yıkama | Tüm Hakları Saklıdır
-</footer>
+    <footer id="iletisim">
+        <div class="footer-grid">
+            <div>
+                <h3>YAPRAK HALI YIKAMA</h3>
+                <p>Ankara'nın temizlikteki öncü ismi. Halılarınız ilk günkü gibi tertemiz.</p>
+            </div>
+            <div>
+                <h3>İletişim Bilgileri</h3>
+                <p><i class="fas fa-phone"></i> 0536 233 36 75</p>
+                <p><i class="fas fa-phone"></i> 0312 244 03 04</p>
+                <p><i class="fas fa-map-marker-alt"></i> Ankara / Çayyolu ve Çevre Bölgeler</p>
+            </div>
+            <div>
+                <h3>Çalışma Saatleri</h3>
+                <p>Pazartesi - Cumartesi: 09:00 - 19:00</p>
+                <p>Pazar: Kapalı</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Yaprak Halı Yıkama - Tüm Hakları Saklıdır. | Çayyolu SEO Uyumlu Web Tasarım
+        </div>
+    </footer>
 
 </body>
 </html>
