@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaprak Halı Yıkama | İncek, Çayyolu, Ümitköy, Etimesgut Profesyonel Temizlik</title>
+    <title>Yaprak Halı Yıkama | İncek, Çayyolu, Yaşamkent, Bağlıca Profesyonel Temizlik</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -21,48 +21,48 @@
         /* Hero */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hali-sirtinda-tasima.jpg') no-repeat center center/cover;
-            height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 20px;
+            height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 20px;
         }
 
-        /* --- %100 ÇALIŞAN KAYDIRMALI GALERİ --- */
+        /* --- KAYDIRMALI GALERİ --- */
         .gallery-section { padding: 40px 5%; text-align: center; }
-        .gallery-section h2 { color: var(--p-blue); margin-bottom: 20px; }
+        .gallery-section h2 { color: var(--p-blue); margin-bottom: 10px; }
         
-        /* Kaydırma Kutusu */
         .scroll-container {
             display: flex;
-            overflow-x: auto; /* Yatay kaydırmayı açar */
-            scroll-snap-type: x mandatory; /* Fotoğrafların tam ortada durmasını sağlar */
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
             gap: 15px;
             padding: 20px 0;
-            scrollbar-width: none; /* Mouse tekerleği çubuğunu gizler */
+            scrollbar-width: none;
         }
-        .scroll-container::-webkit-scrollbar { display: none; } /* Chrome/Safari için çubuğu gizler */
+        .scroll-container::-webkit-scrollbar { display: none; }
 
         .scroll-item {
-            flex: 0 0 85%; /* Mobilde ekranın %85'ini kaplar (yanındaki görünsün diye) */
+            flex: 0 0 85%;
             scroll-snap-align: center;
             background: white;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
         }
 
         .scroll-item img {
             width: 100%;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
             display: block;
         }
 
-        .item-info { padding: 15px; background: #fff; border-top: 2px solid var(--p-green); }
+        .item-info { padding: 15px; background: #fff; border-top: 3px solid var(--p-green); }
         .item-info h4 { color: var(--p-blue); font-size: 1.1rem; }
 
-        /* --- SEO & İLÇE METİNLERİ (DOPDOLU) --- */
-        .seo-section { padding: 50px 5%; background: var(--bg-gray); }
+        /* --- SEO & İLÇE METİNLERİ --- */
+        .seo-section { padding: 40px 5%; background: var(--bg-gray); }
         .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
         .seo-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .seo-card h3 { color: var(--p-blue); margin-bottom: 12px; border-bottom: 2px solid var(--p-green); display: inline-block; }
+        .seo-card h3 { color: var(--p-blue); margin-bottom: 12px; border-bottom: 2px solid var(--p-green); display: inline-block; font-size: 1.2rem; }
         .seo-card p { font-size: 0.9rem; color: #555; text-align: justify; margin-bottom: 10px; }
 
         /* WhatsApp */
@@ -73,18 +73,16 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* Bilgisayar Ekranı İçin Düzenleme */
         @media (min-width: 992px) {
-            .scroll-item { flex: 0 0 30%; } /* Bilgisayarda 3 tane yan yana görünür */
-            .hero { height: 60vh; }
+            .scroll-item { flex: 0 0 30%; }
         }
     </style>
 </head>
 <body>
 
     <div class="top-info">
-        <span>Yaprak Halı Yıkama - Ankara Hijyen Hattı</span>
-        <a href="tel:05362333675" style="color:white;">0536 233 36 75</a>
+        <span>Ankara Profesyonel Halı Yıkama Fabrikası</span>
+        <a href="tel:05362333675" style="color:white; font-weight:bold;">0536 233 36 75</a>
     </div>
 
     <nav>
@@ -92,73 +90,70 @@
     </nav>
 
     <section class="hero">
-        <h1>Ankara Halı Yıkama'da Öncü Firma</h1>
-        <p>İncek, Çayyolu ve Etimesgut'un En Güvenilir İsmi</p>
+        <h1>Ankara'nın Hijyen Merkezi</h1>
+        <p>15 Yıllık Tecrübe ile Halı, Koltuk ve Perde Temizliği</p>
     </section>
 
-    <!-- GALERİ (DOKUNMATİK VE KAYDIRMALI) -->
+    <!-- GALERİ -->
     <section class="gallery-section">
-        <h2>Temizlik Sürecimiz</h2>
-        <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">(Resimleri yana kaydırabilirsiniz)</p>
+        <h2>Hizmetlerimiz</h2>
+        <p style="font-size: 0.8rem; color: #999;">(Yana kaydırarak inceleyebilirsiniz)</p>
         
         <div class="scroll-container">
-            <!-- 1 -->
             <div class="scroll-item">
                 <img src="images/makina.jfif" alt="Halı Yıkama">
-                <div class="item-info"><h4>1. Tam Otomatik Yıkama</h4><p>Derinlemesine temizlik.</p></div>
+                <div class="item-info"><h4>1. Otomatik Halı Yıkama</h4><p>Derinlemesine temizlik.</p></div>
             </div>
-            <!-- 2 -->
             <div class="scroll-item">
-                <img src="images/battaniye.jfif" alt="Battaniye">
-                <div class="item-info"><h4>2. Battaniye Hijyeni</h4><p>Yumuşacık ve tertemiz.</p></div>
+                <img src="images/battaniye.jfif" alt="battaniye Yıkama">
+                <div class="item-info"><h4>2. Battaniye & Yorgan</h4><p>Hijyenik ve yumuşak.</p></div>
             </div>
-            <!-- 3 -->
             <div class="scroll-item">
-                <img src="images/perde.jfif" alt="Perde">
-                <div class="item-info"><h4>3. Stor & Perde</h4><p>Hassas dokunuşlar.</p></div>
+                <img src="images/perde.jfif" alt="Perde Yıkama">
+                <div class="item-info"><h4>3. Stor & Zebra Perde</h4><p>Hassas temizleme.</p></div>
             </div>
-            <!-- 4 -->
             <div class="scroll-item">
                 <img src="images/kurutma.jfif" alt="Kurutma">
-                <div class="item-info"><h4>4. Tozsuz Kurutma</h4><p>Özel kurutma odaları.</p></div>
+                <div class="item-info"><h4>4. Kapalı Alan Kurutma</h4><p>Tozsuz ortamda kurutma.</p></div>
             </div>
-            <!-- 5 -->
             <div class="scroll-item">
                 <img src="images/paket.jfif" alt="Teslimat">
-                <div class="item-info"><h4>5. Hızlı Teslimat</h4><p>Söz verdiğimiz zamanda.</p></div>
+                <div class="item-info"><h4>5. Ücretsiz Servis</h4><p>Hızlı ve güvenli teslimat.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- SEO & İLÇE METİNLERİ (DOPDOLU) -->
+    <!-- GENİŞLETİLMİŞ SEO YAZILARI -->
     <section class="seo-section">
         <div class="seo-grid">
             <div class="seo-card">
-                <h3>İncek Halı Yıkama</h3>
-                <p><strong>İncek halı yıkama</strong> fabrikası olarak, İncek ve çevresindeki sitelere profesyonel halı temizleme hizmeti veriyoruz. Villa ve geniş dairelerin ihtiyaç duyduğu yerinde koltuk yıkama hizmetini en modern makinelerle sunmaktayız. İpek, yün ve el dokuma halılarınızın formunu bozmadan temizliyoruz.</p>
-                <p>Ankara'nın havasına ve suyuna uygun en kaliteli bitkisel şampuanlarla sağlığınızı koruyoruz.</p>
+                <h3>İncek & Beytepe Halı Yıkama</h3>
+                <p><strong>İncek halı yıkama</strong> ve <strong>Beytepe halı yıkama</strong> servisimiz, bölgedeki müstakil evler ve modern yerleşkeler için VIP temizlik hizmeti sunmaktadır. Değerli el dokuma halılarınız, uzman ekibimiz tarafından iplik yapısına uygun şampuanlarla titizlikle temizlenir.</p>
             </div>
 
             <div class="seo-card">
-                <h3>Çayyolu Halı Yıkama</h3>
-                <p><strong>Çayyolu halı yıkama</strong> ihtiyaçlarınızda Yaprak Halı Yıkama uzmanlığı yanınızda. Ümitköy, Konutkent ve Beysukent bölgelerindeki müşterilerimize özel antibakteriyel yıkama seçenekleri sunuyoruz. Halılarınız tozdan arındırılır, yıkanır ve dezenfekte edilerek ilk günkü parlaklığına kavuşur.</p>
-                <p>Ücretsiz servisimizle halılarınızı kapınızdan alıp kapınıza bırakıyoruz.</p>
+                <h3>Çayyolu & Konutkent Halı Yıkama</h3>
+                <p><strong>Çayyolu halı yıkama</strong> ve <strong>Konutkent halı yıkama</strong> bölgelerinde halı temizliğinin yanı sıra profesyonel koltuk yıkama hizmeti de veriyoruz. Lekelere karşı garantili çözümlerimizle evinizdeki hijyeni en üst seviyeye çıkarıyoruz.</p>
             </div>
 
             <div class="seo-card">
-                <h3>Etimesgut Halı Yıkama</h3>
-                <p><strong>Etimesgut halı yıkama</strong> servis ağımız Bağlıca, Eryaman ve Elvankent mahallelerini kapsamaktadır. Geniş araç filomuzla Etimesgut bölgesinde hızlı ve zamanında teslimat yapıyoruz. Battaniye, yorgan ve perde yıkama işlemlerinde de bölgenin en uygun fiyatlı ve en kaliteli hizmetini sağlıyoruz.</p>
-                <p>Halınızın cinsi ne olursa olsun, doğru teknikle temizlendiğinden emin olabilirsiniz.</p>
+                <h3>Yaşamkent & Beysukent Halı Yıkama</h3>
+                <p><strong>Yaşamkent halı yıkama</strong> ve <strong>Beysukent halı yıkama</strong> hattımız her gün düzenli servis imkanı sunar. Stor perdelerinizden yorganlarınıza kadar tüm ev tekstili ürünlerinizi son teknoloji tesisimizde dezenfekte ediyoruz.</p>
+            </div>
+
+            <div class="seo-card">
+                <h3>Etimesgut & Bağlıca Halı Yıkama</h3>
+                <p><strong>Etimesgut halı yıkama</strong> ve <strong>Bağlıca halı yıkama</strong> bölgelerinde en hızlı teslimat yapan firmayız. Tam otomatik makinelerimizde yıkanan halılarınız, güneş ışığına maruz kalmadan özel nem alma odalarında kurutularak ilk günkü canlılığına kavuşur.</p>
             </div>
         </div>
     </section>
 
-    <footer style="background:#111; color:#999; text-align:center; padding:20px;">
-        <p>&copy; 2026 Yaprak Halı Yıkama - Ankara</p>
+    <footer style="background:#111; color:#777; text-align:center; padding:30px; font-size: 0.9rem;">
+        <p>&copy; 2026 Yaprak Halı Yıkama - İncek, Çayyolu, Yaşamkent, Beysukent, Beytepe, Etimesgut, Bağlıca</p>
     </footer>
 
     <a href="https://wa.me/905362333675" class="wa-float" target="_blank">
-        <i class="fab fa-whatsapp"></i> <span>WhatsApp Randevu</span>
+        <i class="fab fa-whatsapp"></i> <span>WhatsApp Randevu Hattı</span>
     </a>
 
 </body>
