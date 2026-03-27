@@ -4,75 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Çayyolu Halı Yıkama | Profesyonel Halı Temizliği</title>
-<meta name="description" content="Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti. Halılarınız hijyenik ve tertemiz teslim edilir.">
-<meta name="keywords" content="Çayyolu halı yıkama, Etimesgut halı temizliği, Sincan halı yıkama, halı temizleme, profesyonel halı temizliği">
 <style>
-    /* Genel Stil */
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:Arial,sans-serif;background:#f5f5f5;color:#333;overflow-x:hidden;}
-    a{text-decoration:none;color:white;}
-    h2,h3{color:#0077cc;}
-    
-    /* Üst Video ve Parallax */
+    body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5;}
     header{position:relative;width:100%;height:80vh;overflow:hidden;}
-    header video{width:100%;height:100%;object-fit:cover;filter:brightness(0.6);}
+    header video{
+        position:absolute;top:0;left:0;width:100%;height:100%;
+        object-fit:cover;z-index:1;
+    }
     .overlay{
-        position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+        position:absolute;top:0;left:0;width:100%;height:100%;
+        display:flex;justify-content:center;align-items:center;
         color:white;font-size:3em;font-weight:bold;text-align:center;
-        animation:fadeInDown 2s ease forwards;
+        background: rgba(0,0,0,0.3);z-index:2;
     }
-    .overlay span{
-        display:inline-block;
-        animation:slideText 5s infinite alternate;
-    }
-    
-    @keyframes slideText{
-        0%{transform:translateY(0);}
-        100%{transform:translateY(-20px);}
-    }
-    @keyframes fadeInDown{
-        0%{opacity:0;transform:translateY(-50px);}
-        100%{opacity:1;transform:translateY(0);}
-    }
-    
-    /* Navbar */
-    nav{display:flex;justify-content:center;gap:15px;background:#0077cc;padding:12px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
-    nav a{font-weight:bold;padding:8px 16px;border-radius:5px;transition:0.3s;}
+    nav{display:flex;justify-content:center;gap:15px;background:#0077cc;padding:12px 0;position:sticky;top:0;z-index:100;}
+    nav a{color:white;font-weight:bold;padding:8px 16px;border-radius:5px;transition:0.3s;}
     nav a:hover{background:white;color:#0077cc;}
-    
-    /* Butonlar */
     .contact-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:20px;}
-    .contact-buttons a{padding:12px 24px;background:#0077cc;border-radius:8px;font-weight:bold;transition:0.3s;position:relative;overflow:hidden;}
+    .contact-buttons a{padding:12px 24px;background:#0077cc;color:white;border-radius:8px;font-weight:bold;transition:0.3s;}
     .contact-buttons a:hover{background:#005fa3;}
-    .contact-buttons a::after{
-        content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(255,255,255,0.2);transition:0.4s;
-    }
-    .contact-buttons a:hover::after{left:0;}
-    
-    /* İçerik */
     .content{max-width:1200px;margin:auto;padding:30px;}
-    .service-box, .mahalle-box{background:white;padding:20px;margin:15px 0;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.4s;}
-    .service-box:hover, .mahalle-box:hover{transform:translateY(-5px);}
-    .content img{width:100%;margin:15px 0;border-radius:12px;transition:transform 0.5s;}
-    .content img:hover{transform:scale(1.05);}
-    ul{margin-left:20px;margin-top:10px;}
-    
-    /* Footer */
+    .content img{width:100%;margin:15px 0;border-radius:12px;}
     footer{background:#0077cc;color:white;text-align:center;padding:25px 10px;margin-top:40px;}
-    
-    /* Animasyon Scroll */
-    [data-animate]{opacity:0;transform:translateY(40px);transition:all 0.7s ease-out;}
-    [data-animate].active{opacity:1;transform:translateY(0);}
 </style>
 </head>
 <body>
 
 <header>
-    <video autoplay muted loop>
+    <video autoplay muted loop playsinline>
         <source src="images/haliyikama.mp4" type="video/mp4">
         Tarayıcınız video etiketini desteklemiyor.
     </video>
-    <div class="overlay"><span>Çayyolu Halı Yıkama | Profesyonel Temizlik</span></div>
+    <div class="overlay">Çayyolu Halı Yıkama | Profesyonel Temizlik</div>
 </header>
 
 <nav>
@@ -81,52 +44,44 @@
     <a href="#iletisim">İletişim</a>
 </nav>
 
-<div class="contact-buttons" data-animate>
+<div class="contact-buttons">
     <a href="tel:05362333675">0536 233 36 75</a>
     <a href="tel:03122440304">0312 244 03 04</a>
     <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
 </div>
 
 <div class="content" id="hizmetler">
-    <h2 data-animate>Profesyonel Halı Temizliği</h2>
-    <p data-animate>Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti sunuyoruz. Halılarınız hijyenik, tertemiz ve güvenli bir şekilde teslim edilir.</p>
-    
-    <div class="service-box" data-animate>
-        <h3>Hizmetlerimiz:</h3>
-        <ul>
-            <li>Ev tipi halı yıkama</li>
-            <li>Koltuk ve kanepe temizliği</li>
-            <li>Derinlemesine leke çıkarma</li>
-            <li>Hızlı ve güvenli teslimat</li>
-        </ul>
-    </div>
-
-    <div class="service-box" data-animate>
-        <h3>Öne Çıkan Fotoğraflar</h3>
-        <img src="images/haliyikama1.jpg" alt="Halı Yıkama">
-        <img src="images/haliyikama2.jpg" alt="Halı Yıkama">
-        <img src="images/haliyikama3.jpg" alt="Halı Yıkama">
-    </div>
+    <h2>Profesyonel Halı Temizliği</h2>
+    <p>Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti sunuyoruz. Halılarınız hijyenik ve tertemiz teslim edilir.</p>
+    <h3>Hizmetlerimiz:</h3>
+    <ul>
+        <li>Ev tipi halı yıkama</li>
+        <li>Koltuk ve kanepe temizliği</li>
+        <li>Derinlemesine leke çıkarma</li>
+        <li>Hızlı ve güvenli teslimat</li>
+    </ul>
+    <h3>Fotoğraflar</h3>
+    <img src="images/haliyikama1.jpg" alt="Halı Yıkama">
+    <img src="images/haliyikama2.jpg" alt="Halı Yıkama">
+    <img src="images/haliyikama3.jpg" alt="Halı Yıkama">
 </div>
 
 <div class="content" id="mahalleler">
-    <h2 data-animate>Hizmet Verilen Mahalleler</h2>
-    <div class="mahalle-box" data-animate>
-        <ul>
-            <li>Çayyolu Merkez</li>
-            <li>Mutlukent</li>
-            <li>Ümitköy</li>
-            <li>Yaşamkent</li>
-            <li>Etimesgut Merkez</li>
-            <li>Sincan Merkez</li>
-            <li>Batıkent</li>
-        </ul>
-    </div>
+    <h2>Hizmet Verilen Mahalleler</h2>
+    <ul>
+        <li>Çayyolu Merkez</li>
+        <li>Mutlukent</li>
+        <li>Ümitköy</li>
+        <li>Yaşamkent</li>
+        <li>Etimesgut Merkez</li>
+        <li>Sincan Merkez</li>
+        <li>Batıkent</li>
+    </ul>
 </div>
 
 <div class="content" id="iletisim">
-    <h2 data-animate>İletişim</h2>
-    <div class="contact-buttons" data-animate>
+    <h2>İletişim</h2>
+    <div class="contact-buttons">
         <a href="tel:05362333675">0536 233 36 75</a>
         <a href="tel:03122440304">0312 244 03 04</a>
         <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
@@ -136,18 +91,6 @@
 <footer>
     &copy; 2026 Çayyolu Halı Yıkama | Tüm Hakları Saklıdır
 </footer>
-
-<script>
-    // Scroll Animasyon
-    const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.classList.add('active');
-            }
-        });
-    }, {threshold:0.2});
-    document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
-</script>
 
 </body>
 </html>
