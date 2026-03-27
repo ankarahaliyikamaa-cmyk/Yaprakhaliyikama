@@ -1,79 +1,160 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Batıkent Halı Yıkama | Yaprak Halı Yıkama (08:00-20:00)</title>
-  <meta name="description" content="Batıkent halı yıkama: adresten alım–teslim, hijyenik yıkama, leke & koku giderme. 08:00–20:00. 0536 233 36 75" />
-  <link rel="canonical" href="https://yaprakhaliyikama.net/batikent-hali-yikama.html" />
-  <style>
-    :root{--bg:#f5f5f5;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--blue:#2563eb;--green:#25D366;--shadow:0 10px 25px rgba(0,0,0,.08);--radius:16px}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    header{background:linear-gradient(135deg,#111827,#2563eb);color:#fff;padding:24px 14px;text-align:center}
-    header h1{margin:0;font-size:26px}
-    header p{margin:10px 0 0;color:rgba(255,255,255,.88)}
-    .top-link{display:inline-block;margin-top:10px;color:#fff;text-decoration:underline;font-weight:700;opacity:.95}
-    .container{max-width:980px;margin:0 auto;padding:16px}
-    .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:16px 0 6px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;min-width:210px;box-shadow:var(--shadow)}
-    .btn-call{background:var(--blue)} .btn-wa{background:var(--green)}
-    .note{text-align:center;color:var(--muted);margin:10px 0 18px;font-size:14px}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin:14px 0;text-align:left}
-    .card h2{margin:0 0 10px;font-size:20px}
-    .badge{display:inline-block;font-size:12px;padding:6px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;margin-bottom:10px;font-weight:700}
-    ul{margin:10px 0 0;padding-left:18px} li{margin:7px 0}
-    .map-wrap{overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .whatsapp-fixed{position:fixed;right:18px;bottom:18px;background:var(--green);color:#fff;padding:14px 16px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.22)}
-    footer{text-align:center;color:var(--muted);padding:22px 10px 90px;font-size:13px}
-    .small{color:var(--muted);font-size:14px;margin-top:6px}
-    details{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:14px 16px;margin:10px 0}
-    summary{cursor:pointer;font-weight:800}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaprak Halı Yıkama | Batıkent, Bağlıca, İncek, Çayyolu Profesyonel Temizlik</title>
+    <meta name="description" content="Batıkent halı yıkama (Çakırlar, Kardelen, Meydan) ve tüm Ankara'da profesyonel halı, koltuk, perde temizliği. Yaprak Halı Yıkama ile %100 hijyen!">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root { --p-blue: #004a80; --p-green: #27ae60; --bg-gray: #f4f7f6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #fff; color: #333; line-height: 1.6; overflow-x: hidden; }
+
+        .top-info { background: var(--p-blue); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 0.8rem; border-bottom: 3px solid var(--p-green); }
+        nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--p-blue); }
+        .logo span { color: var(--p-green); }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hali-sirtinda-tasima.jpg') no-repeat center center/cover;
+            height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 20px;
+        }
+
+        /* --- KAYDIRMALI GALERİ --- */
+        .gallery-section { padding: 40px 5%; text-align: center; }
+        .gallery-section h2 { color: var(--p-blue); margin-bottom: 10px; }
+        
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 15px;
+            padding: 20px 0;
+            scrollbar-width: none;
+        }
+        .scroll-container::-webkit-scrollbar { display: none; }
+
+        .scroll-item {
+            flex: 0 0 85%;
+            scroll-snap-align: center;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .scroll-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-info { padding: 15px; background: #fff; border-top: 3px solid var(--p-green); }
+        .item-info h4 { color: var(--p-blue); font-size: 1.1rem; }
+
+        /* --- SEO & İLÇE METİNLERİ --- */
+        .seo-section { padding: 40px 5%; background: var(--bg-gray); }
+        .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .seo-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .seo-card h3 { color: var(--p-blue); margin-bottom: 12px; border-bottom: 2px solid var(--p-green); display: inline-block; font-size: 1.2rem; }
+        .seo-card p { font-size: 0.9rem; color: #555; text-align: justify; margin-bottom: 10px; }
+        .batikent-special { border: 2px solid var(--p-blue); background: #f0f8ff; }
+
+        .wa-float {
+            position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white;
+            padding: 12px 20px; border-radius: 50px; font-weight: bold; z-index: 10000;
+            text-decoration: none; display: flex; align-items: center; gap: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        @media (min-width: 992px) {
+            .scroll-item { flex: 0 0 30%; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Batıkent Halı Yıkama</h1>
-    <p>Batıkent • Yenimahalle • Eryaman • Demetevler</p>
-    <a class="top-link" href="/">← Ana Sayfa</a>
-  </header>
 
-  <div class="container">
-    <div class="actions">
-      <a class="btn btn-call" href="tel:+905362333675">📞 Hemen Ara</a>
-      <a class="btn btn-wa" href="https://wa.me/905362333675?text=Merhaba%20Bat%C4%B1kent%20hal%C4%B1%20y%C4%B1kama%20i%C3%A7in%20fiyat%20almak%20istiyorum" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <div class="top-info">
+        <span>Ankara Profesyonel Halı Yıkama Fabrikası</span>
+        <a href="tel:05362333675" style="color:white; font-weight:bold;">0536 233 36 75</a>
     </div>
 
-    <div class="note">Çalışma saatleri: <b>08:00–20:00</b> • Adresten alım–teslim • Hijyenik yıkama</div>
+    <nav>
+        <div class="logo">YAPRAK <span>HALI YIKAMA</span></div>
+    </nav>
 
-    <div class="card">
-      <span class="badge">Batıkent’te Halı Yıkama</span>
-      <p>Batıkent’te halılarınızı adresinizden alır, profesyonel yıkama ve kurutma sonrası hijyenik şekilde paketleyip teslim ederiz. Kalıntısız durulama ile koku/sertleşme riski azalır.</p>
-      <ul>
-        <li>Toz alma + şampuanlama</li>
-        <li>Bol durulama</li>
-        <li>Sıkma & kontrollü kurutma</li>
-      </ul>
-      <p class="small">Halı türü + m²/adet yaz → hızlı fiyat.</p>
-    </div>
+    <section class="hero">
+        <h1>Batıkent ve Çevresinde Hijyen Devrimi</h1>
+        <p>Çakırlar'dan Bağlıca'ya Tüm Ankara'da Profesyonel Temizlik</p>
+    </section>
 
-    <div class="card">
-      <span class="badge">Konum</span>
-      <div class="map-wrap">
-        <iframe src="https://www.google.com/maps?q=Bat%C4%B1kent%20Ankara&output=embed" width="100%" height="360" style="border:0;" loading="lazy"></iframe>
-      </div>
-    </div>
+    <!-- GALERİ -->
+    <section class="gallery-section">
+        <h2>Hizmet Sürecimiz</h2>
+        <div class="scroll-container">
+            <div class="scroll-item">
+                <img src="images/makina.jfif" alt="Batıkent Halı Yıkama Makinası">
+                <div class="item-info"><h4>1. Otomatik Halı Yıkama</h4><p>Derinlemesine temizlik.</p></div>
+            </div>
+            <div class="scroll-item">
+                <img src="images/battaniye.jfif" alt="battaniye Yıkama">
+                <div class="item-info"><h4>2. Battaniye & Yorgan</h4><p>Hijyenik ve yumuşak.</p></div>
+            </div>
+            <div class="scroll-item">
+                <img src="images/perde.jfif" alt="Perde Temizliği">
+                <div class="item-info"><h4>3. Stor & Zebra Perde</h4><p>Hassas temizleme.</p></div>
+            </div>
+            <div class="scroll-item">
+                <img src="images/kurutma.jfif" alt="Kurutma">
+                <div class="item-info"><h4>4. Kapalı Alan Kurutma</h4><p>Tozsuz ortamda kurutma.</p></div>
+            </div>
+            <div class="scroll-item">
+                <img src="images/paket.jfif" alt="Teslimat">
+                <div class="item-info"><h4>5. Ücretsiz Servis</h4><p>Hızlı ve güvenli teslimat.</p></div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h2>Sık Sorulan Sorular</h2>
-      <details><summary>Hassas halı yıkıyor musunuz?</summary><p class="small">Evet. Halı tipine uygun, daha nazik işlem uygulanır.</p></details>
-      <details><summary>Randevu nasıl alırım?</summary><p class="small">Ara ya da WhatsApp’tan yaz, uygun saat verelim.</p></details>
-    </div>
+    <!-- SEO YAZILARI -->
+    <section class="seo-section">
+        <div class="seo-grid">
+            <!-- BATIKENT ÖZEL BLOĞU -->
+            <div class="seo-card batikent-special">
+                <h3>Batıkent Halı Yıkama</h3>
+                <p><strong>Batıkent halı yıkama</strong> servisimizle; Çakırlar, Kardelen, Uğur Mumcu, İlkyerleşim, İnönü ve Batı Sitesi mahallelerine profesyonel çözümler sunuyoruz. Batıkent'in her bölgesine gün içinde ücretsiz servis imkanıyla halılarınızı kapınızdan alıyor, tam otomatik tesisimizde hijyenle buluşturuyoruz.</p>
+                <p>Meydan, Ergazi ve Turgut Özal mahallelerindeki müşterilerimiz için özel leke çıkarıcı bitkisel şampuanlarla yorgan ve battaniye yıkama hizmetimiz devam etmektedir.</p>
+            </div>
 
-    <footer>© <span id="year"></span> Yaprak Halı Yıkama</footer>
-  </div>
+            <div class="seo-card">
+                <h3>Bağlıca & Etimesgut Halı Yıkama</h3>
+                <p><strong>Bağlıca halı yıkama</strong> ve Etimesgut bölgesinde hızlı teslimatın adresiyiz. Elvankent ve Eryaman dahil olmak üzere halılarınız antibakteriyel ortamda dezenfekte edilir.</p>
+            </div>
 
-  <a class="whatsapp-fixed" href="https://wa.me/905362333675" target="_blank" rel="noopener">💬 WhatsApp</a>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+            <div class="seo-card">
+                <h3>İncek & Çayyolu Halı Yıkama</h3>
+                <p><strong>İncek halı yıkama</strong>, Yaşamkent, Beysukent ve Ümitköy mahallelerinde ipek, yün ve el dokuma halılarınız için uzman ekip ve ekipmanlarla garantili temizlik sağlıyoruz.</p>
+            </div>
+
+            <div class="seo-card">
+                <h3>Beytepe & Konutkent Halı Yıkama</h3>
+                <p><strong>Beytepe halı yıkama</strong> ve Konutkent sakinleri için stor perde yıkama, koltuk yıkama ve halıfleks temizliğinde Ankara'nın en çok tercih edilen firmasıyız.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#111; color:#777; text-align:center; padding:30px; font-size: 0.9rem;">
+        <p>&copy; 2026 Yaprak Halı Yıkama - Batıkent, Bağlıca, İncek, Çayyolu, Ümitköy, Yaşamkent, Beytepe, Etimesgut</p>
+    </footer>
+
+    <a href="https://wa.me/905362333675?text=Merhaba, Batıkent bölgesinden randevu almak istiyorum." class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i> <span>WhatsApp Randevu Hattı</span>
+    </a>
+
 </body>
 </html>
