@@ -3,72 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe ve Alacaatlı profesyonel halı yıkama hizmeti. Ev ve ofis halılarınız hijyenik ve güvenli şekilde temizlenir.">
+<meta name="description" content="Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe ve Alacaatlı profesyonel halı yıkama hizmeti. Hijyenik ve güvenli temizlik, evden teslim.">
 <meta name="keywords" content="Halı yıkama, Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe, Alacaatlı, koltuk temizliği, ev tipi halı, profesyonel temizlik">
-<title>Yaprak Halı Yıkama - Çayyolu</title>
+<title>Yaprak Halı Yıkama - Premium Tema</title>
 <style>
 /* Reset */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-body{background:#f4f6f8;color:#111;scroll-behavior:smooth;}
+body{background:#f9fafb;color:#111;scroll-behavior:smooth;}
 a{text-decoration:none;transition:0.3s;}
 img{max-width:100%;display:block;border-radius:12px;}
 h1,h2,h3{margin-bottom:0.5em;}
 
 /* Header */
-header{background:#1e40af;color:white;padding:20px;text-align:center;position:sticky;top:0;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,0.15);}
-header nav a{margin:0 15px;color:white;font-weight:bold;}
+header{background:#1e3a8a;color:white;padding:20px 10px;text-align:center;position:sticky;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.2);}
+header nav a{margin:0 15px;color:white;font-weight:600;}
 header nav a:hover{color:#facc15;}
 
 /* Hero */
 .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));z-index:1;}
-.hero video{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);min-width:100%;min-height:100%;object-fit:cover;z-index:0;}
+.hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(30,58,138,0.5),rgba(37,99,235,0.5));z-index:1;}
+.hero video{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);min-width:100%;min-height:100%;object-fit:cover;z-index:0;filter:brightness(0.6);}
 .hero-content{position:relative;z-index:2;}
 .hero h2{font-size:4em;margin-bottom:20px;animation:pulse 2s infinite;}
-.hero p{font-size:1.4em;margin-bottom:30px;max-width:800px;}
-.hero a{background:linear-gradient(90deg,#1e40af,#2563eb);padding:20px 50px;border-radius:30px;color:white;font-weight:bold;box-shadow:0 8px 20px rgba(0,0,0,0.3);}
+.hero p{font-size:1.4em;margin-bottom:30px;max-width:800px;line-height:1.6;}
+.hero a{background:linear-gradient(90deg,#1e3a8a,#2563eb);padding:20px 50px;border-radius:30px;color:white;font-weight:bold;box-shadow:0 10px 30px rgba(0,0,0,0.3);}
 .hero a:hover{transform:scale(1.05);}
 @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
 
 /* About */
 .about{max-width:1000px;margin:60px auto;padding:0 20px;text-align:left;line-height:1.8;color:#111;}
-.about h2{color:#1e40af;font-size:2.8em;margin-bottom:20px;}
+.about h2{color:#1e3a8a;font-size:2.8em;margin-bottom:20px;}
 .about p{margin-bottom:15px;font-size:1.15em;}
 
 /* Services */
-.services{max-width:1200px;margin:60px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;padding:0 20px;}
-.service-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.15);transition:0.4s;cursor:pointer;position:relative;}
-.service-card:hover{transform:translateY(-12px);box-shadow:0 20px 40px rgba(0,0,0,0.2);}
-.service-card img{transition:0.4s;}
-.service-card:hover img{transform:scale(1.05);}
-.service-card div{padding:25px;}
-.service-card h3{margin-bottom:12px;font-size:1.6em;color:#1e40af;}
-.service-card p{font-size:1em;line-height:1.5;}
+.services{max-width:1200px;margin:60px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;padding:0 20px;}
+.service-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,0.15);transition:0.5s;cursor:pointer;position:relative;}
+.service-card:hover{transform:translateY(-15px);box-shadow:0 25px 50px rgba(0,0,0,0.2);}
+.service-card img{transition:0.5s;}
+.service-card:hover img{transform:scale(1.08);}
+.service-card div{padding:30px;}
+.service-card h3{margin-bottom:12px;font-size:1.8em;color:#1e3a8a;}
+.service-card p{font-size:1.05em;line-height:1.6;}
+.service-card .popup{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);background:#2563eb;color:white;padding:10px 20px;border-radius:20px;opacity:0;transition:0.4s;pointer-events:none;}
+.service-card:hover .popup{opacity:1;pointer-events:auto;}
 
 /* Reviews Slider */
-.reviews{background:#bfdbfe;padding:80px 20px;text-align:center;}
+.reviews{background:#dbeafe;padding:100px 20px;text-align:center;}
 .reviews h2{font-size:2.8em;margin-bottom:50px;}
 .review-container{display:flex;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;}
 .review-container::-webkit-scrollbar{display:none;}
-.review-card{background:white;padding:35px;margin:15px;border-radius:20px;min-width:320px;box-shadow:0 12px 30px rgba(0,0,0,0.15);transition:0.3s;}
-.review-card:hover{transform:translateY(-5px);box-shadow:0 14px 35px rgba(0,0,0,0.2);}
-.stars{color:#facc15;margin-bottom:12px;font-size:1.3em;}
+.review-card{background:white;padding:40px;margin:15px;border-radius:20px;min-width:320px;box-shadow:0 15px 35px rgba(0,0,0,0.15);transition:0.3s;}
+.review-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.2);}
+.stars{color:#facc15;margin-bottom:12px;font-size:1.4em;}
 
 /* Satisfaction Table */
 .satisfaction{max-width:900px;margin:60px auto;overflow-x:auto;padding:0 20px;}
-table{width:100%;border-collapse:collapse;background:white;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.15);}
-th,td{padding:18px;text-align:center;border-bottom:1px solid #ddd;}
-th{background:#1e40af;color:white;font-size:1.1em;}
-td{font-size:1em;}
-tr:hover{background:#f0f9ff;}
+table{width:100%;border-collapse:collapse;background:white;border-radius:20px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,0.15);}
+th,td{padding:20px;text-align:center;border-bottom:1px solid #ddd;}
+th{background:#1e3a8a;color:white;font-size:1.15em;}
+td{font-size:1.05em;}
+tr:hover{background:#eff6ff;}
 
 /* Contact */
-.contact{max-width:700px;margin:80px auto;background:white;padding:55px;border-radius:25px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.15);}
-.contact a{display:inline-block;margin:12px;padding:18px 35px;background:linear-gradient(90deg,#1e40af,#2563eb);color:white;border-radius:20px;font-weight:bold;transition:0.3s;}
-.contact a:hover{transform:scale(1.05);}
+.contact{max-width:700px;margin:100px auto;background:white;padding:60px;border-radius:30px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,0.15);}
+.contact a{display:inline-block;margin:12px;padding:20px 40px;background:linear-gradient(90deg,#1e3a8a,#2563eb);color:white;border-radius:25px;font-weight:bold;transition:0.3s;}
+.contact a:hover{transform:scale(1.08);}
 
 /* Footer */
-footer{background:#1e40af;color:white;text-align:center;padding:35px;font-size:0.95em;}
+footer{background:#1e3a8a;color:white;text-align:center;padding:40px;font-size:0.95em;}
 </style>
 </head>
 <body>
@@ -97,9 +99,9 @@ footer{background:#1e40af;color:white;text-align:center;padding:35px;font-size:0
 
 <section class="about" id="about">
 <h2>Hakkımızda</h2>
-<p>Yaprak Halı Yıkama olarak Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe ve Alacaatlı bölgelerinde uzun yıllardır profesyonel halı ve koltuk temizliği hizmeti sunuyoruz. Müşterilerimizin ev ve iş yerlerinde hijyenin en üst seviyeye çıkmasını sağlamak en büyük önceliğimizdir.</p>
-<p>Gelişmiş ekipmanlarımız ve çevre dostu temizlik ürünlerimizle, ev tipi halılardan ofis ve kurumsal halılara kadar tüm hizmetlerimizde etkili ve güvenli bir temizlik sağlıyoruz. Her hizmetimizde memnuniyet garantisi sunuyoruz.</p>
-<p>Deneyimli ekibimizle, Çayyolu halı yıkama, İncek koltuk temizliği ve Beysukent profesyonel temizlik hizmetleri ile Google aramalarında kolayca bulunabilirsiniz.</p>
+<p>Yaprak Halı Yıkama olarak Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe ve Alacaatlı bölgelerinde uzun yıllardır profesyonel halı ve koltuk temizliği hizmeti sunuyoruz. Ev ve iş yerlerinde hijyenin en üst seviyeye çıkması önceliğimizdir.</p>
+<p>Gelişmiş ekipmanlarımız ve çevre dostu temizlik ürünlerimizle ev tipi ve ofis halılarınızda derinlemesine temizlik sağlıyoruz. Her hizmetimizde memnuniyet garantisi sunuyoruz.</p>
+<p>Deneyimli ekibimizle, Google aramalarında kolayca bulunabilir ve hızlı hizmet alabilirsiniz.</p>
 </section>
 
 <section id="services" class="services">
@@ -107,21 +109,24 @@ footer{background:#1e40af;color:white;text-align:center;padding:35px;font-size:0
 <img src="https://via.placeholder.com/400x250?text=Ev+Hali+Yikama" alt="Ev Tipi Halı">
 <div>
 <h3>Ev Tipi Halı Yıkama</h3>
-<p>Ev tipi halılarınızı toplayıp, derinlemesine temizliyor ve güvenle teslim ediyoruz. Çayyolu ve çevresinde hızlı ve hijyenik hizmet.</p>
+<p>Ev tipi halılarınızı topluyor, derinlemesine temizliyor ve güvenle teslim ediyoruz.</p>
+<div class="popup">Hızlı ve hijyenik temizlik garantisi</div>
 </div>
 </div>
 <div class="service-card">
 <img src="https://via.placeholder.com/400x250?text=Koltuk+Temizligi" alt="Koltuk Temizliği">
 <div>
 <h3>Koltuk & Döşeme Temizliği</h3>
-<p>Koltuk ve kanepelerinizi özel yöntemlerle temizliyoruz. İncek ve Beysukent bölgelerinde güvenle tercih edebilirsiniz.</p>
+<p>Koltuk ve kanepelerinizi özel yöntemlerle temizliyoruz.</p>
+<div class="popup">İncek ve Beysukent bölgelerinde güvenle</div>
 </div>
 </div>
 <div class="service-card">
 <img src="https://via.placeholder.com/400x250?text=Ofis+Hali" alt="Ofis Halı">
 <div>
 <h3>Ofis & Kurumsal Halılar</h3>
-<p>Ofis ve kurumsal alanlar için profesyonel halı temizliği sunuyoruz. Beytepe ve Alacaatlı’da güvenli ve hızlı temizlik garantisi.</p>
+<p>Ofis ve kurumsal alanlar için profesyonel halı temizliği.</p>
+<div class="popup">Beytepe ve Alacaatlı’da hızlı temizlik</div>
 </div>
 </div>
 </section>
