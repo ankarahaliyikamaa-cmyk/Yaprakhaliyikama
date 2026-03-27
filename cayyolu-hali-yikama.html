@@ -1,182 +1,159 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe ve Alacaatlı profesyonel halı yıkama hizmeti. Hijyenik ve güvenli temizlik, evden teslim.">
-<meta name="keywords" content="Halı yıkama, Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe, Alacaatlı, koltuk temizliği, ev tipi halı, profesyonel temizlik">
-<title>Yaprak Halı Yıkama - Premium Kurumsal Tema</title>
-<style>
-/* Reset */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#fdfdfd;color:#1f2937;scroll-behavior:smooth;}
-a{text-decoration:none;transition:0.3s;}
-img{max-width:100%;display:block;border-radius:12px;}
-h1,h2,h3{margin-bottom:0.5em;}
-
-/* Header */
-header{background:#ffffff;color:#1f2937;padding:25px 20px;text-align:center;position:sticky;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
-header nav a{margin:0 15px;color:#1f2937;font-weight:600;}
-header nav a:hover{color:#fbbf24;}
-
-/* Hero */
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(31,41,55,0.5),rgba(59,130,246,0.5));z-index:1;}
-.hero video{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);min-width:100%;min-height:100%;object-fit:cover;z-index:0;filter:brightness(0.6);}
-.hero-content{position:relative;z-index:2;}
-.hero h2{font-size:4em;margin-bottom:20px;font-weight:700;animation:pulse 2s infinite;}
-.hero p{font-size:1.4em;margin-bottom:30px;max-width:800px;line-height:1.6;}
-.hero a{background:linear-gradient(90deg,#fbbf24,#f59e0b);padding:20px 50px;border-radius:30px;color:#1f2937;font-weight:bold;box-shadow:0 10px 30px rgba(0,0,0,0.3);}
-.hero a:hover{transform:scale(1.05);}
-@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
-
-/* About */
-.about{max-width:1000px;margin:60px auto;padding:0 20px;text-align:left;line-height:1.8;color:#1f2937;}
-.about h2{color:#111827;font-size:2.8em;margin-bottom:20px;}
-.about p{margin-bottom:15px;font-size:1.15em;}
-
-/* Services */
-.services{max-width:1200px;margin:60px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;padding:0 20px;}
-.service-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,0.08);transition:0.5s;cursor:pointer;position:relative;}
-.service-card:hover{transform:translateY(-15px);box-shadow:0 25px 50px rgba(0,0,0,0.15);}
-.service-card img{transition:0.5s;}
-.service-card:hover img{transform:scale(1.08);}
-.service-card div{padding:30px;}
-.service-card h3{margin-bottom:12px;font-size:1.8em;color:#111827;}
-.service-card p{font-size:1.05em;line-height:1.6;}
-.service-card .popup{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);background:#fbbf24;color:#1f2937;padding:10px 20px;border-radius:20px;opacity:0;transition:0.4s;pointer-events:none;}
-.service-card:hover .popup{opacity:1;pointer-events:auto;}
-
-/* Reviews Slider */
-.reviews{background:#f0f9ff;padding:100px 20px;text-align:center;}
-.reviews h2{font-size:2.8em;margin-bottom:50px;color:#111827;}
-.review-container{display:flex;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;}
-.review-container::-webkit-scrollbar{display:none;}
-.review-card{background:white;padding:40px;margin:15px;border-radius:20px;min-width:320px;box-shadow:0 15px 35px rgba(0,0,0,0.08);transition:0.3s;}
-.review-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.12);}
-.stars{color:#fbbf24;margin-bottom:12px;font-size:1.4em;}
-
-/* Satisfaction Table */
-.satisfaction{max-width:900px;margin:60px auto;overflow-x:auto;padding:0 20px;}
-table{width:100%;border-collapse:collapse;background:white;border-radius:20px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,0.08);}
-th,td{padding:20px;text-align:center;border-bottom:1px solid #e5e7eb;}
-th{background:#111827;color:white;font-size:1.15em;}
-td{font-size:1.05em;}
-tr:hover{background:#fef3c7;}
-
-/* Contact */
-.contact{max-width:700px;margin:100px auto;background:white;padding:60px;border-radius:30px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,0.08);}
-.contact a{display:inline-block;margin:12px;padding:20px 40px;background:linear-gradient(90deg,#fbbf24,#f59e0b);color:#1f2937;border-radius:25px;font-weight:bold;transition:0.3s;}
-.contact a:hover{transform:scale(1.08);}
-
-/* Footer */
-footer{background:#111827;color:white;text-align:center;padding:40px;font-size:0.95em;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çayyolu Halı Yıkama | Profesyonel Halı Temizliği Etimesgut & Sincan</title>
+    <meta name="description" content="Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti. Halılarınız hijyenik ve tertemiz teslim edilir.">
+    <meta name="keywords" content="Çayyolu halı yıkama, Etimesgut halı temizliği, Sincan halı yıkama, halı temizleme, profesyonel halı temizliği">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+        }
+        header {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+        }
+        header iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #0077cc;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-buttons {
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .contact-buttons a {
+            padding: 10px 20px;
+            background: #0077cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .content img {
+            max-width: 100%;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        h2, h3 {
+            color: #0077cc;
+        }
+        footer {
+            background: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-<h1>Yaprak Halı Yıkama</h1>
-<p>Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe, Alacaatlı Profesyonel Temizlik</p>
-<nav>
-<a href="#about">Hakkımızda</a>
-<a href="#services">Hizmetler</a>
-<a href="#reviews">Müşteri Yorumları</a>
-<a href="#contact">İletişim</a>
-</nav>
+    <!-- iStock Video Embed -->
+    <iframe src="https://www.istockphoto.com/tr/video/carpet-washing-gm1404923828-456945225/embed" allowfullscreen></iframe>
+    <div class="overlay">Çayyolu Halı Yıkama | Profesyonel Temizlik</div>
 </header>
 
-<section class="hero">
-  <video autoplay muted loop>
-    <source src="https://media.istockphoto.com/id/1404923828/video/carpet-washing.mp4" type="video/mp4">
-  </video>
-  <div class="hero-content">
-    <h2>Halılarınız Bizimle Güvende</h2>
-    <p>Hızlı, güvenli ve profesyonel halı temizliği. Evden teslim, kapınıza kadar.</p>
-    <a href="#contact">Hemen Randevu Al</a>
-  </div>
-</section>
+<nav>
+    <a href="#hizmetler">Hizmetlerimiz</a>
+    <a href="#mahalleler">Hizmet Verilen Mahalleler</a>
+    <a href="#iletisim">İletişim</a>
+</nav>
 
-<section class="about" id="about">
-<h2>Hakkımızda</h2>
-<p>Yaprak Halı Yıkama olarak Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe ve Alacaatlı bölgelerinde uzun yıllardır profesyonel halı ve koltuk temizliği hizmeti sunuyoruz. Ev ve iş yerlerinde hijyenin en üst seviyeye çıkması önceliğimizdir.</p>
-<p>Gelişmiş ekipmanlarımız ve çevre dostu temizlik ürünlerimizle ev tipi ve ofis halılarınızda derinlemesine temizlik sağlıyoruz. Her hizmetimizde memnuniyet garantisi sunuyoruz.</p>
-<p>Deneyimli ekibimizle, Google aramalarında kolayca bulunabilir ve hızlı hizmet alabilirsiniz.</p>
-</section>
+<div class="contact-buttons">
+    <a href="tel:05362333675">Ara: 0536 233 36 75</a>
+    <a href="tel:03122440304">Ara: 0312 244 03 04</a>
+    <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
+</div>
 
-<section id="services" class="services">
-<div class="service-card">
-<img src="https://via.placeholder.com/400x250?text=Ev+Hali+Yikama" alt="Ev Tipi Halı">
-<div>
-<h3>Ev Tipi Halı Yıkama</h3>
-<p>Ev tipi halılarınızı topluyor, derinlemesine temizliyor ve güvenle teslim ediyoruz.</p>
-<div class="popup">Hızlı ve hijyenik temizlik garantisi</div>
-</div>
-</div>
-<div class="service-card">
-<img src="https://via.placeholder.com/400x250?text=Koltuk+Temizligi" alt="Koltuk Temizliği">
-<div>
-<h3>Koltuk & Döşeme Temizliği</h3>
-<p>Koltuk ve kanepelerinizi özel yöntemlerle temizliyoruz.</p>
-<div class="popup">İncek ve Beysukent bölgelerinde güvenle</div>
-</div>
-</div>
-<div class="service-card">
-<img src="https://via.placeholder.com/400x250?text=Ofis+Hali" alt="Ofis Halı">
-<div>
-<h3>Ofis & Kurumsal Halılar</h3>
-<p>Ofis ve kurumsal alanlar için profesyonel halı temizliği.</p>
-<div class="popup">Beytepe ve Alacaatlı’da hızlı temizlik</div>
-</div>
-</div>
-</section>
+<div class="content" id="hizmetler">
+    <h2>Profesyonel Halı Temizliği</h2>
+    <p>Çayyolu, Etimesgut, Sincan ve çevre mahallelerde profesyonel halı yıkama hizmeti sunuyoruz. Halılarınız hijyenik, tertemiz ve güvenli bir şekilde teslim edilir. Modern ekipmanlarımız ve deneyimli ekibimizle her tür halı ve koltuk temizliği yapılmaktadır.</p>
+    
+    <h3>Hizmetlerimiz:</h3>
+    <ul>
+        <li>Ev tipi halı yıkama</li>
+        <li>Koltuk ve kanepe temizliği</li>
+        <li>Derinlemesine leke çıkarma</li>
+        <li>Hızlı ve güvenli teslimat</li>
+    </ul>
 
-<section id="reviews" class="reviews">
-<h2>Müşteri Memnuniyeti</h2>
-<div class="review-container" id="reviewSlider">
-<div class="review-card"><div class="stars">★★★★★</div><p>Çayyolu halı yıkama hizmetinden çok memnun kaldım. Hızlı ve temiz!</p><strong>Ahmet K.</strong></div>
-<div class="review-card"><div class="stars">★★★★★</div><p>İncek’teki koltuk temizliği mükemmeldi, herkese tavsiye ederim.</p><strong>Elif S.</strong></div>
-<div class="review-card"><div class="stars">★★★★☆</div><p>Beysukent’teki hizmet hızlı ve güvenliydi, teşekkürler!</p><strong>Mehmet A.</strong></div>
+    <h3>Öne Çıkan Fotoğraflar</h3>
+    <img src="https://via.placeholder.com/800x400?text=Halı+Yıkama+1" alt="Halı Yıkama">
+    <img src="https://via.placeholder.com/800x400?text=Halı+Yıkama+2" alt="Halı Yıkama">
+    <img src="https://via.placeholder.com/800x400?text=Halı+Yıkama+3" alt="Halı Yıkama">
 </div>
-</section>
 
-<section class="satisfaction">
-<table>
-<thead><tr><th>Mahalle</th><th>Memnuniyet</th><th>Puan</th></tr></thead>
-<tbody>
-<tr><td>Çayyolu</td><td>Çok Memnun</td><td>★★★★★</td></tr>
-<tr><td>Yaşamkent</td><td>Memnun</td><td>★★★★</td></tr>
-<tr><td>İncek</td><td>Çok Memnun</td><td>★★★★★</td></tr>
-<tr><td>Beysukent</td><td>Memnun</td><td>★★★★</td></tr>
-<tr><td>Beytepe</td><td>Çok Memnun</td><td>★★★★★</td></tr>
-<tr><td>Alacaatlı</td><td>Memnun</td><td>★★★★</td></tr>
-</tbody>
-</table>
-</section>
+<div class="content" id="mahalleler">
+    <h2>Hizmet Verilen Mahalleler</h2>
+    <p>Çayyolu ve çevresindeki mahallelerde hizmet veriyoruz:</p>
+    <ul>
+        <li>Çayyolu Merkez</li>
+        <li>Mutlukent</li>
+        <li>Ümitköy</li>
+        <li>Yaşamkent</li>
+        <li>Etimesgut Merkez</li>
+        <li>Sincan Merkez</li>
+        <li>Batıkent</li>
+    </ul>
+</div>
 
-<section class="contact" id="contact">
-<h2>İletişim</h2>
-<p>Randevu ve sorularınız için hemen arayın veya WhatsApp’tan yazın:</p>
-<a href="tel:+905362333675">📞 0536 233 36 75</a>
-<a href="tel:+903122440304">📞 0312 244 03 04</a>
-<a href="https://wa.me/905362333675" target="_blank">💬 WhatsApp</a>
-</section>
+<div class="content" id="iletisim">
+    <h2>İletişim</h2>
+    <p>Bize ulaşmak için aşağıdaki numaraları arayabilir veya WhatsApp üzerinden mesaj atabilirsiniz.</p>
+    <div class="contact-buttons">
+        <a href="tel:05362333675">0536 233 36 75</a>
+        <a href="tel:03122440304">0312 244 03 04</a>
+        <a href="https://wa.me/905362333675" target="_blank">WhatsApp</a>
+    </div>
+</div>
 
 <footer>
-<p>© 2026 Yaprak Halı Yıkama. Çayyolu, Yaşamkent, İncek, Beysukent, Beytepe ve Alacaatlı profesyonel halı yıkama hizmeti.</p>
+    &copy; 2026 Çayyolu Halı Yıkama | Tüm Hakları Saklıdır
 </footer>
-
-<script>
-// Review slider otomatik
-const slider = document.getElementById('reviewSlider');
-let scrollAmount = 0;
-function autoScroll(){
-  scrollAmount += 1;
-  if(scrollAmount >= slider.scrollWidth - slider.clientWidth){scrollAmount=0;}
-  slider.scrollTo({left:scrollAmount, behavior:'smooth'});
-}
-setInterval(autoScroll,50);
-</script>
 
 </body>
 </html>
